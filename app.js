@@ -41,6 +41,7 @@ app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
 app.get('/login', pagelist.viewlog);
 app.get('/beachlist', pagelist.viewbeach);
+app.get('/dummy', pagelist.viewdummy);
 
 // Example route
 // app.get('/users', user.list);

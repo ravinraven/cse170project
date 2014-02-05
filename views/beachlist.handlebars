@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-		<title> Find a Beach </title>
-	</head>
+<link href="/css/beachlist.css" rel="stylesheet">
+<div class="button">
+	<ul>
+		<li><a href="#"> La Jolla Shores </a></li>
+		<li><a href="#"> Oceanside Beach </a></li>
+		<li><a href="#"> Pacific Beach </a></li>
+		<li><a href="#"> Coronado Beach </a></li>
+		<li><a href="#"> La Jolla Shores </a></li>
+	</ul>
+</div>
 
+<script type="text/javascript">
+function loadDummyContent(){
+	console.log("ajax called dummy");
+   //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
+	$( ".container" ).load( "/dummy" , function( response, status, xhr ) {
+		if ( status == "error" ) {
+		var msg = "Sorry but there was an error: ";
+		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+	} });
+}
 
-<body>
-	<div class="button">
-		<ul>
-			<li> <a href="first link"> La Jolla Shores </a> </li>
-			<li> <a href="second page"> Oceanside Beach </a> </li>
-			<li> <a href="third page"> Pacific Beach </a> </li>
-			<li> <a href="fourth page"> Coronado Beach </a> </li>
-			<li> <a href="fifth page"> La Jolla Shores </a> </li>
-		</ul>	
-	</div>
-
-</body>
-</html>
+$( document ).ready(function() {
+	$("li a").click(function() { loadDummyContent(); });
+});
+</script>

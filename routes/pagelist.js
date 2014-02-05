@@ -11,3 +11,9 @@ exports.viewbeach = function(req, res) { 
   res.render('beachlist',{});
   // controller code goes here 
 };
+
+exports.viewdummy = function(req, res) { 
+  var name = req.params.name; 
+  res.render('dummy',{});
+  // controller code goes here 
+};
