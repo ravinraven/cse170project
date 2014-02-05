@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title> Login Form </title>
+	</head>
+<!-- not sure what this is for -->
+
 <div id="form">
 <div class="button" id="fb">
 
@@ -5,3 +12,27 @@
 <div id="fb-root"></div>
 
 </div>
+
+<!-- where I started my coding -->
+	<body>
+		<h2> BEACH BUM LOGIN: </h2>
+
+		<form id="myForm" action="form_action.asp">
+		<p><strong> USERNAME: </stong> 
+			<input type="text" name="fname"> <br><br> </p>
+		<p><strong> PASSSWORD: </strong> 
+			<input type="text" name="Iname"><br><br> </p>
+		<input type="button" onclick="myFunction()" value="LOGIN">
+
+		<script>
+		function myFunction()
+		{
+		document.getElementByld("Form").submit();
+		}
+		</script>
+		
+		<!-- not sure how to get the facebook login button to work :( 
+		but here's the site I found thats useful: 
+		https://developers.facebook.com/docs/facebook-login/login-flow-for-web/) -->
+	</body>
+</html>
