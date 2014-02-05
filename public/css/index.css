@@ -1,3 +1,8 @@
+/*
+ * 
+ *
+ *
+ */
 body{
 	position: relative;
     width: 100%;
@@ -18,6 +23,7 @@ body{
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three bottons on front page*/
+
 	background: red;/*default background color for bottons*/
 }
 .circle{

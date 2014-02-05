@@ -21,17 +21,27 @@
     
     <div class="circle" id="title">Beach Bum</div>
     <div id="bottonline">
-    <div class="botton" id="login">Login</div>
-    <div class="botton" id="sign">Sign Up</div></div>
-    <div class="botton" id="find">Find a Beach</div>
+    <div class="botton" id="login"><a href="#">Login</a></div>
+    <div class="botton" id="sign"><a href="#">Sign Up</a></div></div>
+    <div class="botton" id="find"><a href="#">Find a Beach</a></div>
 
 	</div>
 
 <script>
+function loadMainContent(){
+	alert("Clicked");
+   //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
+	$( ".container" ).load( pagename + ".html", function( response, status, xhr ) {
+		if ( status == "error" ) {
+		var msg = "Sorry but there was an error: ";
+		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+	} });
+}
 
-$( "#login" ).click(function() {
-$( this ).slideUp();
+$( document ).ready(function() {
+	$("div#login").click(function() { loadMainContent(); });
 });
+
 
 </script>
 <script src="https://code.jquery.com/jquery.js"></script>
