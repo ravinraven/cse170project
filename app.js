@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var project = require('./routes/project');
-var login = require('./routes/login');
+var pagelist = require('./routes/pagelist');
 // Example route
 // var user = require('./routes/user');
 
@@ -26,7 +26,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
+app.use(express.cookieParser('BEACH BUM TEMP KEY'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -39,7 +39,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
-app.get('/login', login.viewlog);
+app.get('/login', pagelist.viewlog);
+app.get('/beachlist', pagelist.viewbeach);
 
 // Example route
 // app.get('/users', user.list);
