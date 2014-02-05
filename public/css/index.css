@@ -24,7 +24,7 @@ body{
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three bottons on front page*/
 
-	background: red;/*default background color for bottons*/
+	background: #00C9AD;/*default background color for bottons*/
 }
 .circle{
 width:300px;
@@ -35,7 +35,7 @@ font-size:50px;
 color:#fff; /* center font color*/
 line-height:300px;
 text-align:center;
-background:f0de63; /*center circle color*/
+background:#F0DE63; /*center circle color*/
 }
 #bottonline{
 	width:400px;
@@ -45,16 +45,22 @@ background:f0de63; /*center circle color*/
 	margin-right: 5px;
 	width:195px;
 	float:left;
-	background: blue; /*sign in background color*/
+	/*background: blue; /*sign in background color*/
 }
 #sign{
 	margin-left: 5px;
 	width:195px;
 	float:right;
-	background:red; /*sign in background color*/
+	/*background:red; /*sign in background color*/
 }
 #find{
 	clear:both;
 	width:400px;
-	background:green; /*sign in background color*/
+	/*background:green; /*sign in background color*/
+}
+div a{
+	display:block;
+}
+a:hover{
+	text-decoration: none;
 }
