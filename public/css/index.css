@@ -58,9 +58,8 @@ background:#F0DE63; /*center circle color*/
 	width:400px;
 	/*background:green; /*sign in background color*/
 }
-div a{
-	display:block;
-}
-a:hover{
-	text-decoration: none;
-}
+div a{display:block;}
+a:hover{text-decoration: none;}
+a:link {text-decoration: none}
+a:visited {text-decoration: none}
+a:active {text-decoration: none}
