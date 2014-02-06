@@ -31,10 +31,11 @@ width:300px;
 height:300px;
 
 border-radius: 50%;
-font-size:50px;
+font-size:100px;
 color:#fff; /* center font color*/
 line-height:300px;
-text-align:center;
+text-align:right;
+padding-right: 20px;
 background:#F0DE63; /*center circle color*/
 }
 #bottonline{
@@ -63,3 +64,16 @@ a:hover{text-decoration: none;}
 a:link {text-decoration: none}
 a:visited {text-decoration: none}
 a:active {text-decoration: none}
+
+
+/*font for app*/
+@font-face
+{
+font-family: myFirstFont;
+src: url(/fonts/talldark.ttf);
+}
+
+div
+{
+font-family: myFirstFont;
+}
