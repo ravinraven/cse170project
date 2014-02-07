@@ -9,60 +9,42 @@ body{
     display: block;
     background: white;/* background color of app*/
 }
+
+
 .container{
 	width:400px;
 }
-#title{
+
+#username{
+	margin-right: 5px;
+	width:195px;
+	
 }
-.p{
-	margin:10px 0;
+
+#password{
+margin-right: 5px;
+	width:195px;
+}
+
+.button {
+		margin:10px 0;
 	font-size:40px;
-	color:#fff; /* center font color*/
+	color:#000000; /* center font color*/
 	text-align: center;
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three bottons on front page*/
 
-	background: #00C9AD;/*default background color for bottons*/
+	back
 }
 
-#bottonline{
-	width:400px;
-	clear:both;
-}
-#myForm{
-	margin-right: 5px;
+#back{
+		margin-right: 5px;
 	width:195px;
-	float:left;
-	/*background: blue; /*sign in background color*/
-}
-#sign{
-	margin-left: 5px;
-	width:195px;
-	float:right;
-	/*background:red; /*sign in background color*/
-}
-#find{
-	clear:both;
-	width:400px;
-	/*background:green; /*sign in background color*/
-}
-div a{display:block;}
-a:hover{text-decoration: none;}
-a:link {text-decoration: none}
-a:visited {text-decoration: none}
-a:active {text-decoration: none}
-
-
-/*font for app*/
-@font-face
-{
-font-family: myFirstFont;
-src: url(/fonts/talldark.ttf);
 }
 
-div
-{
-font-family: myFirstFont;
-}
+
+
+
+
