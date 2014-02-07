@@ -1,17 +1,17 @@
 exports.viewlog = function(req, res) { 
   var name = req.params.name; 
-  res.render('login',{});
+  res.render('login');
   // controller code goes here 
 };
 
 exports.viewbeach = function(req, res) { 
   var name = req.params.name; 
-  res.render('beachlist',{});
+  res.render('beachlist');
   // controller code goes here 
 };
 
 exports.viewdummy = function(req, res) { 
   var name = req.params.name; 
-  res.render('dummy',{});
+  res.render('dummy');
   // controller code goes here 
 };
