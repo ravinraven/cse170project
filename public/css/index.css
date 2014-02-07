@@ -12,7 +12,7 @@ body{
 .container{
 	width:400px;
 }
-.botton{
+.button{
 	margin:10px 0;
 	font-size:40px;
 	color:#000000; /* center font color*/
@@ -20,9 +20,9 @@ body{
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 60px; /* height for all three bottons on front page*/
+  	height: 60px; /* height for all three buttons on front page*/
 
-	background: #00C9AD;/*default background color for bottons*/
+	background: #00C9AD;/*default background color for buttons*/
 }
 #tagline{
 	font-size: 26px;
