@@ -4,48 +4,21 @@
  *
  */
 body{
-	position: relative;
-    width: 100%;
-    display: block;
-    background: white;/* background color of app*/
+	background: #00c9AD;
 }
-.container{
-	width:400px;
-}
-
-#username{
-	margin-right: 5px;
-	width:195px;
-	
-}
-
-#password{
-margin-right: 5px;
-	width:195px;
-}
-
-.button {
-		margin:10px 0;
+.button{
+	width: 400px;
+	margin:10px 0;
 	font-size:40px;
-	color:#000000; /* center font color*/
+	color:black; /* center font color*/
 	text-align: center;
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 60px; /* height for all three bottons on front page*/
-
-	back
+  	height: 65px; /* height for all three bottons on front page*/
+	width: 400px; /*width of the buttons*/
+	background: #F0DE62;/*default background color for bottons*/
 }
-
-#bottonline{
-	width:400px;
-	clear:both;
-}
-#back{
-	margin-right: 5px;
-	width:195px;
-}
-
 div a{display:block;}
 a:hover{text-decoration: none;}
 a:link {text-decoration: none}
