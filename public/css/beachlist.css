@@ -7,6 +7,7 @@
 li{
 	height:60px;
 	width: 300px;
+	list-style-type: none;
 }
 
 .container{
