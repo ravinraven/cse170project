@@ -1,4 +1,4 @@
-<!-- link href="/css/beachlist.css" rel="stylesheet" -->
+<link href="/css/beachlist.css" rel="stylesheet">
 
 <div class="button" id="blist">	
 	<ul>
@@ -11,7 +11,8 @@
 </div>
 
 
-<script>
+<script type="text/javascript">
+	
 console.log("ajax called dummy");
 function loadDummyContent( pagename ){
 	console.log("ajax called on this one");
@@ -24,8 +25,8 @@ function loadDummyContent( pagename ){
 }
 
 $( document ).ready(function() {
-	$("a").click( function(){alert("clicked"); })
-	$("#login a").click(function() { loadMainContent("login"); });
+	$("a").click( function(){ loadDummyContent("dummy") })
+	//$("#login a").click(function() { loadMainContent("login"); });
 	//$("a").click(function() { loadDummyContent("beachlist"); });
 	//$("#find a").click(function() { loadMainContent(""); });
 });
