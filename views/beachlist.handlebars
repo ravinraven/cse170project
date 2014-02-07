@@ -2,7 +2,7 @@
 
 <div class="button" id="blist">	
 	<ul>
-		<li class="fbotton" id="LaJolla"><a href="#"> Back </a> </li>
+		<li class="fbotton" id="back"><a href="#"> Back </a> </li>
 		<li class="fbotton" id="LaJolla"><a href="#"> La Jolla Shores </a> </li>
 		<li class="fbotton" id="Oceanside"> <a href="#"> Oceanside Beach </a> </li>
 		<li class="fbotton" id="Pacific"> <a href="#"> Pacific Beach </a> </li>
@@ -26,6 +26,7 @@ function loadDummyContent( pagename ){
 
 $( document ).ready(function() {
 	$("a").click( function(){ loadDummyContent("dummy") })
+	$("#back a").click(function() { window.location.href="/"; });
 	//$("#login a").click(function() { loadMainContent("login"); });
 	//$("a").click(function() { loadDummyContent("beachlist"); });
 	//$("#find a").click(function() { loadMainContent(""); });

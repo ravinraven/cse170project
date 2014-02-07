@@ -12,8 +12,6 @@ body{
 .container{
 	width:400px;
 }
-#title{
-}
 .botton{
 	margin:10px 0;
 	font-size:40px;
@@ -26,7 +24,6 @@ body{
 
 	background: #00C9AD;/*default background color for bottons*/
 }
-
 #tagline{
 	font-size: 26px;
 	text-align: right;

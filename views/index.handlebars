@@ -3,6 +3,7 @@
 <head>
 	<title>Beach Bum</title>
 	<meta charset="utf-8">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -30,16 +31,8 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/beachbum.js"></script>
 <script>
-function loadMainContent( pagename ){
-   //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
-	$( ".container" ).load( pagename , function( response, status, xhr ) {
-		if ( status == "error" ) {
-		var msg = "Sorry but there was an error: ";
-		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-	} });
-}
-
 $( document ).ready(function() {
 	$("#login a").click(function() { loadMainContent("login"); });
 	$("#find a").click(function() { loadMainContent("beachlist"); });
