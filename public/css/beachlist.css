@@ -14,7 +14,7 @@ body{
 	margin-right: 5px;
 	width:195px;
 }
-.fbotton{
+.fbutton{
 	width: 400px;
 	margin:10px 0;
 	font-size:40px;
@@ -23,8 +23,7 @@ body{
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 65px; /* height for all three bottons on front page*/
+  	height: 65px; /* height for all three buttons on front page*/
 	width: 400px; /*width of the buttons*/
-	background: #F0DE62;/*default background color for bottons*/
-
+	background: #F0DE62;/*default background color for buttons*/
 }
