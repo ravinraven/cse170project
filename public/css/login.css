@@ -3,17 +3,6 @@
  *
  *
  */
-body{
-	position: relative;
-    width: 100%;
-    display: block;
-    background: white;/* background color of app*/
-}
-.container{
-	width:400px;
-}
-#title{
-}
 .p{
 	margin:10px 0;
 	font-size:40px;
@@ -53,16 +42,3 @@ a:hover{text-decoration: none;}
 a:link {text-decoration: none}
 a:visited {text-decoration: none}
 a:active {text-decoration: none}
-
-
-/*font for app*/
-@font-face
-{
-font-family: myFirstFont;
-src: url(/fonts/talldark.ttf);
-}
-
-div
-{
-font-family: myFirstFont;
-}
