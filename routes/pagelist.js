@@ -11,6 +11,7 @@ exports.viewbeach = function(req, res) { 
 };
 
 exports.viewdummy = function(req, res) { 
+	console.log("ajax called dummy");
   var name = req.params.name; 
   res.render('dummy');
   // controller code goes here 

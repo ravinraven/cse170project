@@ -33,7 +33,6 @@
 <script src="/js/bootstrap.min.js"></script>
 <script>
 function loadMainContent( pagename ){
-	console.log("ajax called on this one");
    //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
 	$( ".container" ).load( pagename , function( response, status, xhr ) {
 		if ( status == "error" ) {
@@ -45,6 +44,7 @@ function loadMainContent( pagename ){
 $( document ).ready(function() {
 	$("#login a").click(function() { loadMainContent("login"); });
 	$("#find a").click(function() { loadMainContent("beachlist"); });
+	$("#sign a").click(function() { loadMainContent("/dummy"); });
 	//$("#find a").click(function() { loadMainContent(""); });
 });
 </script>
