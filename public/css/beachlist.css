@@ -1,3 +1,4 @@
+
 #blist{
 	background: 00C9AD;
 	text-decoration: none;
@@ -6,4 +7,50 @@
 li{
 	height:60px;
 	width: 300px;
+}
+
+.container{
+	width:400px;
+}
+
+#login{
+	margin-right: 5px;
+	width:195px;
+}
+
+.fbotton{
+	margin:10px 0;
+	font-size:20px;
+	color:#fff; /* center font color*/
+	text-align: center;
+	-moz-border-radius: 12px; /* FF1+ */
+	-webkit-border-radius: 12px; /* Saf3-4 */
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+  	height: 60px; /* height for all three bottons on front page*/
+
+	background: #00C9AD;/*default background color for bottons*/
+}
+
+#LaJolla {
+	margin-right: 5px;
+	width:195px;
+}
+
+#Pacific {
+	margin-right: 5px;
+	width:195px;
+}
+#Coronado {
+	margin-right: 5px;
+	width:195px;
+}
+
+#Oceanside{
+	margin-right: 5px;
+	width:195px;
+}
+
+#MissionBay{
+	margin-right: 5px;
+	width:195px;
 }
