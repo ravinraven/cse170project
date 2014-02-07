@@ -15,12 +15,14 @@
 
 <!-- where I started my coding -->
 	<body>
-		<h2> WELCOME TO BEACH BUM </h2>
+		
+		<div class="container"> 
+		<div class="botton" id="back"> <a href="#"> Back </a> </div>
 
 		<form id="myForm" action="form_action.asp">
-		<p><strong> USERNAME: </stong> 
+		<p><strong id="username"> USERNAME: </stong> 
 			<input type="text" name="fname"> <br><br> </p>
-		<p><strong> PASSWORD: </strong> 
+		<p><strong id="password"> PASSWORD: </strong> 
 			<input type="text" name="Iname"><br><br> </p>
 		<input type="button" onclick="myFunction()" value="LOGIN">
 
@@ -31,8 +33,11 @@
 		}
 		</script>
 		
+		
 		<!-- not sure how to get the facebook login button to work :( 
 		but here's the site I found thats useful: 
 		https://developers.facebook.com/docs/facebook-login/login-flow-for-web/) -->
+	
+	</div>
 	</body>
 </html>
