@@ -15,10 +15,14 @@
 		</div><div class="form-group">
 	<p><strong id="password"> PASSWORD: </strong> 
 		<input class="form-control" type="text" name="Iname"><br><br> </p></div>
-	<button class="btn btn-default" type="button" onclick="myFunction()">LOGIN</button>
+	<button class="btn btn-default" type="button" onclick="submitForm()">LOGIN</button>
 	</form>
 
 <script>
+
+function submitForm(){
+	loadMainContent("/dummy");
+}
 $(document).ready( function(){ 
 $("#back a").click(function() { window.location.href="/"; });
 
