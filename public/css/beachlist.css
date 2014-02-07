@@ -1,13 +1,27 @@
+
+#blist{
+	background: 00C9AD;
+	text-decoration: none;
+}
+
+li{
+	height:60px;
+	width: 300px;
+}
+
 .container{
 	width:400px;
+<<<<<<< HEAD
 	background-color: #00C9AD;
+=======
+	background-color: #00c9AD;
+>>>>>>> ecae1357400ad82727a137961c4af4242e8e8ad5
 }
 
 #login{
 	margin-right: 5px;
 	width:195px;
 }
-
 .fbotton{
 	margin:10px 0;
 	font-size:35px;
@@ -16,8 +30,12 @@
 	-moz-border-radius: 14px; /* FF1+ */
 	-webkit-border-radius: 14px; /* Saf3-4 */
   	border-radius: 14px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+<<<<<<< HEAD
   	height: 60px; /* height for all three bottons on beach page*/
 
+=======
+  	height: 60px; /* height for all three bottons on front page*/
+>>>>>>> ecae1357400ad82727a137961c4af4242e8e8ad5
 	background: #F0DE62;/*default background color for bottons*/
 }
 
@@ -44,5 +62,3 @@
 	margin-right: 5px;
 	width:195px;
 }
-
-

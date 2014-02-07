@@ -1,24 +1,21 @@
-<link href="/css/beachlist.css" rel="stylesheet">
+<!-- link href="/css/beachlist.css" rel="stylesheet" -->
 
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-
-
-<div class="container">
+<div class="button" id="blist">	
 	<ul>
-		<li class="fbotton" id="LaJolla"><a href="#"> La Jolla Shores </a></li>
-		<li class="fbotton" id="Oceanside"><a href="#"> Oceanside Beach </a></li>
-		<li class="fbotton" id="Pacific"><a href="#"> Pacific Beach </a></li>
-		<li class="fbotton" id="Coronado"><a href="#"> Coronado Beach </a></li>
-		<li class="fbotton" id="MissionBay"><a href="#"> Mission Bay </a></li>
+		<li class="fbotton" id="LaJolla"><a href="#"> La Jolla Shores </a> </li>
+		<li class="fbotton" id="Oceanside"> <a href="#"> Oceanside Beach </a> </li>
+		<li class="fbotton" id="Pacific"> <a href="#"> Pacific Beach </a> </li>
+		<li class="fbotton" id="Coronado"> <a href="#"> Coronado Beach </a> </li>
+		<li class="fbotton" id="MissionBay"> <a href="#">Mission Bay</a> </li>
 	</ul>
 </div>
 
 
-
 <script type="text/javascript">
-function loadDummyContent(){
-	console.log("ajax called dummy");
+	
+console.log("ajax called dummy");
+function loadDummyContent( pagename ){
+	console.log("ajax called on this one");
    //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
 	$( ".container" ).load( "/dummy" , function( response, status, xhr ) {
 		if ( status == "error" ) {
@@ -28,6 +25,9 @@ function loadDummyContent(){
 }
 
 $( document ).ready(function() {
-	$("li a").click(function() { loadContent(); });
+	$("a").click( function(){ loadDummyContent("dummy") })
+	//$("#login a").click(function() { loadMainContent("login"); });
+	//$("a").click(function() { loadDummyContent("beachlist"); });
+	//$("#find a").click(function() { loadMainContent(""); });
 });
-</script>>
+</script>
