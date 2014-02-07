@@ -17,7 +17,7 @@ body{
 .botton{
 	margin:10px 0;
 	font-size:40px;
-	color:#fff; /* center font color*/
+	color:#000000; /* center font color*/
 	text-align: center;
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
