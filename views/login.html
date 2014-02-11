@@ -1,10 +1,3 @@
-<div id="form">
-<!-- div class="button" id="fb" -->
-
-</div>
-<div id="fb-root"></div>
-
-</div>
 <link href="/css/login.css" rel="stylesheet">
 <!-- where I started my coding -->	
 	<div class="button" id="back"> <a href="#">Back</a></div>
@@ -20,12 +13,9 @@
 
 <script>
 
-function submitForm(){
-	loadMainContent("/dummy");
-}
-$(document).ready( function(){ 
+function submitForm(){loadMainContent("/dummy");}
+$(document).ready( function(){
 $("#back a").click(function() { window.location.href="/"; });
-
 });
 
 function myFunction(){

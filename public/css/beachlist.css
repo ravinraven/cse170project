@@ -27,3 +27,15 @@ body{
 	width: 400px; /*width of the buttons*/
 	background: #F0DE62;/*default background color for buttons*/
 }
+li img{
+	/**/
+	margin-right:20px;
+	margin-top:5px;
+	width:57px;
+	height:57px;
+	float:right;
+}
+a{
+	width:300px;
+	float:left;
+}
