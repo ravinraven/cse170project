@@ -5,7 +5,7 @@
 		<li class="fbutton" id="back"><a href="#"> Back </a> </li>
 		<li class="fbutton" id="LaJolla"><div><a href="#">La Jolla Shores </a><img src="/images/sunny.png"></div></li>
 		<li class="fbutton" id="Oceanside"><div><a href="#"> Oceanside Beach</a><img src="/images/fog1.png"></div></li>
-		<li class="fbutton" id="Pacific"><div><a href="#"> Pacific Beach</a><img src="/images/fog1.png"></div></li>
+		<li class="fbutton" id="pb"><div><a href="#"> Pacific Beach</a><img src="/images/fog1.png"></div></li>
 		<li class="fbutton" id="Coronado"><div><a href="#"> Coronado Beach</a><img src="/images/cloud2.png"></div></li>
 		<li class="fbutton" id="MissionBay"><div><a href="#">Mission Bay</a><img src="/images/sunny.png"></div></li>
 	</ul>
@@ -27,5 +27,6 @@ function loadDummyContent( pagename ){
 $( document ).ready(function() {
 	$("a").click( function(){ loadDummyContent("dummy") })
 	$("#back a").click(function() { window.location.href="/"; });
+	$("#pb a").click( function(){ loadMainContent("pb") });
 });
 </script>
