@@ -15,7 +15,6 @@ body{
 	width:195px;
 }
 .fbutton{
-	width: 400px;
 	margin:10px 0;
 	font-size:40px;
 	color:black; /* center font color*/
@@ -27,6 +26,14 @@ body{
 	width: 400px; /*width of the buttons*/
 	background: #F0DE62;/*default background color for buttons*/
 }
+#back{
+	text-align: left;
+	padding-left: 90px;
+	font-size: 20px;
+	width: 200px;
+	height: 30px;
+}
+
 li img{
 	/**/
 	margin-right:20px;
