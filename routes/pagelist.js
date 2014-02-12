@@ -29,4 +29,8 @@ exports.viewHome = function(req, res) { 
   // controller code goes here 
 };
 
-
+exports.viewob = function(req, res) { 
+  var name = req.params.name; 
+  res.render('ob');
+  // controller code goes here 
+};
