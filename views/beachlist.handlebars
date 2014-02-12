@@ -2,18 +2,17 @@
 
 <div class="button" id="blist">	
 	<ul>
-		<li class="button" id="back"><a href="#">Back</a></li>
-		<li class="button" id="LaJolla"><div><a href="#">La Jolla Shores </a><img src="/images/sunny.png"></div></li>
-		<li class="button" id="Oceanside"><div><a href="#"> Oceanside Beach</a><img src="/images/fog1.png"></div></li>
-		<li class="button" id="pb"><div><a href="#"> Pacific Beach</a><img src="/images/fog1.png"></div></li>
-		<li class="button" id="Coronado"><div><a href="#"> Coronado Beach</a><img src="/images/cloud2.png"></div></li>
-		<li class="button" id="MissionBay"><div><a href="#">Mission Bay</a><img src="/images/sunny.png"></div></li>
+		<li><div class="button" id="back"><a href="#">Back</a></div></li>
+		<li><div class="button" id="LaJolla"><a href="#">La Jolla Shores </a><img src="/images/sunny.png"></div></li>
+		<li><div class="button" id="Oceanside"><a href="#"> Oceanside Beach</a><img src="/images/fog1.png"></div></li>
+		<li><div class="button" id="pb"><a href="#"> Pacific Beach</a><img src="/images/fog1.png"></div></li>
+		<li><div class="button" id="Coronado"><a href="#"> Coronado Beach</a><img src="/images/cloud2.png"></div></li>
+		<li><div class="button" id="MissionBay"><a href="#">Mission Bay</a><img src="/images/sunny.png"></div></li>
 	</ul>
 </div>
 
 
 <script type="text/javascript">
-console.log("ajax called dummy");
 function loadDummyContent( pagename ){
    //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
 	$( ".container" ).load( "/dummy" , function( response, status, xhr ) {
