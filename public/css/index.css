@@ -9,51 +9,46 @@ body{
     display: block;
     background: white;/* background color of app*/
 }
+
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
 .container{ /* main screen size*/
 	width:480px;
-}
-}
+}}
 
 /* #### Mobile Phones Landscape #### */
 @media screen and (max-device-width: 640px) and (orientation: landscape){
 .container{ /* main screen size*/
 	width:640px;
-}
-}
+}}
 
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px){
 .container{ /* main screen size*/
 	width:640px;
-}
-}
+}}
 
 /* #### iPhone 4+ Portrait or Landscape #### */
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
 .container{ /* main screen size*/
-	width:4800px;
-}
-}
+	width:480px;
+}}
 
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
  .container{ /* main screen size*/
-	width:768px;
-}
-}
+	/*width:768px;*/
+	width:400px; /*standard width*/
+}}
 
 /* #### Desktops #### */
-@media screen and (min-width: 1024px){
+@media screen{
 .container{ /* main screen size*/
 	width:400px;
-}
-}
-
+}}
 
 .button{
-	margin:10px 0;
+	margin:5px 0;
 	font-size:40px;
 	color:#000000; /* center font color*/
 	text-align: center;
@@ -115,10 +110,5 @@ a:active {text-decoration: none}
 
 
 /*font for app*/
-@font-face{
-font-family: myFirstFont;
-src: url(/fonts/talldark.ttf);
-}
-div{
-font-family: myFirstFont;
-}
+@font-face{font-family: myFirstFont;src: url(/fonts/talldark.ttf);}
+div{font-family: myFirstFont;}

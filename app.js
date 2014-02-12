@@ -44,6 +44,7 @@ app.get('/login', pagelist.viewlog);
 app.get('/beachlist', pagelist.viewbeach);
 app.get('/dummy', pagelist.viewdummy);
 app.get('/pb', pagelist.viewpb);
+app.get('/ob', pagelist.viewob);
 
 // Example route
 // app.get('/users', user.list);

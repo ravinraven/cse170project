@@ -22,3 +22,10 @@ exports.viewpb = function(req, res) { 
   res.render('pb');
   // controller code goes here 
 };
+
+
+exports.viewob = function(req, res) { 
+  var name = req.params.name; 
+  res.render('ob');
+  // controller code goes here 
+};
