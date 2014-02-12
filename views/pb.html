@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title> Beach Bum </title>
+	<link href="/css/pb.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+<!--back button -->
+	<div class="button" id="pb">	
+		<div class="fbutton" id="back"><a href="#"> BACK </a></div>
+	</div>
+
+	<img id="weather" src="/images/sun-cloud-512.png" alt="weather logo"/> 
+	<p id="pagename"> PACIFIC BEACH </p>
+
+<!--login and help button at bottom-->
+	<div id="bottombuttons">
+	    <div class="button" id="login"><a href="#">LOGIN</a></div>
+	    <div class="button" id="help"><a href="#">HELP</a></div>
+	</div>
+
+
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		$("#back a").click(function() { window.location.href="/"; });
+		$("#login a").click( function(){ loadMainContent("LOGIN") });
+		$("#help a").click(function() { loadMainContent("HELP"); }); 
+		});
+	</script>
+
+</body>
+</html>
