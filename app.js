@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var project = require('./routes/project');
-var pagelist = require('./routes/pagelist');
+var pagelist = require('./routes/pagelist'); //every page should go to pagelist
 // Example route
 // var user = require('./routes/user');
 

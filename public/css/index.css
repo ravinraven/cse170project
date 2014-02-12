@@ -9,7 +9,7 @@ body{
     display: block;
     background: white;/* background color of app*/
 }
-.container{
+.container{ /* main screen size*/
 	width:400px;
 }
 .button{
@@ -21,7 +21,6 @@ body{
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three buttons on front page*/
-
 	background: #00C9AD;/*default background color for buttons*/
 }
 #tagline{
@@ -76,13 +75,10 @@ a:active {text-decoration: none}
 
 
 /*font for app*/
-@font-face
-{
+@font-face{
 font-family: myFirstFont;
 src: url(/fonts/talldark.ttf);
 }
-
-div
-{
+div{
 font-family: myFirstFont;
 }
