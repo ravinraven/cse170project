@@ -5,11 +5,11 @@
 #back {
 	height:30px;
 	background-color: #FFFFFF
-	
+
 }
 
 #blist{
-	background: #00C9AD;
+	background-image: /images/purtywood.png;
 }
 ul {
 	padding-left:0px;
@@ -22,6 +22,7 @@ body{
 }
 .button{
 	width: 100%; /*width of the buttons*/
+	background-image: /images/purtywood.png;
 	background: #F0DE62;/*default background color for buttons*/
 }
 /*
