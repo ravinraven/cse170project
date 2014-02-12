@@ -1,14 +1,9 @@
 .navbar{
 
 }
-#back {
-	height:30px;
-	background-color: #FFFFFF
-
-}
 
 #blist{
-	background-image: /images/purtywood.png;
+	background: #00C9AD;
 }
 ul {
 	padding-left:0px;
@@ -21,22 +16,22 @@ body{
 }
 .button{
 	width: 100%; /*width of the buttons*/
-	background-image: /images/purtywood.png;
 	background: #F0DE62;/*default background color for buttons*/
+	/*background-image: url('/images/purtywood.png'); */
 }
-/*
+
 #back{
 	display:block;
 	text-align: left;
 	padding-left: 90px;
 	font-size: 20px;
-	width: 200px;
+	width: 150px;
 	height: 30px;
 }
 #back a{
 	display:block;
 }
-*/
+
 
 li img{
 	/* left over 25% width*/
