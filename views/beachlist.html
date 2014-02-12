@@ -1,14 +1,30 @@
 <!-- link href="/css/beachlist.css" rel="stylesheet" -->
+<link href="/css/beachlist.css" rel="stylesheet">
+
+<!-- Is this how you code a back button? -Ash -->
+<div>
+	<script>
+	function goBack()
+  		{
+  	window.history.back()
+  		}
+	</script>
+
+	<body>
+	<button onclick="goBack()" class="navbar" id="back">Back</button>
+	</body>
+</div>
 
 <div class="button" id="blist">	
 	<ul>
-		<li class="fbotton" id="LaJolla"><a href="#">La Jolla Shores</a><img src="/images/sunny.png"></li>
-		<li class="fbotton" id="Oceanside"> <a href="#">Oceanside Beach</a></li>
-		<li class="fbotton" id="Pacific"> <a href="#">Pacific Beach</a></li>
-		<li class="fbotton" id="Coronado"> <a href="#">Coronado Beach</a></li>
-		<li class="fbotton" id="MissionBay"> <a href="#">Mission Bay</a></li>
+		<li><div class="button" id="LaJolla"><a href="#">La Jolla Shores </a><img src="/images/sun.png"></div></li>
+		<li><div class="button" id="Oceanside"><a href="#"> Oceanside Beach</a><img src="/images/overcast.png"></div></li>
+		<li><div class="button" id="pb"><a href="#"> Pacific Beach</a><img src="/images/sun.png"></div></li>
+		<li><div class="button" id="Coronado"><a href="#"> Coronado Beach</a><img src="/images/sunclouds1.png"></div></li>
+		<li><div class="button" id="MissionBay"><a href="#">Mission Bay</a><img src="/images/rain.png"></div></li>
 	</ul>
 </div>
+
 
 
 <script type="text/javascript">

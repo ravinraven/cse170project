@@ -1,41 +1,57 @@
+.navbar{
+
+}
+
+#back {
+	height:30px;
+	background-color: #FFFFFF
+
+}
+
 #blist{
-	background: #00C9AD;
-	text-decoration: none;
+	background-image: /images/purtywood.png;
+}
+ul {
+	padding-left:0px;
 }
 li{
-	height:60px;
 	list-style-type: none;
 }
 body{
-	background-color: #00c9AD;
+	background-color: #00C9AD;
 }
-
-#login{
-	margin-right: 5px;
-	width:195px;
-}
-.fbutton{
-	width: 400px;
-	margin:10px 0;
-	font-size:40px;
-	color:black; /* center font color*/
-	text-align: center;
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 65px; /* height for all three buttons on front page*/
-	width: 400px; /*width of the buttons*/
+.button{
+	width: 100%; /*width of the buttons*/
+	background-image: /images/purtywood.png;
 	background: #F0DE62;/*default background color for buttons*/
 }
+/*
+#back{
+	display:block;
+	text-align: left;
+	padding-left: 90px;
+	font-size: 20px;
+	width: 200px;
+	height: 30px;
+}
+#back a{
+	display:block;
+}
+*/
+
 li img{
-	/**/
-	margin-right:20px;
-	margin-top:5px;
-	width:57px;
-	height:57px;
+	/* left over 25% width*/
+	margin-right:25px;
+	margin-top:2px;
+	width:55px;
+	height:55px;
 	float:right;
 }
+div{
+	display: block;
+}
 a{
-	width:300px;
+	display:block;
+	width:75%;
 	float:left;
 }
