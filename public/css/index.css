@@ -9,9 +9,49 @@ body{
     display: block;
     background: white;/* background color of app*/
 }
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+.container{ /* main screen size*/
+	width:480px;
+}
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+.container{ /* main screen size*/
+	width:640px;
+}
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+.container{ /* main screen size*/
+	width:640px;
+}
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+.container{ /* main screen size*/
+	width:4800px;
+}
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+ .container{ /* main screen size*/
+	width:768px;
+}
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px){
 .container{ /* main screen size*/
 	width:400px;
 }
+}
+
+
 .button{
 	margin:10px 0;
 	font-size:40px;
@@ -48,23 +88,23 @@ background:#F0DE63; /*center circle color
 }
 */
 #buttonline{
-	width:400px;
+	width:100%;
 	clear:both;
 }
 #login{
-	margin-right: 5px;
-	width:195px;
+	margin-right: 1%;
+	width:49%;
 	float:left;
 }
 #sign{
-	margin-left: 5px;
-	width:195px;
+	margin-left: 1%;
+	width:49%;
 	float:right;
 	/*background:red; /*sign in background color*/
 }
 #find{
 	clear:both;
-	width:400px;
+	width:100%;
 	/*background:green; /*sign in background color*/
 }
 div a{display:block;}
