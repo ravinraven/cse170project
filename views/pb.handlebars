@@ -1,12 +1,14 @@
-<!doctype html>
-<html>
-<head>
-	<title> Beach Bum </title>
-	<link href="/public/css/pb.css" rel="stylesheet">
-</head>
+<link href="/public/css/pb.css" rel="stylesheet">
 
-<body>
-	<div class="container">
+<div class="beachcontent">
+
+<div class="sidebar">
+	
+</div>
+<div class="sbcontent">
+	
+</div>
+
 <!--back button -->
 	<div class="button" id="pb">	
 		<div class="fbutton" id="back"><a href="#"> BACK </a></div>
@@ -21,14 +23,12 @@
 	    <div class="button" id="help"><a href="#">HELP</a></div>
 	</div>
 
+</div> <!-- end beach content -->
 
-	<script type="text/javascript">
-	$( document ).ready(function() {
-		$("#back a").click(function() { window.location.href="/"; });
-		$("#login a").click( function(){ loadMainContent("LOGIN") });
-		$("#help a").click(function() { loadMainContent("HELP"); }); 
-		});
-	</script>
-
-</body>
-</html>
+<script type="text/javascript">
+$( document ).ready(function() {
+	$("#back a").click(function() { window.location.href="/"; });
+	$("#login a").click( function(){ loadMainContent("LOGIN") });
+	$("#help a").click(function() { loadMainContent("HELP"); }); 
+	});
+</script>
