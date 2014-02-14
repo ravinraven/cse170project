@@ -34,6 +34,26 @@ exports.viewob = function(req, res) { 
   res.render('ob');
   // controller code goes here 
 };
+exports.viewmb = function(req, res) { 
+  var name = req.params.name; 
+  res.render('mb');
+  // controller code goes here 
+};
+exports.viewcb = function(req, res) { 
+  var name = req.params.name; 
+  res.render('cb');
+  // controller code goes here 
+};
+exports.viewljs = function(req, res) { 
+  var name = req.params.name; 
+  res.render('ljs');
+  // controller code goes here 
+};
+exports.viewob = function(req, res) { 
+  var name = req.params.name; 
+  res.render('ob');
+  // controller code goes here 
+};
 exports.viewsurf = function(req, res) { 
   var name = req.params.name; 
   var surf = require('../public/json/surf.json');
