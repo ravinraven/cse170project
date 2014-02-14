@@ -1,0 +1,87 @@
+<link href="/public/css/pb.css" rel="stylesheet">
+<link href="/css/pb.css" rel="stylesheet">
+
+<div class="beachcontent">
+<div class="headline">
+<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div></div>
+<div class="pagename">MISSION BEACH</div>
+
+<div style="clear:both;"></div>
+<div class="centercontent">
+<div class="sidebar">
+
+	<div class="tab"><div class="iconname" id="home"><a href='#'>HOME</a></div><img src="/images/homeicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="surf"><a href='#'>SURF</a></div><img src="/images/surficon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="map"><a href='#'>MAP</a></div><img src="/images/mapicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="activity"><a href='#'>ACTIVITY</a></div><img src="/images/activityicon2.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="crowd"><a href='#'>CROWD</a></div><img src="/images/crowdicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="alert"><a href='#'>ALERT</a></div><img src="/images/alerticon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div>
+</div>
+<div style="clear:both;"></div>
+<div class="sbcontent">
+	<img id="weather" src="/images/sun-cloud-512.png" alt="weather logo"/> 
+</div>
+</div><!-- end center content -->
+<div style="clear:both;"></div>
+</div> <!-- end beach content -->
+
+<script type="text/javascript">
+//prototypes and declarations
+var expansion = 0;
+function allShow(){
+$("#home").show();
+$("#surf").show();
+$("#map").show();
+$("#activity").show();
+$("#crowd").show();
+$("#alert").show();
+$("#help").show();
+}
+function allHide(){
+$("#home").hide();
+$("#surf").hide();
+$("#map").hide();
+$("#activity").hide();
+$("#crowd").hide();
+$("#alert").hide();
+$("#help").hide();
+}
+
+//may not work with different type of browsers
+function expandSidebar(){
+	console.log("clickable");
+	if(expansion == 0){
+	$(".sidebar").css({animation: "slideout 1s", width:'150px'});
+	window.setTimeout('allShow()', 800);
+	$(".sbcontent").css({"z-index":'-1'});
+	expansion = 1;
+	}else{
+	allHide();
+	$(".sidebar").css({animation: "slidein 1s"});
+	window.setTimeout(function(){$(".sidebar").css({width:'50px'});}, 1000);
+	$(".sbcontent").css({ "z-index":"1"});
+	expansion = 0;
+	}
+}
+
+function loadBeachContent(content){
+//var src = $( "#weather" ).attr("src").replace("sun-cloud-512.png", "pbsurf.png");
+//$("#weather").attr("src", src);
+
+	$(".sbcontent").load( "/"+content , function( response, status, xhr ) {
+	if ( status == "error" ) {
+	var msg = "Sorry but there was an error: ";
+	$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+}});
+}
+allHide(); //call default
+
+$( document ).ready(function() {
+	$(".sidebar").click( function(){ expandSidebar(); } );
+	$(".arrow a").click(function() { loadMainContent("beachlist") });
+	$("#surf").click(function(){loadBeachContent("surf") });
+	$("#login a").click( function(){ loadMainContent("LOGIN") });
+	$("#help a").click(function() { loadMainContent("HELP"); }); 
+	});
+</script>
