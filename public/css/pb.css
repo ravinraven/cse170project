@@ -20,7 +20,6 @@ body{
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three buttons on front page*/
-
 	background: #00C9AD;/*default background color for buttons*/
 }
 
@@ -30,6 +29,14 @@ a{
 }
 
 /*///////////////////////////*/
+@keyframes slideout{
+from {width:50px;}
+to {width:150px;}
+}
+@keyframes slidein{
+from {width:150px;}
+to {width:50px;}
+}
 .icon{
 	width:50px;
 	height:50px;
@@ -38,6 +45,7 @@ a{
 .iconname{
 	float:left;
 	font-size: 30px;
+	margin-left:30px;
 }
 
 .sbcontent{
@@ -52,6 +60,9 @@ a{
 	position:absolute;
 	float:left;
 	z-index: 2;
+	-moz-border-radius: 12px; /* FF1+ */
+	-webkit-border-radius: 12px; /* Saf3-4 */
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
 }
 .beachcontent{
 	clear:both;
