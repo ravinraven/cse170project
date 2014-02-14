@@ -36,14 +36,14 @@ console.log(result);
 }
 
 $( document ).ready(function() {
-	$("#pb a").click( function(){ //loadMainContent("pb") });
-	 loadWeather()});
+	$("#pb a").click( function(){ loadMainContent("beach/PacificBeach") });
+	 //loadWeather()});
 	//$("a").click( function(){ loadDummyContent("dummy") })
 	$("#back a").click(function() { window.location.href="/"; });
-	$("#Oceanside a").click( function(){ loadMainContent("ob") });
-	$("#MissionBay a").click( function(){ loadMainContent("mb") });
-	$("#Coronado a").click( function(){ loadMainContent("cb") });
-	$("#LaJolla a").click( function(){ loadMainContent("ljs") });
+	$("#Oceanside a").click( function(){ loadMainContent("beach/Oceanside") });
+	$("#MissionBay a").click( function(){ loadMainContent("beach/MissionBay") });
+	$("#Coronado a").click( function(){ loadMainContent("beach/Coronado") });
+	$("#LaJolla a").click( function(){ loadMainContent("beach/LaJolla") });
 	
 });
 </script>

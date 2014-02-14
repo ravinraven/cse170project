@@ -41,12 +41,12 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
 app.get('/login', pagelist.viewlog);
-app.get('/beachlist', pagelist.viewbeach);
+app.get('/beachlist', pagelist.viewbeachlist);
 app.get('/dummy', pagelist.viewdummy);
 app.get('/pb', pagelist.viewpb);
 app.get('/Home', pagelist.viewHome);
 app.get('/ob', pagelist.viewob);
-app.get('/ljs', pagelist.viewljs);
+app.get('/beach/:name', pagelist.viewbeach);
 app.get('/mb', pagelist.viewmb);
 app.get('/cb', pagelist.viewcb);
 app.get('/surf', pagelist.viewsurf);

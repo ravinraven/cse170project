@@ -4,7 +4,7 @@ exports.viewlog = function(req, res) { 
   // controller code goes here 
 };
 
-exports.viewbeach = function(req, res) { 
+exports.viewbeachlist = function(req, res) { 
   var name = req.params.name; 
   res.render('beachlist');
   // controller code goes here 
@@ -17,38 +17,32 @@ exports.viewdummy = function(req, res) { 
   // controller code goes here 
 };
 
-exports.viewpb = function(req, res) { 
-  var name = req.params.name; 
-  res.render('pb');
-  // controller code goes here 
-};
-
 exports.viewHome = function(req, res) { 
   var name = req.params.name; 
   res.render('Home');
   // controller code goes here 
 };
 
-exports.viewob = function(req, res) { 
+exports.viewbeach = function(req, res) { 
   var name = req.params.name; 
-  res.render('ob');
+  var beachname;
+  if(name == "LaJolla")
+    beachname = "La Jolla Shores";
+  else if(name == "Oceanside")
+    beachname = "Oceanside";
+  else if(name == "PacificBeach")
+    beachname = "Pacific Beach";
+  else if(name == "Coronado")
+    beachname = "Coronado";
+  else if(name == "MissionBay")
+    beachname = "Mission Bay";
+
+  //create sture for data
+  var jsondata = { "beachname": beachname }
+  res.render('beach', jsondata);
   // controller code goes here 
 };
-exports.viewmb = function(req, res) { 
-  var name = req.params.name; 
-  res.render('mb');
-  // controller code goes here 
-};
-exports.viewcb = function(req, res) { 
-  var name = req.params.name; 
-  res.render('cb');
-  // controller code goes here 
-};
-exports.viewljs = function(req, res) { 
-  var name = req.params.name; 
-  res.render('ljs');
-  // controller code goes here 
-};
+
 exports.viewsurf = function(req, res) { 
   var name = req.params.name; 
   var surf = require('../public/json/surf.json');
