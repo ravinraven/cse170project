@@ -11,9 +11,6 @@
 	</ul>
 </div>
 
-
-
-
 <script type="text/javascript">
 function loadDummyContent( pagename ){
    //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
@@ -25,9 +22,9 @@ function loadDummyContent( pagename ){
 }
 
 $( document ).ready(function() {
-	$("a").click( function(){ loadDummyContent("dummy") })
-	$("#back a").click(function() { window.location.href="/"; });
 	$("#pb a").click( function(){ loadMainContent("pb") });
+	//$("a").click( function(){ loadDummyContent("dummy") })
+	$("#back a").click(function() { window.location.href="/"; });
 	$("#Oceanside a").click( function(){ loadMainContent("ob") });
 });
 </script>

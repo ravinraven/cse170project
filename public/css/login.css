@@ -6,19 +6,6 @@
 body{
 	background: #00c9AD;
 }
-.button{
-	width: 400px;
-	margin:10px 0;
-	font-size:40px;
-	color:black; /* center font color*/
-	text-align: center;
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 65px; /* height for all three buttons on front page*/
-	width: 400px; /*width of the buttons*/
-	background: #F0DE62;/*default background color for buttons*/
-}
 div a{display:block;}
 a:hover{text-decoration: none;}
 a:link {text-decoration: none}

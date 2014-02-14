@@ -1,21 +1,16 @@
-.container{
-	width: 400px;
-}
-
-
-#pb{
+body{
 	background: #00C9AD;
 	text-decoration: none;
 }
-
 #pagename{
 	font-size: 45px;
 	text-align: center;
 }
 #weather{
+	position:relative;
 	width: 100%;
+	z-index: -10;
 }
-
 .button{
 	margin:10px 0;
 	font-size:40px;
@@ -25,42 +20,55 @@
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 60px; /* height for all three buttons on front page*/
-
 	background: #00C9AD;/*default background color for buttons*/
-}
-
-.fbutton{
-	width: 400px;
-	margin:10px 0;
-	font-size:40px;
-	color:black; /* center font color*/
-	text-align: center;
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-  	height: 65px; /* height for all three buttons on front page*/
-	width: 400px; /*width of the buttons*/
-	background: #F0DE62;/*default background color for buttons*/
-}
-
-#bottombuttons {
-	width: 400px;
-	clear: both;
-}
-
-#login{
-	margin-right: 5px;
-	width:195px;
-	float:left;
-}
-
-#help{
-	margin-left: 5px;
-	width:195px;
-	float:right;
 }
 
 a{
 	width:300px;
 	float:left;
+}
+
+/*///////////////////////////*/
+@keyframes slideout{
+from {width:50px;}
+to {width:150px;}
+}
+@keyframes slidein{
+from {width:150px;}
+to {width:50px;}
+}
+.icon{
+	width:50px;
+	height:50px;
+	float:right;
+}
+.iconname{
+	float:left;
+	font-size: 30px;
+	margin-left:30px;
+}
+
+.sbcontent{
+	position:relative;
+	width:300px;
+	height:300px;
+	float:right;
+	z-index: 2;
+}
+.sidebar{
+	background: #00C9AD;
+	position:absolute;
+	float:left;
+	z-index: 2;
+	-moz-border-radius: 12px; /* FF1+ */
+	-webkit-border-radius: 12px; /* Saf3-4 */
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+}
+.beachcontent{
+	clear:both;
+}
+
+.tab{
+	clear:both;
+	width:100%;
 }
