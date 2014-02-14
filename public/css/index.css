@@ -8,6 +8,7 @@ body{
     width: 100%;
     display: block;
     background: white;/* background color of app*/
+    /*background-image: url('/images/bg.jpg');*/
 }
 
 /* #### Mobile Phones Portrait #### */
