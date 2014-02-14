@@ -1,8 +1,9 @@
-<link href="/css/pb.css" rel="stylesheet">
+<link href="/css/beach.css" rel="stylesheet">
 
 <div class="beachcontent">
 <div class="headline">
-<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename">{{beachname}}</div></div>
+<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename">{{beachname}}</div>
+<div class="home"><a href="#"><img src="/images/homeicon.png"></a></div></div>
 
 <div style="clear:both;"></div>
 <div class="centercontent">
@@ -83,8 +84,9 @@ allHide(); //call default
 $( document ).ready(function() {
 	$(".sidebar").click( function(){ expandSidebar(); } );
 	$(".arrow a").click(function() { loadMainContent("beachlist") });
+	$(".home a").click(function() { window.location.href="/"; });
 	$("#surf").click(function(){loadBeachContent("ljssurf.png") });
-	$("#home").click(function(){loadBeachContent("ljsmain.png") });
+	$("#weather").click(function(){loadBeachContent("ljsmain.png") });
 	$("#crowd").click(function(){loadBeachContent("crowd.png") });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 
