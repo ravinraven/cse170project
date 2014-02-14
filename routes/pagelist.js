@@ -34,3 +34,9 @@ exports.viewob = function(req, res) { 
   res.render('ob');
   // controller code goes here 
 };
+exports.viewsurf = function(req, res) { 
+  var name = req.params.name; 
+  var surf = require('../public/json/surf.json');
+  res.render('surf', surf);
+  // controller code goes here 
+};

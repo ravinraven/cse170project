@@ -46,6 +46,7 @@ app.get('/dummy', pagelist.viewdummy);
 app.get('/pb', pagelist.viewpb);
 app.get('/Home', pagelist.viewHome);
 app.get('/ob', pagelist.viewob);
+app.get('/surf', pagelist.viewsurf);
 
 
 // Example route

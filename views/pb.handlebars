@@ -2,22 +2,24 @@
 <link href="/css/pb.css" rel="stylesheet">
 
 <div class="beachcontent">
-<div class="button" id="back"><a href="#">BACK</a></div>
-<p id="pagename"> PACIFIC BEACH </p>
+<div class="headline">
+<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename">PACIFIC BEACH</div></div>
 
+<div style="clear:both;"></div>
 <div class="sidebar">
 
-	<div class="tab"><div class="iconname" id="home">HOME</div><img src="/images/homeicon.png" class="icon"/></div>
-	<div class="tab"><div class="iconname" id="map">MAP</div><img src="/images/mapicon.png" class="icon"/></div>
-	<div class="tab"><div class="iconname" id="activity">ACTIVITY</div><img src="/images/activityicon2.png" class="icon"/></div>
-	<div class="tab"><div class="iconname" id="crowd">CROWD</div><img src="/images/crowdicon.png" class="icon"/></div>
-	<div class="tab"><div class="iconname" id="alert">ALERT</div><img src="/images/alerticon.png" class="icon"/></div>
-	<div class="tab"><div class="iconname" id="help">HELP</div><img src="/images/helpicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="home"><a href='#'>HOME</a></div><img src="/images/homeicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="surf"><a href='#'>SURF</a></div><img src="/images/surficon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="map"><a href='#'>MAP</a></div><img src="/images/mapicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="activity"><a href='#'>ACTIVITY</a></div><img src="/images/activityicon2.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="crowd"><a href='#'>CROWD</a></div><img src="/images/crowdicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="alert"><a href='#'>ALERT</a></div><img src="/images/alerticon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div>
 </div>
 <div class="sbcontent">
 	<img id="weather" src="/images/sun-cloud-512.png" alt="weather logo"/> 
 </div>
-
+<div style="clear:both;"></div>
 </div> <!-- end beach content -->
 
 <script type="text/javascript">
@@ -25,7 +27,7 @@
 var expansion = 0;
 function allShow(){
 $("#home").show();
-$("#home").show();
+$("#surf").show();
 $("#map").show();
 $("#activity").show();
 $("#crowd").show();
@@ -34,6 +36,7 @@ $("#help").show();
 }
 function allHide(){
 $("#home").hide();
+$("#surf").hide();
 $("#map").hide();
 $("#activity").hide();
 $("#crowd").hide();
@@ -58,11 +61,22 @@ function expandSidebar(){
 	}
 }
 
+function loadBeachContent(content){
+//var src = $( "#weather" ).attr("src").replace("sun-cloud-512.png", "pbsurf.png");
+//$("#weather").attr("src", src);
+
+	$(".sbcontent").load( "/"+content , function( response, status, xhr ) {
+	if ( status == "error" ) {
+	var msg = "Sorry but there was an error: ";
+	$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+}});
+}
 allHide(); //call default
 
 $( document ).ready(function() {
 	$(".sidebar").click( function(){ expandSidebar(); } );
 	$("#back a").click(function() { window.location.href="/"; });
+	$("#surf").click(function(){loadBeachContent("surf") });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 
 	});
