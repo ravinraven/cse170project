@@ -3,14 +3,12 @@
 
 <div class="beachcontent">
 <div class="headline">
-<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div></div>
-<div class="pagename">LA JOLLA SHORES</div>
+<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename">LA JOLLA SHORES</div></div>
 
 <div style="clear:both;"></div>
 <div class="centercontent">
 <div class="sidebar">
-
-	<div class="tab"><div class="iconname" id="home"><a href='#'>HOME</a></div><img src="/images/homeicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="weather"><a href='#'>WEATHER</a></div><img src="/images/weathericon.png" class="icon"/></div>
 	<div class="tab"><div class="iconname" id="surf"><a href='#'>SURF</a></div><img src="/images/surficon.png" class="icon"/></div>
 	<div class="tab"><div class="iconname" id="map"><a href='#'>MAP</a></div><img src="/images/mapicon.png" class="icon"/></div>
 	<div class="tab"><div class="iconname" id="activity"><a href='#'>ACTIVITY</a></div><img src="/images/activityicon2.png" class="icon"/></div>
@@ -20,7 +18,7 @@
 </div>
 <div style="clear:both;"></div>
 <div class="sbcontent">
-	<img id="weather" src="/images/ljsmain.png" alt="weather logo"/> 
+	<img id="weatherimg" src="/images/ljsmain.png" alt="weather logo"/> 
 </div>
 </div><!-- end center content -->
 <div style="clear:both;"></div>
@@ -29,8 +27,9 @@
 <script type="text/javascript">
 //prototypes and declarations
 var expansion = 0;
+var def = 1;
 function allShow(){
-$("#home").show();
+$("#weather").show();
 $("#surf").show();
 $("#map").show();
 $("#activity").show();
@@ -39,13 +38,28 @@ $("#alert").show();
 $("#help").show();
 }
 function allHide(){
-$("#home").hide();
+$("#weather").hide();
 $("#surf").hide();
 $("#map").hide();
 $("#activity").hide();
 $("#crowd").hide();
 $("#alert").hide();
 $("#help").hide();
+if(def)
+loadWeather();
+def=0;
+}
+
+function loadWeather(){
+	$( ".sbcontent" ).load( "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569" , 
+		function( response, status, xhr ) {
+		parseweather(response);
+		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
+		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+	} });
+}
+function parseweather(result){
+	console.log(result);
 }
 
 //may not work with different type of browsers

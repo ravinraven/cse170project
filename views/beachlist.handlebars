@@ -21,8 +21,23 @@ function loadDummyContent( pagename ){
 	} });
 }
 
+function loadWeather(){
+	$.get("http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569", parseweather);
+	$( ".container" ).load( "api.openweathermap.org/data/2.5/weather?lat=32.84&lon=-117.276944" , function( response, status, xhr ) {
+		console.log(response);
+		if ( status == "error" ) {
+		var msg = "Sorry but there was an error: ";
+		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+	} });
+}
+function parseweather( result ){
+console.log("ajax to weather");
+console.log(result);
+}
+
 $( document ).ready(function() {
-	$("#pb a").click( function(){ loadMainContent("pb") });
+	$("#pb a").click( function(){ //loadMainContent("pb") });
+	 loadWeather()});
 	//$("a").click( function(){ loadDummyContent("dummy") })
 	$("#back a").click(function() { window.location.href="/"; });
 	$("#Oceanside a").click( function(){ loadMainContent("ob") });

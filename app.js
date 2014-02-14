@@ -50,6 +50,7 @@ app.get('/ljs', pagelist.viewljs);
 app.get('/mb', pagelist.viewmb);
 app.get('/cb', pagelist.viewcb);
 app.get('/surf', pagelist.viewsurf);
+app.get('/weather', pagelist.viewweather);
 
 
 // Example route
