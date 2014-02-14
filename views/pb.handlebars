@@ -3,9 +3,11 @@
 
 <div class="beachcontent">
 <div class="headline">
-<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename">PACIFIC BEACH</div></div>
+<div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div></div>
+<div class="pagename">PACIFIC BEACH</div>
 
 <div style="clear:both;"></div>
+<div class="centercontent">
 <div class="sidebar">
 
 	<div class="tab"><div class="iconname" id="home"><a href='#'>HOME</a></div><img src="/images/homeicon.png" class="icon"/></div>
@@ -16,9 +18,11 @@
 	<div class="tab"><div class="iconname" id="alert"><a href='#'>ALERT</a></div><img src="/images/alerticon.png" class="icon"/></div>
 	<div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div>
 </div>
+<div style="clear:both;"></div>
 <div class="sbcontent">
 	<img id="weather" src="/images/sun-cloud-512.png" alt="weather logo"/> 
 </div>
+</div><!-- end center content -->
 <div style="clear:both;"></div>
 </div> <!-- end beach content -->
 
@@ -48,14 +52,14 @@ $("#help").hide();
 function expandSidebar(){
 	console.log("clickable");
 	if(expansion == 0){
-	$(".sidebar").css({animation: "slideout 1s", width:'150px', background:"white"});
+	$(".sidebar").css({animation: "slideout 1s", width:'150px'});
 	window.setTimeout('allShow()', 800);
 	$(".sbcontent").css({"z-index":'-1'});
 	expansion = 1;
 	}else{
 	allHide();
 	$(".sidebar").css({animation: "slidein 1s"});
-	window.setTimeout(function(){$(".sidebar").css({width:'50px', background:"#00C9AD"});}, 1000);
+	window.setTimeout(function(){$(".sidebar").css({width:'50px'});}, 1000);
 	$(".sbcontent").css({ "z-index":"1"});
 	expansion = 0;
 	}
