@@ -65,22 +65,12 @@ function expandSidebar(){
 	}
 }
 
-function loadBeachContent(content){
-//var src = $( "#weather" ).attr("src").replace("sun-cloud-512.png", "pbsurf.png");
-//$("#weather").attr("src", src);
-
-	$(".sbcontent").load( "/"+content , function( response, status, xhr ) {
-	if ( status == "error" ) {
-	var msg = "Sorry but there was an error: ";
-	$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-}});
-}
 allHide(); //call default
 
 $( document ).ready(function() {
 	$(".sidebar").click( function(){ expandSidebar(); } );
 	$(".arrow a").click(function() { loadMainContent("beachlist") });
-	$("#surf").click(function(){loadBeachContent("surf") });
+	$("#surf").click(function(){loadBeachContent("cbsurf") });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 
 	});

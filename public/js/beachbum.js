@@ -6,3 +6,7 @@ function loadMainContent( pagename ){
 		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
 	} });
 }
+function loadBeachContent(content){
+var src = "/images/" + content;
+$("#weather").attr("src", src);
+}
