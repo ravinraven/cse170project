@@ -1,32 +1,63 @@
 <link href="/public/css/pb.css" rel="stylesheet">
+<link href="/css/pb.css" rel="stylesheet">
 
 <div class="beachcontent">
+<div class="button" id="back"><a href="#">BACK</a></div>
+<p id="pagename"> PACIFIC BEACH </p>
 
 <div class="sidebar">
-	
+
+	<div class="tab"><div class="iconname" id="home">HOME</div><img src="/images/homeicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="map">MAP</div><img src="/images/mapicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="activity">ACTIVITY</div><img src="/images/activityicon2.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="crowd">CROWD</div><img src="/images/crowdicon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="alert">ALERT</div><img src="/images/alerticon.png" class="icon"/></div>
+	<div class="tab"><div class="iconname" id="help">HELP</div><img src="/images/helpicon.png" class="icon"/></div>
 </div>
 <div class="sbcontent">
-	
+	<img id="weather" src="/images/sun-cloud-512.png" alt="weather logo"/> 
 </div>
-
-<!--back button -->
-	<div class="button" id="pb">	
-		<div class="fbutton" id="back"><a href="#"> BACK </a></div>
-	</div>
-
-	<img id="weather" src="../public/images/sun-cloud-512.png" alt="weather logo"/> 
-	<p id="pagename"> PACIFIC BEACH </p>
-
-<!--login and help button at bottom-->
-	<div id="bottombuttons">
-	    <div class="button" id="login"><a href="#">LOGIN</a></div>
-	    <div class="button" id="help"><a href="#">HELP</a></div>
-	</div>
 
 </div> <!-- end beach content -->
 
 <script type="text/javascript">
+//default values
+var expansion = 0;
+$("#home").hide();
+$("#map").hide();
+$("#activity").hide();
+$("#crowd").hide();
+$("#alert").hide();
+$("#help").hide();
+
+function expandSidebar(){
+	console.log("clickable");
+	if(expansion == 0){
+	$("#home").show();
+	$("#home").show();
+	$("#map").show();
+	$("#activity").show();
+$("#crowd").show();
+$("#alert").show();
+$("#help").show();
+	$(".sidebar").css({width:'200px', background:"white"});
+	$(".sbcontent").css({"z-index":'-1',"position":"relative",});
+	expansion = 1;
+	}else{
+	$("#home").hide();
+	$("#map").hide();
+	$("#activity").hide();
+$("#crowd").hide();
+$("#alert").hide();
+$("#help").hide();
+	$(".sidebar").css({width:'50px', background:"#00C9AD"});
+	$(".sbcontent").css({"position":"relative", "z-index":"1"});
+	expansion = 0;
+	}
+}
+
 $( document ).ready(function() {
+	$(".sidebar").click( function(){ expandSidebar(); } );
 	$("#back a").click(function() { window.location.href="/"; });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 
