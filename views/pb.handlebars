@@ -79,7 +79,7 @@ allHide(); //call default
 
 $( document ).ready(function() {
 	$(".sidebar").click( function(){ expandSidebar(); } );
-	$("#back a").click(function() { window.location.href="/"; });
+	$(".arrow a").click(function() { loadMainContent("beachlist") });
 	$("#surf").click(function(){loadBeachContent("surf") });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 

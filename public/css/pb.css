@@ -71,9 +71,9 @@ to {width:50px;}
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
 }
 .beachcontent{
-	clear:both;
+	height: 100%;
 	background-image: url('/images/bg.jpg');
-    background-size:100% 100%;
+    background-size:cover;
     background-repeat:no-repeat;
 
 }
