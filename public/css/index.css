@@ -15,6 +15,11 @@ body{
     /*background-image: url('/images/bg.jpg');
     background-size:100% 100%;*/
 }
+/* #### Desktops #### */
+@media screen{
+.container{ /* main screen size*/
+	width:400px;
+}}
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
@@ -49,12 +54,6 @@ body{
  .container{ /* main screen size*/
 	/*width:768px;*/
 	width:100%; /*standard width*/
-}}
-
-/* #### Desktops #### */
-@media screen{
-.container{ /* main screen size*/
-	width:400px;
 }}
 
 .button{
