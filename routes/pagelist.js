@@ -53,6 +53,6 @@ exports.viewsurf = function(req, res) { 
 exports.viewweather = function(req, res) { 
   var name = req.params.name;  //name of location
   var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
-  res.render('surf', surf);
+  res.render('  surf', surf);
   // controller code goes here 
 };
