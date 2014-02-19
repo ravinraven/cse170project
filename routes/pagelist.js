@@ -38,7 +38,8 @@ exports.viewbeach = function(req, res) { 
     beachname = "Mission Bay";
 
   //create sture for data
-  var jsondata = { "beachname": beachname }
+  var jsondata = { "beachname": beachname,
+                "stringname":name }
   res.render('beach', jsondata);
   // controller code goes here 
 };

@@ -14,7 +14,7 @@
 	<div class="tab"><div class="iconname" id="activity"><a href='#'>ACTIVITY</a></div><img src="/images/activityicon2.png" class="img-responsive icon"/></div>
 	<div class="tab"><div class="iconname" id="crowd"><a href='#'>CROWD</a></div><img src="/images/crowdicon.png" class="img-responsive icon"/></div>
 	<!--div class="tab"><div class="iconname" id="alert"><a href='#'>ALERT</a></div><img src="/images/alerticon.png" class="icon"/></div-->
-	<!--div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div-->
+	<div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div>
 </div>
 <div style="clear:both;"></div>
 <div class="sbcontent">
@@ -51,7 +51,8 @@ def=0;
 }
 
 function loadWeather(){
-	$( ".sbcontent" ).load( "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569" , 
+	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
+	$( ".sbcontent" ).load( weatherRequest , "{{stringname}}",
 		function( response, status, xhr ) {
 		parseweather(response);
 		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
