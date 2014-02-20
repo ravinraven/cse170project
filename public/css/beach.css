@@ -1,3 +1,4 @@
+/*
 body{
 	background: #00C9AD;
 	text-decoration: none;
@@ -7,7 +8,7 @@ body{
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #87ceeb), color-stop(1, #0EEFE8));
 	background-image: -webkit-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
 	background-image: linear-gradient(to top, #87ceeb 0%, #0EEFE8 100%);
-}
+}*/
 .pagename{
 	display:inline-block;
 	width:50%;
@@ -30,6 +31,7 @@ body{
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
 	background: #F0DE62;/*default background color for buttons*/
+	background-image: url('/images/purtywood.png'); 
 }
 div a{
 	display: block;
@@ -65,6 +67,7 @@ to {width:50px;}
 	margin-left:0px;
 }
 .sbcontent{
+	line-height: 90%;
 	position:relative;
 	width:300px;
 	height:300px;
