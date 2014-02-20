@@ -50,46 +50,32 @@ loadWeather();
 def=0;
 }
 
-function loadWeather(){
-	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
-	$( ".sbcontent" ).load( "/weather" , "{{stringname}}",
-		function( response, status, xhr ) {
+
+function errorResponse ( response, status, xhr ) {
 		parseweather(response);
 		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
 		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-	} });
+	} };
+
+function loadWeather(){
+	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
+	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
 }
 
 function loadSurf(){
-	$(".sbcontent").load("/surf",
-		function(response, status, xhr) {
-
-		}
-		);
+	$(".sbcontent").load("/surf",errorResponse);
 }
 
 function loadActivity(){
-	$(".sbcontent").load("/activity",
-		function(response, status, xhr) {
-
-		}
-		);
+	$(".sbcontent").load("/activity",errorResponse);
 }
 
 function loadCrowds(){
-	$(".sbcontent").load("/crowds",
-		function(response, status, xhr) {
-
-		}
-		);
+	$(".sbcontent").load("/crowds",errorResponse);
 }
 
 function loadMap(){
-	$(".sbcontent").load("/map",
-		function(response, status, xhr) {
-
-		}
-		);
+	$(".sbcontent").load("/map", errorResponse);
 }
 
 function parseweather(result){
@@ -113,6 +99,7 @@ function expandSidebar(){
 	}
 }
 
+loadWeather();
 //allHide(); //call default
 
 $( document ).ready(function() {

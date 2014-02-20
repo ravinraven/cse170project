@@ -7,7 +7,7 @@
 <div id="sunrise"> Sunrise: 6:27PM </div>
 <div id="sunset"> Sunset: 6:02PM </div>
 <div id="highlow"> 75 59 </div>
-
+<div id="order"></div>
 </div>
 
 
@@ -52,9 +52,30 @@ img{
 #highlow{
 	
 }
-
-
 </style>
-
 <script>
+
+function getWeather(){
+	var location;
+	var name = "{{beachname}}"
+	if(name == "LaJolla")
+    	location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
+	else if(name == "Oceanside")
+    	location = "Oceanside";
+  	else if(name == "PacificBeach")
+    	location = "Pacific Beach";
+  	else if(name == "Coronado")
+    	location = "Coronado";
+  	else if(name == "MissionBay")
+    	location = "Mission Bay";
+  
+	console.log("getting data from" + location);
+	$.get(location, displayWeather);
+}
+
+function displayWeather(result){
+	console.log(result);
+	$("div #order").html("<p>"+result['name']+"</p>");
+}
+getWeather();
 </script>
