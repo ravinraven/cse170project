@@ -46,6 +46,7 @@ app.get('/dummy', pagelist.viewdummy);
 app.get('/Home', pagelist.viewHome);
 app.get('/beach/:name', pagelist.viewbeach);
 app.get('/surf', pagelist.viewsurf);
+app.get('/crowds', pagelist.viewcrowd);
 app.get('/weather', pagelist.viewweather);
 
 

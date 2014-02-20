@@ -52,13 +52,46 @@ def=0;
 
 function loadWeather(){
 	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
-	$( ".sbcontent" ).load( weatherRequest , "{{stringname}}",
+	$( ".sbcontent" ).load( "/weather" , "{{stringname}}",
 		function( response, status, xhr ) {
 		parseweather(response);
 		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
 		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
 	} });
 }
+
+function loadSurf(){
+	$(".sbcontent").load("/surf",
+		function(response, status, xhr) {
+
+		}
+		);
+}
+
+function loadActivity(){
+	$(".sbcontent").load("/activity",
+		function(response, status, xhr) {
+
+		}
+		);
+}
+
+function loadCrowds(){
+	$(".sbcontent").load("/crowds",
+		function(response, status, xhr) {
+
+		}
+		);
+}
+
+function loadMap(){
+	$(".sbcontent").load("/map",
+		function(response, status, xhr) {
+
+		}
+		);
+}
+
 function parseweather(result){
 	console.log(result);
 }
@@ -86,9 +119,9 @@ $( document ).ready(function() {
 	//$(".sidebar").click( function(){ expandSidebar(); } );
 	$(".arrow a").click(function() { loadMainContent("beachlist") });
 	$(".home a").click(function() { window.location.href="/"; });
-	$("#surf a").click(function(){alert("clicked!!");loadBeachContent("ljssurf.png") });
+	$("#surf a").click(function(){ loadSurf("ljssurf.png") });
 	$("#weather a").click(function(){loadWeather("ljsmain.png") });
-	$("#crowd a").click(function(){loadBeachContent("crowd.png") });
+	$("#crowd a").click(function(){loadCrowds("crowd.png") });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });
 	$("#help a").click(function() { loadMainContent("HELP"); }); 
 	});

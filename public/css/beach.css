@@ -1,12 +1,12 @@
 body{
 	background: #00C9AD;
 	text-decoration: none;
-	background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #0EEFE8 100%);
-	background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #0EEFE8 100%);
-	background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #0EEFE8 100%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #0EEFE8));
-	background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #0EEFE8 100%);
-	background-image: linear-gradient(to top, #FFFFFF 0%, #0EEFE8 100%);
+	background-image: -ms-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
+	background-image: -moz-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
+	background-image: -o-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #87ceeb), color-stop(1, #0EEFE8));
+	background-image: -webkit-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
+	background-image: linear-gradient(to top, #87ceeb 0%, #0EEFE8 100%);
 }
 .pagename{
 	display:inline-block;
@@ -16,6 +16,7 @@ body{
 	text-align: center;
 	position:relative;
 	z-index: 2;
+	color:#4682B4;
 }
 #weatherimg{
 	position:relative;
@@ -97,5 +98,5 @@ to {width:50px;}
 	height: 50px;
 }
 div .comment .title .height{
-	font-size:40px;
+	font-size:60px;
 }
