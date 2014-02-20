@@ -2,7 +2,7 @@
 
 <div id="beachname"> La Jolla Shores </div>
 <div id="time"> 2:10PM </div>
-<div id="icon"> <img src="/images/sunclouds1.png"> </div> 
+<div id="icon"> <img src="/images/sunclouds1.png" class="img-responsive">  </div> 
 <div id="temp"> 72 </div>
 <div id="sunrise"> Sunrise: 6:27PM </div>
 <div id="sunset"> Sunset: 6:02PM </div>
@@ -19,7 +19,7 @@ div .comment .title .height{
 }
 
 .weather{
-	vertical-align: middle;
+	text-align: center;
 	font-size: 40px;
 }
 
@@ -31,18 +31,22 @@ div .comment .title .height{
 	
 
 #icon{
-	
+	display:inline-block;
 }
-
+img{
+	width:170px;
+	height:170px;
+}
 #temp{
 
 }
 
 #sunrise{
-	
+	font-size: 25px;
 }
 
 #sunset{
+	font-size: 25px;
 	}
 
 #highlow{
