@@ -54,7 +54,8 @@ img{
 }
 </style>
 <script>
-
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+console.log(width);
 function getWeather(){
 	var location;
 	var name = "{{beachname}}"

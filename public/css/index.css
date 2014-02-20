@@ -12,11 +12,11 @@ body{
     height:100%;
     display: block;
     background: white;/* background color of app*/
-    /*background-image: url('/images/bg.jpg');
-    background-size:100% 100%;*/
+    background-image: url('/images/knitback.png');
+    background-size:100% 100%;
 }
 /* #### Desktops #### */
-@media screen and(min-device-width: 768px){
+@media screen {/*and(min-device-width: 768px){*/
 .container{ /* main screen size*/
 	width:400px;
 }}
@@ -54,6 +54,7 @@ body{
  .container{ /* main screen size*/
 	/*width:768px;*/
 	width:100%; /*standard width*/
+
 }}
 
 .button{

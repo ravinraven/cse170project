@@ -34,6 +34,9 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/beachbum.js"></script>
 <script>
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+//if(width > 620)
+    //$('.container').css('width', "400px");
 $( document ).ready(function() {
 	$("#login a").click(function() { loadMainContent("login"); });
 	$("#find a").click(function() { loadMainContent("beachlist"); });
