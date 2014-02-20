@@ -53,7 +53,19 @@ exports.viewsurf = function(req, res) { 
 exports.viewweather = function(req, res) { 
   var name = req.params.name;  //name of location
   var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
-  res.render('weather');
+  if(name == "LaJolla")
+    location = encodeURIComponent("http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"); //la jolla 
+  else if(name == "Oceanside")
+    location = "Oceanside";
+  else if(name == "PacificBeach")
+    location = "Pacific Beach";
+  else if(name == "Coronado")
+    location = "Coronado";
+  else if(name == "MissionBay")
+    location = "Mission Bay";
+  
+  var jsondata = { "location":location, "beachname": name }
+  res.render('weather', jsondata);
   // controller code goes here 
 };
 exports.viewcrowd = function(req, res) { 
