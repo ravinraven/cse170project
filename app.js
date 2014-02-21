@@ -49,7 +49,7 @@ app.get('/surf/:name', pagelist.viewsurf);
 app.get('/crowds/:name', pagelist.viewcrowd);
 app.get('/weather/:name', pagelist.viewweather);
 app.get('/map/:name', pagelist.viewMap);
-app.get('/activity', pagelist.viewActivity);
+app.get('/activity/:name', pagelist.viewActivity);
 
 
 // Example route

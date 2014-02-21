@@ -73,7 +73,7 @@ exports.viewMap = function(req, res) { 
 };
 exports.viewActivity = function(req, res) { 
    var name = req.params.name; 
-   var jsondata;
-   res.render('activity');
+   var activity = require('../public/json/activity.json');
+   res.render('activity', activity[name]);
   // controller code goes here 
 };
