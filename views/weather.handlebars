@@ -1,14 +1,29 @@
 <link href="/css/weather.css" rel="stylesheet">
 
-<div class="weather">
-<div id="beachname"> La Jolla Shores </div>
+<div class="weather">	
+<div id="beachname"> {{beachname}} </div>
 <div id="time"> 2:10PM </div>
-<div id="icon"> <img src="/images/sunclouds1.png" class="img-responsive">  </div> 
 <div id="temp"> 72 </div>
-<div id="sunrise"> Sunrise: 6:27PM </div>
-<div id="sunset"> Sunset: 6:02PM </div>
-<div id="highlow"> 75 59 </div>
-<div id="order"></div>
+<div id="icon"> <img src="/images/sunclouds1.png" class="img-responsive"> </div> 
+
+<!-- <div id="sunrise"> Sunrise: 6:27PM </div>
+<div id="sunset"> Sunset: 6:02PM </div> -->
+<div id="highlow"> low: 59F high: 74 </div>
+<div id="weeklywe"> <table style="width:150px" align="center">
+		<tr>
+  			<td>W</td>
+  			<td>TH</td>
+  			<td>F</td>
+  			<td>Sa</td>
+		</tr>
+		<tr>
+  			<td>65</td>
+  			<td>67</td>
+  			<td>69</td>
+  			<td>70</td>
+		</tr>
+</table></div>
+<div id="order"> </div>
 </div>
 
 <script>

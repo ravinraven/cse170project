@@ -64,3 +64,13 @@ exports.viewcrowd = function(req, res) { 
   res.render('crowds');
   // controller code goes here 
 };
+exports.viewMap = function(req, res) { 
+   var name = req.params.name; 
+   res.render('map');
+  // controller code goes here 
+};
+exports.viewActivity = function(req, res) { 
+   var name = req.params.name; 
+   res.render('activity');
+  // controller code goes here 
+};
