@@ -1,8 +1,8 @@
 <link href="/css/map.css" rel="stylesheet">
 
 <div class="map">
-<div id="imgmap"> {{loadmapimg}} </div> 
-<div id=""> </div>
+<div id="name"> {{beachname}} </div> 
+<div id="mapdata"> </div>
 <div id=""> </div>
 <div id=""> </div>	
 
@@ -11,7 +11,7 @@
 <script> 
 function getMap(){
 	var location;
-	var name = "{{loadmapimg}}"
+	var name = "{{beachname}}"
 	if(name == "LaJolla")
     	location = "/images/LJSMap.png"; //la jolla 
 	else if(name == "Oceanside")
@@ -23,8 +23,8 @@ function getMap(){
   	else if(name == "MissionBay")
     	location = "/images/MsMap.png";
   
-	console.log("getting data from" + location);
-	$.get(location, displayWeather);
+	var tag = "<img src=\"" + location +"\" >";
+	$("div #mapdata").html(tag);
 }
 getMap();
 </script>

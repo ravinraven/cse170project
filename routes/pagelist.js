@@ -65,7 +65,8 @@ exports.viewcrowd = function(req, res) { 
 };
 exports.viewMap = function(req, res) { 
    var name = req.params.name; 
-   var jsondata = { "location":location, "beachname": name }
+   var location;
+   var jsondata = { "beachname": name }
    res.render('map', jsondata);
   // controller code goes here 
 };
