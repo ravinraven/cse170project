@@ -12,7 +12,7 @@ body{
 .pagename{
 	display:inline-block;
 	width:50%;
-	font-size: 30px;
+	font-size: 40px;
 	line-height: 1;
 	text-align: center;
 	position:relative;
@@ -27,10 +27,10 @@ body{
 .headline{
 	font-size:40px;
 	width:100%;
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-	/*background: #F0DE62;/*default background color for buttons*/
+	/*-moz-border-radius: 12px; /* FF1+ */
+	/*-webkit-border-radius: 12px; /* Saf3-4 */
+  	/*border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+	background: #F0DE62;/*default background color for buttons*/
 	/*background-image: url('/images/purtywood.png'); */
 }
 /*///////////////////////////*/
