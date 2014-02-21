@@ -1,8 +1,6 @@
 div .comment .title .height{
 	font-size:40px;
 	border-radius:;
-
-
 }
 .weather{
 	text-align: center;
@@ -22,8 +20,6 @@ div .comment .title .height{
     top:0px;
     z-index:-1;
 }
-
-}
 img{
 	width:170px;
 	height:120px;
@@ -42,10 +38,8 @@ img{
 
 #highlow{
 	padding-bottom: 5px;
-	font-size: 25px;
-	
+	font-size: 25px;	
 }
-
 #weeklywe{
 	padding:7px;
 	font-size: 30px;
