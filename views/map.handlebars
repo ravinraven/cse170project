@@ -1,9 +1,30 @@
 <link href="/css/map.css" rel="stylesheet">
 
 <div class="map">
-<div id="imgmap"> <img src="/images/sunclouds1.png" class="img-responsive"> </div> 
+<div id="imgmap"> {{loadmapimg}} </div> 
 <div id=""> </div>
 <div id=""> </div>
 <div id=""> </div>	
 
 </div>
+
+<script> 
+function getMap(){
+	var location;
+	var name = "{{loadmapimg}}"
+	if(name == "LaJolla")
+    	location = "/images/LJSMap.png"; //la jolla 
+	else if(name == "Oceanside")
+    	location = "/images/OBMap.png";
+  	else if(name == "PacificBeach")
+    	location = "/images/PBmap.png";
+  	else if(name == "Coronado")
+    	location = "/images/CorMap.png";
+  	else if(name == "MissionBay")
+    	location = "/images/MsMap.png";
+  
+	console.log("getting data from" + location);
+	$.get(location, displayWeather);
+}
+getMap();
+</script>
