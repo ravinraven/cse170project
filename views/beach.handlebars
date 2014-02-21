@@ -13,8 +13,6 @@
 	<div class="iconname" id="map"><a href='#'><img src="/images/mapicon.png" class="img-responsive icon"></a></div>
 	<div class="iconname" id="activity"><a href='#'><img src="/images/activityicon2.png" class="img-responsive icon"></a></div>
 	<div class="iconname" id="crowd"><a href='#'><img src="/images/crowdicon.png" class="img-responsive icon"></a></div>
-	<!--div class="tab"><div class="iconname" id="alert"><a href='#'>ALERT</a></div><img src="/images/alerticon.png" class="icon"/></div-->
-	<!--div class="tab"><div class="iconname" id="help"><a href='#'>HELP</a></div><img src="/images/helpicon.png" class="icon"/></div-->
 </div>
 <div style="clear:both;"></div>
 <div class="sbcontent">
@@ -25,32 +23,6 @@
 </div> <!-- end beach content -->
 
 <script type="text/javascript">
-//prototypes and declarations
-var expansion = 0;
-var def = 1;
-function allShow(){
-$("#weather").show();
-$("#surf").show();
-$("#map").show();
-$("#activity").show();
-$("#crowd").show();
-$("#alert").show();
-$("#help").show();
-}
-function allHide(){
-$("#weather").hide();
-$("#surf").hide();
-$("#map").hide();
-$("#activity").hide();
-$("#crowd").hide();
-$("#alert").hide();
-$("#help").hide();
-if(def)
-loadWeather();
-def=0;
-}
-
-
 function errorResponse ( response, status, xhr ) {
 		//parseweather(response);
 		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
@@ -62,7 +34,7 @@ function loadWeather(){
 	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
 }
 function loadSurf(){
-	$(".sbcontent").load("/surf",errorResponse);
+	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
 }
 function loadActivity(){
 	$(".sbcontent").load("/activity",errorResponse);
@@ -76,24 +48,6 @@ function loadMap(){
 function parseweather(result){
 	console.log(result);
 }
-
-//may not work with different type of browsers
-function expandSidebar(){
-	console.log("clickable");
-	if(expansion == 0){
-	$(".sidebar").css({animation: "slideout 1s", width:'150px'});
-	window.setTimeout('allShow()', 800);
-	$(".sbcontent").css({"z-index":'-1'});
-	expansion = 1;
-	}else{
-	allHide();
-	$(".sidebar").css({animation: "slidein 1s"});
-	window.setTimeout(function(){$(".sidebar").css({width:'50px'});}, 1000);
-	$(".sbcontent").css({ "z-index":"1"});
-	expansion = 0;
-	}
-}
-
 loadWeather();
 //allHide(); //call default
 

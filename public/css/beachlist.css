@@ -1,7 +1,3 @@
-.navbar{
-
-}
-
 #blist{
 	background: #00C9AD;
 }
@@ -9,6 +5,7 @@ ul {
 	padding-left:0px;
 }
 li{
+	margin-top: 3%;
 	list-style-type: none;
 }
 body{
