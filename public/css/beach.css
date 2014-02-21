@@ -26,11 +26,17 @@ body{
 }
 .headline{
 	width:100%;
+<<<<<<< HEAD
+	-moz-border-radius: 12px; /* FF1+ */
+	-webkit-border-radius: 12px; /* Saf3-4 */
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+=======
 	margin-bottom: 2%;
 	padding-bottom: 1%;
 	/*-moz-border-radius: 12px; /* FF1+ */
 	/*-webkit-border-radius: 12px; /* Saf3-4 */
   	/*border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+>>>>>>> 9f4a8c31bee5a2dda51a5b08a23314a28bfa0381
 	background: #F0DE62;/*default background color for buttons*/
 	/*background-image: url('/images/purtywood.png'); */
 
