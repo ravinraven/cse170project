@@ -13,9 +13,7 @@ li{
 	width: 150px;
 	height: 30px;
 }
-#back a{
-	display:block;
-}
+#back a{display:block;}
 li img{
 	/* left over 25% width*/
 	margin-right:5%;
