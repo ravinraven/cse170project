@@ -52,7 +52,7 @@ def=0;
 
 
 function errorResponse ( response, status, xhr ) {
-		parseweather(response);
+		//parseweather(response);
 		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
 		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
 	} };
@@ -71,7 +71,7 @@ function loadCrowds(){
 	$(".sbcontent").load("/crowds",errorResponse);
 }
 function loadMap(){
-	$(".sbcontent").load("/map", errorResponse);
+	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
 }
 function parseweather(result){
 	console.log(result);

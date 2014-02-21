@@ -3,7 +3,7 @@
 <div class="weather">	
 <!-- <div id="beachname"> {{beachname}} </div> -->
 
-<div id="temp"> 72 </div>
+<div id="temp"> 72' </div>
 <div id="time"> 2:10PM </div>
 <div id="icon"> <img src="/images/sunclouds1.png" class="img-responsive"> </div> 
 
@@ -44,13 +44,10 @@ function getWeather(){
     	location = "Coronado";
   	else if(name == "MissionBay")
     	location = "Mission Bay";
-  
-	console.log("getting data from" + location);
-	$.get(location, displayWeather);
+	//$.get(location, displayWeather);
 }
 
 function displayWeather(result){
-	console.log(result);
 	var date = new Date(result["sys"]["sunset"]);
 	var hours = date.getHours();
 	var minutes = date.getMinutes();

@@ -48,7 +48,7 @@ app.get('/beach/:name', pagelist.viewbeach);
 app.get('/surf', pagelist.viewsurf);
 app.get('/crowds', pagelist.viewcrowd);
 app.get('/weather/:name', pagelist.viewweather);
-app.get('/map', pagelist.viewMap);
+app.get('/map/:name', pagelist.viewMap);
 
 
 // Example route
