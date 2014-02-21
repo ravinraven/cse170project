@@ -46,9 +46,10 @@ app.get('/dummy', pagelist.viewdummy);
 app.get('/Home', pagelist.viewHome);
 app.get('/beach/:name', pagelist.viewbeach);
 app.get('/surf/:name', pagelist.viewsurf);
-app.get('/crowds', pagelist.viewcrowd);
+app.get('/crowds/:name', pagelist.viewcrowd);
 app.get('/weather/:name', pagelist.viewweather);
 app.get('/map/:name', pagelist.viewMap);
+app.get('/activity', pagelist.viewActivity);
 
 
 // Example route
