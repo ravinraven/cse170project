@@ -46,7 +46,6 @@ exports.viewbeach = function(req, res) { 
 exports.viewsurf = function(req, res) { 
   var name = req.params.name; 
   var surf = require('../public/json/surf.json');
-
   res.render('surf', surf[name]);
   // controller code goes here 
 };
