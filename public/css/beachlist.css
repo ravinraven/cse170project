@@ -17,7 +17,7 @@ body{
 .button{
 	width: 100%; /*width of the buttons*/
 	background: #F0DE62;/*default background color for buttons*/
-	background-image: url('/images/purtywood.png'); 
+	/*background-image: url('/images/purtywood.png'); */
 }
 
 #back{
