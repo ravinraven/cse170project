@@ -10,3 +10,7 @@ function loadBeachContent(content){
 var src = "/images/" + content;
 $("#weather").attr("src", src);
 }
+
+function getRealtime(){
+	
+}
