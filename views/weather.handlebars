@@ -43,13 +43,10 @@ function getWeather(){
     	location = "Coronado";
   	else if(name == "MissionBay")
     	location = "Mission Bay";
-  
-	console.log("getting data from" + location);
 	$.get(location, displayWeather);
 }
 
 function displayWeather(result){
-	console.log(result);
 	var date = new Date(result["sys"]["sunset"]);
 	var hours = date.getHours();
 	var minutes = date.getMinutes();
