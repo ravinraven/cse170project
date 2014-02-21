@@ -17,6 +17,12 @@ div .comment .title .height{
 }	
 #icon{
 	display:inline-block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+}
+
 }
 img{
 	width:170px;

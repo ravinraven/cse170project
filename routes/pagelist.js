@@ -71,6 +71,7 @@ exports.viewMap = function(req, res) { 
 };
 exports.viewActivity = function(req, res) { 
    var name = req.params.name; 
+   var jsondata = {"image": mapimage }
    res.render('activity');
   // controller code goes here 
 };
