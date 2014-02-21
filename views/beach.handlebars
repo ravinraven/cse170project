@@ -71,7 +71,7 @@ function loadCrowds(){
 	$(".sbcontent").load("/crowds",errorResponse);
 }
 function loadMap(){
-	$(".sbcontent").load("/map", errorResponse);
+	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
 }
 function parseweather(result){
 	console.log(result);
