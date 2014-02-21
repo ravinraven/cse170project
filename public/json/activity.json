@@ -1,43 +1,48 @@
 {
 	"LaJolla":{
-		"comment": "Surf's Up",
-		"height": "1-3ft",
-		"high": "9:35am",
-		"low": "4:05pm",
-		"wind": "ne strong wind",
-		"h2o": "h2o: 57F"
+		"bestact": "Best activity: Sun Tanning",
+		"youcan": "You can do...",
+		"youcancontent": "run, surf, scuba dive, beach volleyball, fire pits, kayaking",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
 	},
 	"Oceanside":{
-		"comment": "Surf's Up",
-		"height": "3-5ft",
-		"high": "10:06am",
-		"low": "4:01pm",
-		"wind": "nw light wind",
-		"h2o": "h2o: 50F"
+		"bestact": "Best activity: Surfing, Dog Walks",
+		"youcan": "You can do...",
+		"youcancontent": "run, fish, beach volleyball, fire pits, swim",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch, pier",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, cigarettes"
 	},
 	"PacificBeach":{
-		"comment": "Surf's Up",
-		"height": "2-3ft",
-		"high": "11:35am",
-		"low": "6:00pm",
-		"wind": "ne light wind",
-		"h2o": "h2o: 49F"
+		"bestact": "Best activity: Surfing, Running",
+		"youcan": "You can do...",
+		"youcancontent": "run, surf, swim, beach volleyball, fishing",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, pier",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
 	},
 	"Coronado":{
-		"comment": "Surf's Up",
-		"height": "3-5ft",
-		"high": "7:35am",
-		"low": "4:35am",
-		"wind": "nw strong wind",
-		"h2o": "h2o: 52F"
+		"bestact": "Best activity: Sun Tanning",
+		"youcan": "You can do...",
+		"youcancontent": "run, beach volleyball, kayak, build sandcastles",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, Hotel Coronado ",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
 	},
 	"MissionBay":{
-		"comment": "Surf's Up",
-		"height": "1-4ft",
-		"high": "6:20am",
-		"low": "3:40pm",
-		"wind": "ne light wind",
-		"h2o": "h2o: 48F"
+		"bestact": "Best activity: Sailing, Bike Rides",
+		"youcan": "You can do...",
+		"youcancontent": "paddleboard, run, fire pits, picnic, swim, bike",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
 	}
 }
 
