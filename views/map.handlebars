@@ -24,7 +24,25 @@ function getMap(){
     	location = "/images/MsMap.png";
   
 	console.log("getting data from" + location);
-	$.get(location, displayWeather);
+	$.get(location, displayMap);
 }
 getMap();
+
+function getAddress(){
+	var location;
+	var name = "{{loadAddress}}"
+	if(name == "LaJolla")
+    	location = "8200 Camino del Oro, La Jolla, 92037"; //la jolla 
+	else if(name == "Oceanside")
+    	location = " 5059 Newport Ave, San Diego, 92107";
+  	else if(name == "PacificBeach")
+    	location = "4500 Ocean Ave, San Diego, 92109";
+  	else if(name == "Coronado")
+    	location = "1800 Avenida de las Arenas, Coronado, 92118";
+  	else if(name == "MissionBay")
+    	location = "3448 Crown Point Drive, San Diego, 92109";
+  
+	console.log("getting data from" + location);
+	$.get(location, displayAddress);
+}
 </script>
