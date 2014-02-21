@@ -11,9 +11,9 @@ div .comment .title .height{
 #beachname {
 }
 #time{
-	font-size:30px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	font-size:40px;
+	padding-top: 10%;
+	padding-bottom: 15%;
 }	
 #icon{
 	display:inline-block;
@@ -31,7 +31,7 @@ img{
 #temp{
 	position: relative;
 	font-size: 60px;
-	padding-top: 10%;
+	padding-bottom: 15%;
 }
 #sunrise{
 	font-size: 25px;
