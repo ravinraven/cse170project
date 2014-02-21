@@ -25,9 +25,9 @@ body{
 	z-index: -10;
 }
 .headline{
-	font-size:40px;
 	width:100%;
-	margin-bottom: 1%;
+	margin-bottom: 2%;
+	padding-bottom: 1%;
 	/*-moz-border-radius: 12px; /* FF1+ */
 	/*-webkit-border-radius: 12px; /* Saf3-4 */
   	/*border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
@@ -46,14 +46,6 @@ body{
 	float:right;
 	width:20%;
 	height: 50px;	
-}
-@keyframes slideout{
-from {width:50px;}
-to {width:150px;}
-}
-@keyframes slidein{
-from {width:150px;}
-to {width:50px;}
 }
 .icon{
 	width:50px;
