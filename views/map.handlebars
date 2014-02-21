@@ -1,18 +1,32 @@
 <link href="/css/map.css" rel="stylesheet">
 
 <div class="map">
-<div id="name"> {{beachname}} </div> 
+<!-- <div id="name"> {{beachname}} </div> -->
+<div id="maptitle"> Find the Beach! </div>
+<div id="beachAddress"> </div>  
 <div id="mapdata"> </div>
-<div id=""> </div>
-<div id=""> </div>	
+
 
 </div>
-<style type="text/css">
-#mapdata img{
-  width:60%;
-  height: 60%;}
 
+
+
+<style type="text/css">
+  #maptitle{
+    font-size:30px;
+  }
+  #beachAddress{
+    font-size:20px;
+    text-align:center;
+    padding-bottom:7px;
+  }
+  #mapdata img{
+    
+    width:70%;
+    height:70%;
+  }
 </style>
+
 <script> 
 function getMap(){
 	var location;
@@ -32,6 +46,7 @@ function getMap(){
 }
 getMap();
 
+getAddress();
 function getAddress(){
 	var location;
 	var name = "{{beachname}}"
@@ -45,8 +60,9 @@ function getAddress(){
     	location = "1800 Avenida de las Arenas, Coronado, 92118";
   	else if(name == "MissionBay")
     	location = "3448 Crown Point Drive, San Diego, 92109";
+
+    var tag = "<p>" + location + "</p>";
+    $("div #beachAddress").html(tag);
   
-	console.log("getting data from" + location);
-	$.get(location, displayAddress);
 }
 </script>
