@@ -1,20 +1,9 @@
-#blist{
-	background: #00C9AD;
-}
-ul {
-	padding-left:0px;
-}
+@import "beach.css";
+
+ul {padding-left:0px;}
 li{
 	margin-top: 3%;
 	list-style-type: none;
-}
-body{
-	background-color: #00C9AD;
-}
-.button{
-	width: 100%; /*width of the buttons*/
-	background: #F0DE62;/*default background color for buttons*/
-	/*background-image: url('/images/purtywood.png'); */
 }
 #back{
 	display:block;
@@ -35,10 +24,7 @@ li img{
 	height:55px;
 	float:right;
 }
-div{
-	display: block;
-}
-a{
+#blist div a{
 	display:block;
 	width:75%;
 	float:left;

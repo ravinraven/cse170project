@@ -1,14 +1,15 @@
-div .comment .title .height{
-	font-size:40px;
-	border-radius:;
-
-}
 .map{
 	text-align: center;
 	font-size: 40px;
 }
-
-#imgmap{
-
-
+#maptitle{
+    font-size:35px;
+  }
+#beachAddress{
+	font-size:20px;
+    padding-bottom:7px;
+}
+#mapdata img{
+    width:70%;
+    height:70%;
 }

@@ -1,4 +1,4 @@
-<link href="/css/beach.css" rel="stylesheet">
+<!--link href="/css/beach.css" rel="stylesheet"-->
 
 <div class="beachcontent">
 <div class="headline">
@@ -9,26 +9,20 @@
 <div class="centercontent">
 <div class="sidebar">
 	<div class="iconname" id="weather"><a href='#'><img src="/images/weathericon.png" class="img-responsive"></a></div>
-	<div class="iconname" id="surf"><a href='#'><img src="/images/surficon.png" class="img-responsive icon"></a></div>
-	<div class="iconname" id="map"><a href='#'><img src="/images/mapicon.png" class="img-responsive icon"></a></div>
-	<div class="iconname" id="activity"><a href='#'><img src="/images/activityicon2.png" class="img-responsive icon"></a></div>
-	<div class="iconname" id="crowd"><a href='#'><img src="/images/crowdicon.png" class="img-responsive icon"></a></div>
+	<div class="iconname" id="surf"><a href='#'><img src="/images/surficon.png" class="img-responsive"></a></div>
+	<div class="iconname" id="map"><a href='#'><img src="/images/mapicon.png" class="img-responsive"></a></div>
+	<div class="iconname" id="activity"><a href='#'><img src="/images/activityicon2.png" class="img-responsive"></a></div>
+	<div class="iconname" id="crowd"><a href='#'><img src="/images/crowdicon.png" class="img-responsive"></a></div>
 </div>
 <div style="clear:both;"></div>
 <div class="sbcontent">
-	<img id="weatherimg" src="/images/ljsmain.png" alt="weather logo"/> 
+	<!-- page content for the beach --> 
 </div>
 </div><!-- end center content -->
 <div style="clear:both;"></div>
 </div> <!-- end beach content -->
 
 <script type="text/javascript">
-function errorResponse ( response, status, xhr ) {
-		//parseweather(response);
-		if ( status == "error" ) { var msg = "Sorry but there was an error: ";
-		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-	} };
-
 function loadWeather(){
 	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
 	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );

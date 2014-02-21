@@ -1,10 +1,6 @@
 function loadMainContent( pagename ){
    //var pagename = pagehash;//pagehash.substring(1, pagehash.length);
-	$( ".container" ).load( pagename , function( response, status, xhr ) {
-		if ( status == "error" ) {
-		var msg = "Sorry but there was an error: ";
-		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-	} });
+	$( ".container" ).load( pagename , errorResponse);
 }
 function loadBeachContent(content){
 var src = "/images/" + content;
@@ -22,3 +18,9 @@ function getRealtime(){
 	var formattedTime = hours + ':' + minutes + " " +am;
 	return formattedTime;
 }
+
+//ajax error response callback function
+function errorResponse ( response, status, xhr ) {
+		//parseweather(response);
+if ( status == "error" ) { var msg = "Sorry but there was an error: ";
+$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );}};
