@@ -37,10 +37,10 @@ function loadSurf(){
 	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
 }
 function loadActivity(){
-	$(".sbcontent").load("/activity",errorResponse);
+	$(".sbcontent").load("/activity/{{stringname}}",errorResponse);
 }
 function loadCrowds(){
-	$(".sbcontent").load("/crowds",errorResponse);
+	$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);
 }
 function loadMap(){
 	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
@@ -57,6 +57,7 @@ $( document ).ready(function() {
 	$(".home a").click(function() { window.location.href="/"; });
 	$("#surf a").click(function(){ loadSurf()});
 	$("#weather a").click(function(){loadWeather(); });
+	$("#activity a").click(function(){loadActivity(); });
 	$("#map a").click(function(){loadMap();});
 	$("#crowd a").click(function(){loadCrowds() });
 	$("#login a").click( function(){ loadMainContent("LOGIN") });

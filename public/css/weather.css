@@ -15,8 +15,8 @@ div .comment .title .height{
 #icon{
 	display:inline-block;
     position:absolute;
-    left:0px;
-    top:0px;
+    left:20%;
+    top:20%;
     z-index:-1;
 }
 img{

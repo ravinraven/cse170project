@@ -60,7 +60,8 @@ exports.viewweather = function(req, res) { 
 exports.viewcrowd = function(req, res) { 
   var name = req.params.name;  //name of location
   //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
-  res.render('crowds');
+  var crowd = require('../public/json/crowd.json');
+  res.render('crowds',crowd[name]);
   // controller code goes here 
 };
 exports.viewMap = function(req, res) { 
@@ -72,7 +73,7 @@ exports.viewMap = function(req, res) { 
 };
 exports.viewActivity = function(req, res) { 
    var name = req.params.name; 
-   var jsondata = {"image": mapimage }
-   res.render('activity');
+   var activity = require('../public/json/activity.json');
+   res.render('activity', activity[name]);
   // controller code goes here 
 };

@@ -43,6 +43,7 @@ function getWeather(){
     	location = "Coronado";
   	else if(name == "MissionBay")
     	location = "Mission Bay";
+    $("div #time").html("<p>"+getRealtime()+"</p>");
 	//$.get(location, displayWeather);
 }
 
@@ -53,6 +54,7 @@ function displayWeather(result){
 	var seconds = date.getSeconds();
 	var formattedTime = hours + ':' + minutes + ':' + seconds;
 	console.log(formattedTime);
+	$("div #order").html("<p>"+result['name']+"</p>");
 	$("div #order").html("<p>"+result['name']+"</p>");
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
 

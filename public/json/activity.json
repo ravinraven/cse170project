@@ -1,0 +1,49 @@
+{
+	"LaJolla":{
+		"bestact": "Best activity: Sun Tanning",
+		"youcan": "You can do...",
+		"youcancontent": "run, surf, scuba dive, beach volleyball, fire pits, kayaking",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
+	},
+	"Oceanside":{
+		"bestact": "Best activity: Surfing, Dog Walks",
+		"youcan": "You can do...",
+		"youcancontent": "run, fish, beach volleyball, fire pits, swim",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch, pier",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, cigarettes"
+	},
+	"PacificBeach":{
+		"bestact": "Best activity: Surfing, Running",
+		"youcan": "You can do...",
+		"youcancontent": "run, surf, swim, beach volleyball, fishing",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, pier",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
+	},
+	"Coronado":{
+		"bestact": "Best activity: Sun Tanning",
+		"youcan": "You can do...",
+		"youcancontent": "run, beach volleyball, kayak, build sandcastles",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, Hotel Coronado ",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
+	},
+	"MissionBay":{
+		"bestact": "Best activity: Sailing, Bike Rides",
+		"youcan": "You can do...",
+		"youcancontent": "paddleboard, run, fire pits, picnic, swim, bike",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch",
+		"no":"Leave at home...",
+		"nocontent":" alcohol, glass, pets, cigarettes"
+	}
+}
+
+
