@@ -17,7 +17,7 @@ body{
 	text-align: center;
 	position:relative;
 	z-index: 2;
-	color:#4682B4;
+	color:#2a6496;
 }
 #weatherimg{
 	position:relative;
@@ -27,11 +27,11 @@ body{
 .headline{
 	font-size:40px;
 	width:100%;
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+	/*-moz-border-radius: 12px; /* FF1+ */
+	/*-webkit-border-radius: 12px; /* Saf3-4 */
+  	/*border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
 	background: #F0DE62;/*default background color for buttons*/
-	background-image: url('/images/purtywood.png'); 
+	/*background-image: url('/images/purtywood.png'); */
 }
 /*///////////////////////////*/
 .arrow{
