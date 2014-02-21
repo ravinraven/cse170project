@@ -40,7 +40,7 @@ function loadActivity(){
 	$(".sbcontent").load("/activity",errorResponse);
 }
 function loadCrowds(){
-	$(".sbcontent").load("/crowds/:{{stringname}}",errorResponse);
+	$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);
 }
 function loadMap(){
 	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
