@@ -1,14 +1,8 @@
-/*
-body{
-	background: #00C9AD;
-	text-decoration: none;
-	background-image: -ms-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
-	background-image: -moz-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
-	background-image: -o-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #87ceeb), color-stop(1, #0EEFE8));
-	background-image: -webkit-linear-gradient(bottom, #87ceeb 0%, #0EEFE8 100%);
-	background-image: linear-gradient(to top, #87ceeb 0%, #0EEFE8 100%);
-}*/
+/* ///////////////// surf.css /////////////////////////*/
+@import "surf.css";
+/* ///////////////// weather.css /////////////////////////*/
+@import "weather.css";
+
 .pagename{
 	display:inline-block;
 	width:50%;

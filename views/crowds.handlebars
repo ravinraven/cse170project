@@ -1,3 +1,4 @@
+<div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
 <div id="crowd"> High: Packed like Sardines </div>
 <div id="time"> 2:10PM </div>
@@ -6,73 +7,46 @@
 <div id="wttitle"> WORST TIME: <br> </div> 
 <div id="worsttime">BETWEEN 11:00AM-2:30PM </div>
 <div id="hottiealert"> Hottie Alert: <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> </div>
-
+</div>
 
 <style>
+.crowdalert{text-align: center;letter-spacing: 0px;}
 #hottiealert img{
 	width:12%;
 	height: 12%;
 	float: right;
 	margin-right: 0px;
 }
-
-
 #crowdpage{
-	text-align: center;
 	/*color: #2a6496;*/
 	font-size: 40px;
-	letter-spacing: 0px;
 	padding-top: 3px;
 }
-
 #crowd{
-	text-align: center;
 	color: #ef4444;
 	font-size: 35px;
-	letter-spacing: 0px;
 	padding-top: 4px;
-
 }
-
 #time{
-	text-align: center;
 	font-size: 30px;
-	letter-spacing: 0px;
 }
-
 #bttitle{
-	text-align: center;
 	font-size: 27px;
-	letter-spacing: 0px;
 }
-
 #besttime{
-	text-align: center;
 	font-size: 25px;
-	letter-spacing: 0px;
 }
-
 #wttitle{
-	text-align: center;
 	font-size: 27px;
-	letter-spacing: 0px;
 }
-
 #worsttime{
-	text-align: center;
 	font-size: 25px;
-	letter-spacing: 0px;
 }
-
 #hottiealert{
-	text-align: center;
 	font-size: 27px;
-	letter-spacing: 0px;
 }
 </style>
 <script type="text/javascript">
-
 //this portion of the script gets the current time
 $("div #time").html("<p>"+getRealtime()+"</p>");
-
 </script>
