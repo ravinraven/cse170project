@@ -1,0 +1,44 @@
+{
+	"LaJolla":{
+		"comment": "Surf's Up",
+		"height": "1-3ft",
+		"high": "9:35am",
+		"low": "4:05pm",
+		"wind": "ne strong wind",
+		"h2o": "h2o: 57F"
+	},
+	"Oceanside":{
+		"comment": "Surf's Up",
+		"height": "3-5ft",
+		"high": "10:06am",
+		"low": "4:01pm",
+		"wind": "nw light wind",
+		"h2o": "h2o: 50F"
+	},
+	"PacificBeach":{
+		"comment": "Surf's Up",
+		"height": "2-3ft",
+		"high": "11:35am",
+		"low": "6:00pm",
+		"wind": "ne light wind",
+		"h2o": "h2o: 49F"
+	},
+	"Coronado":{
+		"comment": "Surf's Up",
+		"height": "3-5ft",
+		"high": "7:35am",
+		"low": "4:35am",
+		"wind": "nw strong wind",
+		"h2o": "h2o: 52F"
+	},
+	"MissionBay":{
+		"comment": "Surf's Up",
+		"height": "1-4ft",
+		"high": "6:20am",
+		"low": "3:40pm",
+		"wind": "ne light wind",
+		"h2o": "h2o: 48F"
+	}
+}
+
+
