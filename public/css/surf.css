@@ -13,19 +13,19 @@ div .comment .title .height{
 
 .comment{
 	text-align: center;
-	font-size: 30px;
-	color: #2A6496;
+	font-size: 40px;
+	/*color: #2A6496;*/
 	margin-bottom: 5%;
+	padding-top: 10%;
 }
 
 .height{
 	text-align: center;
 	font-size: 40px;
-	color: #ef4444;
+	/*color: #ef4444;*/
 	padding-top: 6px;
 	padding-bottom: 6px;
 	letter-spacing: 2px;
-
 
 }
 
