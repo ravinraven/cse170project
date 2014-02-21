@@ -34,7 +34,7 @@ function loadWeather(){
 	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
 }
 function loadSurf(){
-	$(".sbcontent").load("/surf",errorResponse);
+	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
 }
 function loadActivity(){
 	$(".sbcontent").load("/activity",errorResponse);

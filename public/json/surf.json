@@ -1,5 +1,12 @@
 {
-  "beachname": "pacific beach",
-  "comment": "Surf's Up",
-  "height": "1-3ft"
+	"LaJolla":{
+		"beachname": "pacific beach",
+		"comment": "Surf's Up",
+		"height": "1-3ft"
+	},
+	"Oceanside":{
+		"beachname": "pacific beach",
+		"comment": "Surf's Up",
+		"height": "1-3ft"
+	}
 }
