@@ -57,7 +57,11 @@ function displayWeather(result){
 	$("div #order").html("<p>"+result['name']+"</p>");
 	$("div #order").html("<p>"+result['name']+"</p>");
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
-	$("div #temp").html("<p>"+result['temp']+"</p>");
+ 	xmlDoc = $.parseXML( result ),
+	$xml = $( xmlDoc ),
+ 	$title = $xml.find( "title" );
+	$data = $(result).find("yweather:condition");
+	$("div #temp").html("<p>"+$data.temp+"</p>");
 	$("div #temp_min").html("<p>"+result['temp_min']+"</p>");
 	$("div #temp_max").html("<p>"+result['temp_max']+"</p>");
 
