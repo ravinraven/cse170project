@@ -1,8 +1,9 @@
+
 <div class="weather">	
 <!-- <div id="beachname"> {{beachname}} </div> -->
 
 <div id="time"> 2:10PM </div>
-<div id="temp"> 72' </div>
+<div id="temp"> 70 </div>
 <div id="icon"> <img src="/images/sunclouds1.png" class="img-responsive"></div> 
 <!-- <div id="sunrise"> Sunrise: 6:27PM </div>
 <div id="sunset"> Sunset: 6:02PM </div> -->
@@ -24,6 +25,7 @@
 <!-- <div id="order"> </div> -->
 </div>
 
+
 <script>
 //screen width
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -42,7 +44,7 @@ function getWeather(){
   	else if(name == "MissionBay")
     	location = "http://weather.yahooapis.com/forecastrss?w=55970841&u=f";
     $("div #time").html("<p>"+getRealtime()+"</p>");
-	//$.get(location, displayWeather);
+	$.get(location, displayWeather);
 }
 
 function displayWeather(result){
@@ -55,6 +57,9 @@ function displayWeather(result){
 	$("div #order").html("<p>"+result['name']+"</p>");
 	$("div #order").html("<p>"+result['name']+"</p>");
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
+	$("div #temp").html("<p>"+result['temp']+"</p>");
+	$("div #temp_min").html("<p>"+result['temp_min']+"</p>");
+	$("div #temp_max").html("<p>"+result['temp_max']+"</p>");
 
 }
 getWeather();

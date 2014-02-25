@@ -2,9 +2,15 @@ div .comment .title .height{
 	font-size:40px;
 	border-radius:;
 }
+
+
+
+
 .weather{
 	text-align: center;
 	font-size: 40px;
+	opacity:.9;
+
 }
 
 #time{
