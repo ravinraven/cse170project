@@ -36,7 +36,9 @@ function getWeather(){
 	if(name == "LaJolla")
     	location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
 	else if(name == "Oceanside")
-    	location = "http://weather.yahooapis.com/forecastrss?w=2464118&u=f";
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%222464118%22&format=json"
+    //http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2248907%22&format=json";
+    //http://weather.yahooapis.com/forecastrss?w=2464118&u=f";
   	else if(name == "PacificBeach")
     	location = "http://weather.yahooapis.com/forecastrss?w=2467320&u=f";
   	else if(name == "Coronado")
