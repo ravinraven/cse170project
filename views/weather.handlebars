@@ -34,31 +34,38 @@ function getWeather(){
 	var location;
 	var name = "{{beachname}}"
 	if(name == "LaJolla")
-    	location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292038%22&format=json"
+    //"http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
 	else if(name == "Oceanside")
-    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%222464118%22&format=json"
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292054%22&format=json"
     //http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2248907%22&format=json";
     //http://weather.yahooapis.com/forecastrss?w=2464118&u=f";
   	else if(name == "PacificBeach")
-    	location = "http://weather.yahooapis.com/forecastrss?w=2467320&u=f";
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292109%22&format=json"
+    //"http://weather.yahooapis.com/forecastrss?w=2467320&u=f";
   	else if(name == "Coronado")
-    	location = "http://weather.yahooapis.com/forecastrss?w=2385261&u=f";
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292054%22&format=json"
+    //"http://weather.yahooapis.com/forecastrss?w=2385261&u=f";
   	else if(name == "MissionBay")
-    	location = "http://weather.yahooapis.com/forecastrss?w=55970841&u=f";
+    	location = "http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292109%22&format=json"
+    //"http://weather.yahooapis.com/forecastrss?w=55970841&u=f";
     $("div #time").html("<p>"+getRealtime()+"</p>");
 	$.get(location, displayWeather);
 }
 
 function displayWeather(result){
+	var forecasts = result['query']["results"]['channel']['item']['forecast'];
+	console.log(forecasts[0]);
 	//console.log(result);
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
  	//xmlDoc = $.parseXML( result );
 	//$xml = $( xmlDoc );
  	//$title = $xml.find( "title" );
 	// $data = $(result).find("yweather:condition");
-	//$("div #temp").html("<p>"+$data.temp+"</p>");
-	$("div #temp_min").html("<p>"+result['temp_min']+"</p>");
-	$("div #temp_max").html("<p>"+result['temp_max']+"</p>");
+	
+	$("div #temp").html("<p>"+result['query']["results"]['channel']['item']['condition']['temp']+"</p>");
+	$("div #temp_min").html("<p>"+forecasts[0]["low"]+"</p>");
+	$("div #temp_max").html("<p>"+forecasts[0]['high']+"</p>");
 
 }
 getWeather();
