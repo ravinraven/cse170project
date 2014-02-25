@@ -53,6 +53,7 @@
 	float:right;
 	z-index: 2;
 	background-color: RGBA(255,255,255,.3);
+	border-radius: 3px;
 }
 .sidebar{
 	width:15%;
