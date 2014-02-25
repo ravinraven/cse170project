@@ -48,20 +48,13 @@ function getWeather(){
 }
 
 function displayWeather(result){
-	var date = new Date(result["sys"]["sunset"]);
-	var hours = date.getHours();
-	var minutes = date.getMinutes();
-	var seconds = date.getSeconds();
-	var formattedTime = hours + ':' + minutes + ':' + seconds;
-	console.log(formattedTime);
-	$("div #order").html("<p>"+result['name']+"</p>");
-	$("div #order").html("<p>"+result['name']+"</p>");
+	//console.log(result);
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
- 	xmlDoc = $.parseXML( result ),
-	$xml = $( xmlDoc ),
- 	$title = $xml.find( "title" );
-	$data = $(result).find("yweather:condition");
-	$("div #temp").html("<p>"+$data.temp+"</p>");
+ 	//xmlDoc = $.parseXML( result );
+	//$xml = $( xmlDoc );
+ 	//$title = $xml.find( "title" );
+	// $data = $(result).find("yweather:condition");
+	//$("div #temp").html("<p>"+$data.temp+"</p>");
 	$("div #temp_min").html("<p>"+result['temp_min']+"</p>");
 	$("div #temp_max").html("<p>"+result['temp_max']+"</p>");
 

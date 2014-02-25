@@ -8,7 +8,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var project = require('./routes/project');
@@ -18,10 +18,10 @@ var pagelist = require('./routes/pagelist'); //every page should go to pagelist
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
-var local_database_name = 'beachbumData';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
-mongoose.connect(database_uri);
+//var local_database_name = 'beachbumData';
+//var local_database_uri  = 'mongodb://localhost/' + local_database_name
+//var database_uri = process.env.MONGOLAB_URI || local_database_uri
+//mongoose.connect(database_uri);
 
 var app = express();
 
