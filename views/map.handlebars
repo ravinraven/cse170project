@@ -1,47 +1,68 @@
 <div class="map">
 <!-- <div id="name"> {{beachname}} </div> -->
-<div id="maptitle">Map View</div>
-<div id="beachAddress"></div>
-<div id="mapdata"> </div>
+<div id="address">{{address}}</div>
+<div id="mapimg"><img src="{{mapimg}}"></div>
+<!-- <div id="mapdata"> </div> -->
+<div id="location">{{location}}</div>
+<div id="locationcontent">{{locationcontent}}</div>
 </div>
+
+<style type="text/css">
+#address{
+font-size:15px;
+}
+#mapimg{
+  padding:10px;
+}
+
+#location{
+  font-size:25px;
+}
+#locationcontent{
+  font-size:20px;
+}
+</style>
+
+
 <script> 
-function getMap(){
-	var location;
-	var name = "{{beachname}}"
-	if(name == "LaJolla")
-    	location = "/images/LJSMap.png"; //la jolla 
-	else if(name == "Oceanside")
-    	location = "/images/OBMap.png";
-  	else if(name == "PacificBeach")
-    	location = "/images/PBMap.png";
-  	else if(name == "Coronado")
-    	location = "/images/CorMap.png";
-  	else if(name == "MissionBay")
-    	location = "/images/MsMap.png";
-	var tag = "<img src=\"" + location +"\" >";
-	$("div #mapdata").html(tag);
-}
-function getAddress(){
-	var location;
-	var name = "{{beachname}}"
-	if(name == "LaJolla")
-    	location = "8200 Camino del Oro, La Jolla, 92037"; //la jolla 
-	else if(name == "Oceanside")
-    	location = " 5059 Newport Ave, San Diego, 92107";
-  	else if(name == "PacificBeach")
-    	location = "4500 Ocean Ave, San Diego, 92109";
-  	else if(name == "Coronado")
-    	location = "1800 Avenida de las Arenas, Coronado, 92118";
-  	else if(name == "MissionBay")
-    	location = "3448 Crown Point Drive, San Diego, 92109";
-    var tag = "<p>" + location + "</p>";
-    $("div #beachAddress").html(tag);
+/*<script*/
+// function getMap(){
+// 	var location;
+// 	var name = "{{beachname}}"
+// 	if(name == "LaJolla")
+//     	location = "/images/LJSMap.png"; //la jolla 
+// 	else if(name == "Oceanside")
+//     	location = "/images/OBMap.png";
+//   	else if(name == "PacificBeach")
+//     	location = "/images/PBMap.png";
+//   	else if(name == "Coronado")
+//     	location = "/images/CorMap.png";
+//   	else if(name == "MissionBay")
+//     	location = "/images/MsMap.png";
+// 	var tag = "<img src=\"" + location +"\" >";
+// 	$("div #mapdata").html(tag);
+// }
+// function getAddress(){
+// 	var location;
+// 	var name = "{{beachname}}"
+// 	if(name == "LaJolla")
+//     	location = "8200 Camino del Oro, La Jolla, 92037"; //la jolla 
+// 	else if(name == "Oceanside")
+//     	location = " 5059 Newport Ave, San Diego, 92107";
+//   	else if(name == "PacificBeach")
+//     	location = "4500 Ocean Ave, San Diego, 92109";
+//   	else if(name == "Coronado")
+//     	location = "1800 Avenida de las Arenas, Coronado, 92118";
+//   	else if(name == "MissionBay")
+//     	location = "3448 Crown Point Drive, San Diego, 92109";
+//     var tag = "<p>" + location + "</p>";
+//     $("div #beachAddress").html(tag);
   
-}
+// }
 
-$( document ).ready(function() {
-  getMap();
-  getAddress();
-});
-
+// $( document ).ready(function() {
+//   getMap();
+//   getAddress();
+// });
 </script>
+
