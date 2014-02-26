@@ -7,6 +7,16 @@
 <div id="wttitle"> WORST TIME: <br> </div> 
 <div id="worsttime">BETWEEN 11:00AM-2:30PM </div>-->
 <div id="hottiealert"> Hottie Alert: <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> </div>
+
+
+{{#with crowd}}
+<div id="crowdstatus">{{status}}</div>
+<div id="lastupdate">{{lastupdate}}</div>
+{{/with}}
+<div class="button" id="low"><a href="#">Low</a></div>
+<div class="button" id="med"><a href="#">Medium</a></div>
+<div class="button" id="high"><a href="#">High</a></div>
+
 </div>
 
 <style>
@@ -48,4 +58,10 @@
 <script type="text/javascript">
 //this portion of the script gets the current time
 $("div #time").html("<p>"+getRealtime()+"</p>");
+
+$(document).ready(function(){
+	$("#low a").click(function(){loadMainContent("/updatedcrowd/{{name}}/low");});
+	$("#med a").click(function(){loadMainContent("/updatedcrowd/{{name}}/medium");});
+	$("#high a").click(function(){loadMainContent("/updatedcrowd/{{name}}/high");});
+});
 </script>
