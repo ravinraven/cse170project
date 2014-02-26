@@ -1,3 +1,5 @@
+var beachstatus = require('../beachstatus.json');
+
 exports.viewlog = function(req, res) { 
   var name = req.params.name; 
   res.render('login');
@@ -77,3 +79,36 @@ exports.viewActivity = function(req, res) { 
    res.render('activity', activity[name]);
   // controller code goes here 
 };
+
+//testing json storage
+exports.addActivity = function(req, res){
+  var name = req.query.beach; 
+  console.log(name);
+  var code = nametocode(name);
+  //var activity = "Function call is fine";
+  beachstatus[code]['activity'].push({"name": "fly", "count": 10});
+  res.render('addactivity', activity);
+}
+
+exports.updateCrowd = function(req, res){
+  var name = req.params.name; 
+  var stat = req.params.status; 
+  var newtime = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"); //"hhmmss"
+  var code = nametocode(name);
+  beachstatus[name]['crowd']['lastupdate'] = newtime;
+  beachstatus[name]['crowd']['status'] = stat;
+  res.render('updatedcrowd');
+}
+
+function nametocode (name ){
+  if(name == "LaJolla")
+    return 0;
+  else if(name == "Oceanside")
+    return 1;
+  else if(name == "PacificBeach")
+    return 2;
+  else if(name == "Coronado")
+    return 3;
+  else if(name == "MissionBay")
+    return 4;
+}

@@ -1,0 +1,42 @@
+[
+	{"beachname": "La Jolla",
+	"name": "LaJolla",
+	"activity":[{ "name": "run", "count": 1 }],
+	"crowd":{
+		"lastupdate": "January 1, 2014",
+		"status": "none"
+		}
+	},
+	{"beachname": "Pacific Beach",
+		"name": "PacificBeach",
+		"activity":[{"name": "run", "count": 1}],
+		"crowd":{
+			"lastupdate": "January 1, 2014",
+			"status": "none"
+		}
+	},
+	{"beachname": "Oceanside",
+		"name": "Oceanside",
+		"activity":[{"name": "run", "count": 1}],
+		"crowd":{
+			"lastupdate":"January 1, 2014",
+			"status": "none"
+		}
+	},
+	{"beachname": "Corona",
+		"name": "Corona",
+		"activity":[{"name": "run", "count": 1}],
+		"crowd":{
+			"lastupdate": "January 1, 2014",
+			"status": "none"
+		}
+	},
+	{"beachname": "Mission Bay",
+		"name": "MissionBay",
+		"activity":[{"name": "run", "count": 1}],
+		"crowd":{
+			"lastupdate": "January 1, 2014",
+			"status": "none"
+		}
+	}
+]

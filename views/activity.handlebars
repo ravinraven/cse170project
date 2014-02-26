@@ -7,7 +7,7 @@
 <div id="locationcontent">{{locationcontent}}</div>
 <div id="no">{{no}}</div>
 <div id="nocontent">{{nocontent}}</div>
-<div id="button" id="suggest"><a href="#">Suggest Activity</a></div>
+<div id="suggest"><a href="#">Suggest Activity</a></div>
 </div>
 <style type="text/css">
 .activitypage{
@@ -37,9 +37,7 @@
 }
 </style>
 <script>
-$.document.ready(function(){
-	$("#suggest a").click(function(){
-		
-	});
+$(document).ready(function(){
+	$("#suggest a").click(function() { loadMainContent("/addactivity/LaJolla/run") });
 });
 </script>
