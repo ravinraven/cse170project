@@ -1,7 +1,7 @@
 [
 	{"beachname": "La Jolla",
 	"name": "LaJolla",
-	"activity":[{ "name": "run", "count": 1 }],
+	"activity":[{ "name": "running", "count": 0 }, {"name": "swimming", "count": 0}, {"name": "surfing", "count": 0}, {"name": "kayaking", "count": 0}, {"name": "scuba diving", "count": 0}, {"name": "bonfire", "count": 0}, {"name": "volleyball", "count": 0}, {"name": "fishing", "count": 0}],
 	"crowd":{
 		"lastupdate": "January 1, 2014",
 		"status": "none"
@@ -9,7 +9,7 @@
 	},
 	{"beachname": "Pacific Beach",
 		"name": "PacificBeach",
-		"activity":[{"name": "run", "count": 1}],
+		"activity":[{"name": "running", "count": 0}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0}, {"name": "volleyball", "count": 0}, {"name": "fishing", "count":0} ],
 		"crowd":{
 			"lastupdate": "January 1, 2014",
 			"status": "none"
@@ -17,15 +17,15 @@
 	},
 	{"beachname": "Oceanside",
 		"name": "Oceanside",
-		"activity":[{"name": "run", "count": 1}],
+		"activity":[{"name": "running", "count": 1}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0},{"name": "fishing", "count": 0}, {"name": "volleyball", "count": 0},{"name": "bonfire", "count": 0} ],
 		"crowd":{
 			"lastupdate":"January 1, 2014",
 			"status": "none"
 		}
 	},
-	{"beachname": "Corona",
+	{"beachname": "Coronado",
 		"name": "Corona",
-		"activity":[{"name": "run", "count": 1}],
+		"activity":[{"name": "running", "count": 0}, {"name":"sailing", "count":0},{"name":"sun tan", "count":0}, {"name":"volleyball", "count":0}],
 		"crowd":{
 			"lastupdate": "January 1, 2014",
 			"status": "none"
@@ -33,7 +33,7 @@
 	},
 	{"beachname": "Mission Bay",
 		"name": "MissionBay",
-		"activity":[{"name": "run", "count": 1}],
+		"activity":[{"name": "swimming", "count": 0}, {"name": "surfing", "count":0}, {"name": "volleyball", "count": 0}, {"name":"bonfire", "count":0}],
 		"crowd":{
 			"lastupdate": "January 1, 2014",
 			"status": "none"

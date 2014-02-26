@@ -5,10 +5,36 @@
 		<div id="youcan">{{youcan}}</div>
 		<div id="youcancontent">{{youcancontent}}</div>
 	</div>	
-	<div id="actlist"> <table style="width:65px" align="center">
-		<tr><td id="actname">{{actname}}</td></tr>
-		<tr><td id="votes">{{votes}}</td></tr>
-	</table></div>
+	<div class="actlist"> 
+		<div id="activity"> 
+			<div id="name">Swimming</div>
+			<div id="count">3 Votes</div>
+		</div>
+		<div id="activity"> 
+			<div id="name">Running</div>
+			<div id="count">6 Votes</div>
+		</div>
+		<div id="activity"> 
+			<div id="name">Surfing</div>
+			<div id="count">8 Votes</div>
+		</div>
+		<div id="activity">
+			<div id="name">Kayaking</div>
+			<div id="count">1 Vote</div>
+		</div>
+		<div id="activity">
+			<div id="name">Scuba Diving</div>
+			<div id="count">1 Vote</div>
+		</div>
+		<div id="activity">
+			<div id="name">Bonfire</div>
+			<div id="count">4 Votes</div>
+		</div>
+		<div id="activity">
+			<div id="name">Volleyball</div>
+			<div id="count">7 Votes</div>
+		</div>
+	</div>
 
 <div id="suggest"><a href="#">Suggest Activity</a></div>
 </div>
@@ -32,8 +58,16 @@
 #youcancontent{
 	font-size:20px;
 }
-#actlist{
-
+.actlist{
+width:100%;
+}
+#name{
+	width:50%;
+	float:left;
+}
+#votes{
+	width:50%;
+	float:right;
 }
 </style>
 <script>
