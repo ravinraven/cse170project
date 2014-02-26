@@ -63,7 +63,9 @@ exports.viewcrowd = function(req, res) { 
   var name = req.params.name;  //name of location
   //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
   var crowd = require('../public/json/crowd.json');
-  res.render('crowds',crowd[name]);
+  var code = nametocode(name);
+  var data = beachstatus[code];
+  res.render('crowds',data);
   // controller code goes here 
 };
 exports.viewMap = function(req, res) { 
@@ -96,8 +98,8 @@ exports.updateCrowd = function(req, res){
   var stat = req.params.status; 
   var newtime = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"); //"hhmmss"
   var code = nametocode(name);
-  beachstatus[name]['crowd']['lastupdate'] = newtime;
-  beachstatus[name]['crowd']['status'] = stat;
+  beachstatus[code]['crowd']['lastupdate'] = newtime;
+  beachstatus[code]['crowd']['status'] = stat;
   res.render('updatedcrowd');
 }
 
