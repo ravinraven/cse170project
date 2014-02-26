@@ -1,8 +1,15 @@
 <div class="activitypage">
-<div id="acticon"><img src="{{acticon}}"></div>
-<div id="bestact">{{bestact}}</div>
-<div id="youcan">{{youcan}}</div>
-<div id="youcancontent">{{youcancontent}}</div>
+	<div class="bestact">
+		<div id="acticon"><img src="{{acticon}}"></div>
+		<div id="bestact">{{bestact}}</div>
+		<div id="youcan">{{youcan}}</div>
+		<div id="youcancontent">{{youcancontent}}</div>
+	</div>	
+	<div id="actlist"> <table style="width:65px" align="center">
+		<tr><td id="actname">{{actname}}</td></tr>
+		<tr><td id="votes">{{votes}}</td></tr>
+	</table></div>
+
 <div id="suggest"><a href="#">Suggest Activity</a></div>
 </div>
 
@@ -24,6 +31,9 @@
 }
 #youcancontent{
 	font-size:20px;
+}
+#actlist{
+
 }
 </style>
 <script>
