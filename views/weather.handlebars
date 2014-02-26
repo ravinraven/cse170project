@@ -10,17 +10,23 @@
 <div id="highlow"> low: 59F high: 74 </div>
 <div id="weeklywe"> <table style="width:150px" align="center">
 		<tr>
-  			<td>W</td>
-  			<td>TH</td>
-  			<td>F</td>
-  			<td>Sa</td>
+  			<td id="day0">W</td>
+  			<td id="day1">TH</td>
+  			<td id="day2">F</td>
+  			<td id="day3">Sa</td>
 		</tr>
 		<tr>
-  			<td>65</td>
-  			<td>67</td>
-  			<td>69</td>
-  			<td>70</td>
+  			<td id="high0">65</td>
+  			<td id="high1">67</td>
+  			<td id="high2">69</td>
+  			<td id="high3">70</td>
 		</tr>
+    <tr>
+        <td id="low0">65</td>
+        <td id="low1">67</td>
+        <td id="low2">69</td>
+        <td id="low3">70</td>
+    </tr>
 </table></div>
 <!-- <div id="order"> </div> -->
 </div>
@@ -55,18 +61,25 @@ function getWeather(){
 
 function displayWeather(result){
 	var forecasts = result['query']["results"]['channel']['item']['forecast'];
-	console.log(forecasts[0]);
+	//console.log(forecasts[0]);
 	//console.log(result);
 	//$("div #time").html("<p>"+date.toLocaleTimeString()+"</p>");
- 	//xmlDoc = $.parseXML( result );
-	//$xml = $( xmlDoc );
- 	//$title = $xml.find( "title" );
-	// $data = $(result).find("yweather:condition");
-	
+ 	
 	$("div #temp").html("<p>"+result['query']["results"]['channel']['item']['condition']['temp']+"</p>");
 	$("div #temp_min").html("<p>"+forecasts[0]["low"]+"</p>");
 	$("div #temp_max").html("<p>"+forecasts[0]['high']+"</p>");
-
+  $("#day0").html(forecasts[1]["day"]);
+  $("#day1").html(forecasts[2]["day"]);
+  $("#day2").html(forecasts[3]["day"]);
+  $("#day3").html(forecasts[4]["day"]);
+  $("#low0").html(forecasts[1]["low"]);
+  $("#low1").html(forecasts[2]["low"]);
+  $("#low2").html(forecasts[3]["low"]);
+  $("#low3").html(forecasts[4]["low"]);
+  $("#high0").html(forecasts[1]["high"]);
+  $("#high1").html(forecasts[2]["high"]);
+  $("#high2").html(forecasts[3]["high"]);
+  $("#high3").html(forecasts[4]["high"]);
 }
 getWeather();
 </script>
