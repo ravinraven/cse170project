@@ -3,33 +3,42 @@
 		"acticon": "/images/sun.png",
 		"bestact": "Best activity: Sun Tanning",
 		"youcan": "You can do...",
-		"youcancontent": "run, surf, scuba dive, beach volleyball, fire pits, kayaking"
-		
+		"youcancontent": "run, surf, scuba dive, beach volleyball, fire pits, kayaking",
+		"actname":"Activity Name",
+		"votes": "12 Votes"
 	},
 	"Oceanside":{
 		"acticon": "/images/sun.png",
 		"bestact": "Best activity: Surfing, Dog Walks",
 		"youcan": "You can do...",
-		"youcancontent": "run, fish, beach volleyball, fire pits, swim"
+		"youcancontent": "run, fish, beach volleyball, fire pits, swim",
+		"actname":"Activity Name",
+		"votes": "12 Votes"
 		
 	},
 	"PacificBeach":{
 		"acticon": "/images/sun.png",
 		"bestact": "Best activity: Surfing, Running",
 		"youcan": "You can do...",
-		"youcancontent": "run, surf, swim, beach volleyball, fishing"		
+		"youcancontent": "run, surf, swim, beach volleyball, fishing",
+		"actname":"Activity Name",
+		"votes": "12 Votes"		
 	},
 	"Coronado":{
 		"acticon": "/images/sun.png",
 		"bestact": "Best activity: Sun Tanning",
 		"youcan": "You can do...",
-		"youcancontent": "run, beach volleyball, kayak, build sandcastles"
+		"youcancontent": "run, beach volleyball, kayak, build sandcastles",
+		"actname":"Activity Name",
+		"votes": "12 Votes"
 	},
 	"MissionBay":{
 		"acticon": "/images/sun.png",
 		"bestact": "Best activity: Sailing, Bike Rides",
 		"youcan": "You can do...",
-		"youcancontent": "paddleboard, run, fire pits, picnic, swim, bike"
+		"youcancontent": "paddleboard, run, fire pits, picnic, swim, bike",
+		"actname":"Activity Name",
+		"votes": "12 Votes"
 	}
 }
 
