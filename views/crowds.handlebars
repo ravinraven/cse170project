@@ -3,19 +3,19 @@
 <div id="crowdtime"> </div>
 <div id="crowd"> High: Packed like Sardines </div>
 
-<div id="hottiealert"> Hottie Alert: <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"><img src="/images/heart.png" class="img-responsive"> </div>
+<div id="hottiealert"> Hottie Alert: <img src="/images/gheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"><img src="/images/rheart.png" class="img-responsive"> </div>
+</div>
+
+<div style="clear: both;"></div>
+<div class="buttonppl" id="lcrowd"> Crowd Alert:<a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="hcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
 </div>
 <div style="clear: both;"></div>
-
 {{#with crowd}}
 <div id="crowdstatus">{{status}}</div>
 <div id="lastupdate">last update: {{lastupdate}}</div>
 {{/with}}
-<div class="crowddiv">
-<div class="buttonppl" id="lcrowd"><a href="#"> Crown Alert: <img src="/images/1person.png" class="img-responsive"></a></div>
-<div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
-<div class="buttonppl" id="hcrowd"><a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
-</div>
 
 <style>
 #crowdstatus{
@@ -26,7 +26,7 @@
 	font-size: 20px;
 	text-align: center;
 }
-.crowdalert{text-align: center;letter-spacing: 0px;}
+.crowdalert{text-align: center;letter-spacing: 1.5px;}
 #hottiealert img{
 	width:12%;
 	height: 12%;
@@ -36,11 +36,13 @@
 #crowdpage{
 	/*color: #2a6496;*/
 	font-size: 40px;
-	padding-top: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 #crowd{
 	color: #ef4444;
 	font-size: 35px;
+	margin-bottom: 5px;
 }
 #crowdtime{
 	font-size: 35px;
@@ -49,28 +51,23 @@
 #hottiealert{
 	font-size: 27px;
 }
-#lcrowd{
-	float: left;
-	width: 15%;
-	font-size: 27px;
+#lcrowd img{
+	float: right;
+	width: 12%;
 	color: black;
+	margin-right: 10px;
 }
-#mcrowd{
-	float: left;
-	width: 15%;
+#mcrowd img{
+	float: right;
+	width: 12%;
 }
-#hcrowd{
-	float: left;
-	width: 15%;
+#hcrowd img{
+	float: right;
+	width: 12%;
 }
 .buttonppl{
+}
 
-}
-.crowddiv{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
 
 </style>
 <script type="text/javascript">
