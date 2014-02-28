@@ -78,19 +78,19 @@ exports.viewMap = function(req, res) { 
 };
 exports.viewActivity = function(req, res) { 
    var name = req.params.name; 
-   var activity = require('../public/json/activity.json');
-   res.render('activity', activity[name]);
+   //var activity = require('../public/json/activity.json');
+   var code = nametocode(name);
+   res.render('activity', beachstatus[code]);
   // controller code goes here 
 };
 
 //testing json storage
 exports.addActivity = function(req, res){
   var name = req.query.beach; 
-  console.log(name);
   var code = nametocode(name);
   //var activity = "Function call is fine";
-  beachstatus[code]['activity'].push({"name": "fly", "count": 10});
-  res.render('addactivity', activity);
+  //beachstatus[code]['activity'].push({"name": "fly", "count": 10});
+  res.render('addactivity');
 }
 
 exports.updateCrowd = function(req, res){

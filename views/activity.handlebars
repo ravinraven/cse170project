@@ -1,11 +1,18 @@
 <div class="activitypage">
 	<div class="bestact">
-		<div id="acticon"><img src="{{acticon}}"></div>
+		<div id="acticon"><img src="/images/sun.png"></div>
 		<div id="bestact">{{bestact}}</div>
 		<div id="youcan">{{youcan}}</div>
 		<div id="youcancontent">{{youcancontent}}</div>
 	</div>	
 	<div class="actlist"> 
+	{{#each activity}}
+	<div id="activity"> 
+			<div id="name">{{name}}</div>
+			<div id="count">{{count}} Votes</div>
+		</div>
+		{{/each}}
+<!--
 		<div id="activity"> 
 			<div id="name">Swimming</div>
 			<div id="count">3 Votes</div>
@@ -34,6 +41,7 @@
 			<div id="name">Volleyball</div>
 			<div id="count">7 Votes</div>
 		</div>
+		-->
 	</div>
 
 <div id="suggest"><a href="#">Suggest Activity</a></div>
@@ -46,7 +54,7 @@
  	text-align:center;
  }
  #acticon{
- 	display: 60%;
+ 	width: 60%;
  }
 #bestact{
 	font-size:30px;
