@@ -96,7 +96,7 @@ exports.addActivity = function(req, res){
 exports.updateCrowd = function(req, res){
   var name = req.params.name; 
   var stat = req.params.status; 
-  var newtime = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"); //"hhmmss"
+  var newtime = getRealtime(); //"hhmmss"
   var code = nametocode(name);
   beachstatus[code]['crowd']['lastupdate'] = newtime;
   beachstatus[code]['crowd']['status'] = stat;
@@ -114,4 +114,15 @@ function nametocode (name ){
     return 3;
   else if(name == "MissionBay")
     return 4;
+}
+function getRealtime(){
+  var date = new Date();
+  var hours = date.getHours();
+  var am = "AM";
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  if(hours<10){ hours = "0"+hours;}else if (hours>12){hours = hours%12; am="PM";}
+    if(minutes<10){minutes = "0"+minutes;}
+  var formattedTime = hours + ':' + minutes + " " +am;
+  return formattedTime;
 }

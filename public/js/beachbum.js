@@ -13,7 +13,7 @@ function getRealtime(){
 	var am = "AM";
 	var minutes = date.getMinutes();
 	var seconds = date.getSeconds();
-	if(hours<10){ hours = "0"+hours;}else if (hours>11){hours = hours%12; am="PM";}
+	if(hours<10){ hours = "0"+hours;}else if (hours>12){hours = hours%12; am="PM";}
     if(minutes<10){minutes = "0"+minutes;}
 	var formattedTime = hours + ':' + minutes + " " +am;
 	return formattedTime;
