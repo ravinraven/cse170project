@@ -1,63 +1,78 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
+<div id="crowdtime"> </div>
 <div id="crowd"> High: Packed like Sardines </div>
-<div id="time"> </div>
-<!--<div id="bttitle"> BEST TIME: <br> </div> 
-<div id="besttime"> before 9:30am + after 4:00pm </div>
-<div id="wttitle"> WORST TIME: <br> </div> 
-<div id="worsttime">BETWEEN 11:00AM-2:30PM </div>-->
-<div id="hottiealert"> Hottie Alert: <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> <img src="/images/heart.png" class="img-responsive"> </div>
 
-
-{{#with crowd}}
-<div id="crowdstatus">{{status}}</div>
-<div id="lastupdate">{{lastupdate}}</div>
-{{/with}}
-<div class="button" id="low"><a href="#">Low</a></div>
-<div class="button" id="med"><a href="#">Medium</a></div>
-<div class="button" id="high"><a href="#">High</a></div>
-
+<div id="hottiealert"> Hottie Alert: <img src="/images/gheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"><img src="/images/rheart.png" class="img-responsive"> </div>
 </div>
 
+<div style="clear: both;"></div>
+<div class="buttonppl" id="lcrowd"> Crowd Alert:<a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="hcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
+</div>
+<div style="clear: both;"></div>
+{{#with crowd}}
+<div id="crowdstatus">{{status}}</div>
+<div id="lastupdate">last update: {{lastupdate}}</div>
+{{/with}}
+
 <style>
-.crowdalert{text-align: center;letter-spacing: 0px;}
+#crowdstatus{
+	font-size: 30px;
+	text-align: center;
+}
+#lastupdate{
+	font-size: 20px;
+	text-align: center;
+}
+.crowdalert{text-align: center;letter-spacing: 1.5px;}
 #hottiealert img{
 	width:12%;
 	height: 12%;
 	float: right;
-	margin-right: 0px;
+	margin-right: 10px;
 }
 #crowdpage{
 	/*color: #2a6496;*/
 	font-size: 40px;
-	padding-top: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 #crowd{
 	color: #ef4444;
 	font-size: 35px;
+	margin-bottom: 5px;
 }
-#time{
-	font-size: 30px;
+#crowdtime{
+	font-size: 35px;
 }
-#bttitle{
-	font-size: 27px;
-}
-#besttime{
-	font-size: 25px;
-}
-#wttitle{
-	font-size: 27px;
-}
-#worsttime{
-	font-size: 25px;
-}
+
 #hottiealert{
 	font-size: 27px;
 }
+#lcrowd img{
+	float: right;
+	width: 12%;
+	color: black;
+	margin-right: 10px;
+}
+#mcrowd img{
+	float: right;
+	width: 12%;
+}
+#hcrowd img{
+	float: right;
+	width: 12%;
+}
+.buttonppl{
+}
+
+
 </style>
 <script type="text/javascript">
 //this portion of the script gets the current time
-$("div #time").html("<p>"+getRealtime()+"</p>");
+$("div #crowdtime").html("<p>"+getRealtime()+"</p>");
 
 $(document).ready(function(){
 	$("#low a").click(function(){loadMainContent("/updatedcrowd/{{name}}/low");});
