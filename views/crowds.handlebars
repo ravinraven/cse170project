@@ -7,9 +7,9 @@
 </div>
 
 <div style="clear: both;"></div>
-<div class="buttonppl" id="lcrowd"> Crowd Alert:<a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="hcrowd"> Crowd Alert:<a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
-<div class="buttonppl" id="hcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
 </div>
 <div style="clear: both;"></div>
 {{#with crowd}}
@@ -74,9 +74,11 @@
 //this portion of the script gets the current time
 $("div #crowdtime").html("<p>"+getRealtime()+"</p>");
 
+function loadUpdateCrowd(name){$(".sbcontent").load(name, errorResponse);}
+
 $(document).ready(function(){
-	$("#low a").click(function(){loadMainContent("/updatedcrowd/{{name}}/low");});
-	$("#med a").click(function(){loadMainContent("/updatedcrowd/{{name}}/medium");});
-	$("#high a").click(function(){loadMainContent("/updatedcrowd/{{name}}/high");});
+	$("#lcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/low");});
+	$("#mcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/medium");});
+	$("#hcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/high");});
 });
 </script>

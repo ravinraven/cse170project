@@ -24,7 +24,7 @@
 		}
 	},
 	{"beachname": "Coronado",
-		"name": "Corona",
+		"name": "Coronado",
 		"activity":[{"name": "running", "count": 0}, {"name":"sailing", "count":0},{"name":"sun tan", "count":0}, {"name":"volleyball", "count":0}],
 		"crowd":{
 			"lastupdate": "January 1, 2014",

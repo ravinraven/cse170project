@@ -62,7 +62,7 @@ exports.viewweather = function(req, res) { 
 exports.viewcrowd = function(req, res) { 
   var name = req.params.name;  //name of location
   //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
-  var crowd = require('../public/json/crowd.json');
+  //var crowd = require('../public/json/crowd.json');
   var code = nametocode(name);
   var data = beachstatus[code];
   res.render('crowds',data);
@@ -71,9 +71,9 @@ exports.viewcrowd = function(req, res) { 
 exports.viewMap = function(req, res) { 
    var name = req.params.name; 
    // var location;
-   var map = require('../public/json/map.json');
-   // var jsondata = { "beachname": name }
-   res.render('map', map[name]);
+   //var map = require('../public/json/map.json');
+    var jsondata = { "beachname": name }
+   res.render('map', jsondata);
   // controller code goes here 
 };
 exports.viewActivity = function(req, res) { 
