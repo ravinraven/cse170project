@@ -1,29 +1,40 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
-<div id="crowdtime"> </div>
+<!-- <div id="crowdtime"> </div> -->
 <div id="crowd"> High: Packed like Sardines </div>
+</div>
+
 
 <div id="hottiealert"> Hottie Alert: <img src="/images/gheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"><img src="/images/rheart.png" class="img-responsive"> </div>
 </div>
 
 <div style="clear: both;"></div>
-<div class="buttonppl" id="hcrowd"> Crowd Alert:<a href="#"><img src="/images/3person.png" class="img-responsive"></a></div>
+
+<div id="crowdicons"> Crowd Alert:
+<div class="buttonppl" id="hcrowd"><a href="#"> <img src="/images/3person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
-</div>
 <div style="clear: both;"></div>
+</div>
+
+
+<!-- This updates the beach crowd status when one user clicks a crowd icon. I don't think we need both the "packed like sardines" and this update. -->
+
 {{#with crowd}}
 <div id="crowdstatus">{{status}}</div>
 <div id="lastupdate">last update: {{lastupdate}}</div>
 {{/with}}
 
 <style>
+#crowdicons{
+	font-size:27px;
+}
 #crowdstatus{
 	font-size: 30px;
 	text-align: center;
 }
 #lastupdate{
-	font-size: 20px;
+	font-size: 27px;
 	text-align: center;
 }
 .crowdalert{text-align: center;letter-spacing: 1.5px;}
@@ -41,11 +52,14 @@
 }
 #crowd{
 	color: #ef4444;
-	font-size: 35px;
-	margin-bottom: 5px;
+	font-size: 30px;
+	margin-bottom: 10px;
 }
 #crowdtime{font-size: 35px;}
-#hottiealert{font-size: 27px;}
+#hottiealert{
+	font-size: 27px;
+	padding-bottom:20px;
+}
 #lcrowd img{
 	float: right;
 	width: 12%;
@@ -55,12 +69,16 @@
 #mcrowd img{
 	float: right;
 	width: 12%;
+	margin-right:10px;
 }
 #hcrowd img{
 	float: right;
 	width: 12%;
+	font-size: 27px;
 }
-.buttonppl{}
+.buttonppl{
+	font-size:27px;
+	}
 </style>
 <script type="text/javascript">
 //this portion of the script gets the current time
