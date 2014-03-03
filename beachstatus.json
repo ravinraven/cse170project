@@ -7,19 +7,19 @@
 		"status": "none"
 		}
 	},
-	{"beachname": "Pacific Beach",
-		"name": "PacificBeach",
-		"activity":[{"name": "running", "count": 0}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0}, {"name": "volleyball", "count": 0}, {"name": "fishing", "count":0} ],
-		"crowd":{
-			"lastupdate": "January 1, 2014",
-			"status": "none"
-		}
-	},
 	{"beachname": "Oceanside",
 		"name": "Oceanside",
 		"activity":[{"name": "running", "count": 1}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0},{"name": "fishing", "count": 0}, {"name": "volleyball", "count": 0},{"name": "bonfire", "count": 0} ],
 		"crowd":{
 			"lastupdate":"January 1, 2014",
+			"status": "none"
+		}
+	},
+	{"beachname": "Pacific Beach",
+		"name": "PacificBeach",
+		"activity":[{"name": "running", "count": 0}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0}, {"name": "volleyball", "count": 0}, {"name": "fishing", "count":0} ],
+		"crowd":{
+			"lastupdate": "January 1, 2014",
 			"status": "none"
 		}
 	},

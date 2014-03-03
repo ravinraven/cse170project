@@ -1,19 +1,14 @@
 <div class="activitypage">
-	<div id="pagetitle"> beach lookout </div>
-	<div id="acticon"><img src="/images/sun.png"></div>	
+	<div id="pagetitle">Suggest</div>
 	<div class="actlist"> 
 	{{#each activity}}
-	<div id="activity"> 
-			<div id="name">{{name}}</div>
-			<div id="count">{{count}} Counts </div>
-		</div>
+	<div id="activity"><a href="#">
+			<div id="name" class="{{name}}">{{name}}</div>
+			<div id="count">{{count}} Counts</div>
+		</a></div>
 		{{/each}}
 	</div>
-
-<div class="button" id="suggest"><a href="#">Suggest Activity</a></div>
 </div>
-
-
 <style type="text/css">
 .activitypage{
  	font-size:25px;
@@ -67,11 +62,10 @@ margin-right:auto;
 }
 </style>
 <script>
-var n = "{{name}}";
-console.log(n);
-function loadSA(){$(".sbcontent").load("/suggestact/"+n,errorResponse);}
+var beachloc = "{{name}}";
 $(document).ready(function(){
-	$("#suggest a").click(function() { loadSA(); });
-	//loadMainContent("/suggestActivity/LaJolla")
+	{{#each activity}}
+	$(".{{name}} a").click(function() { loadMainContent("/addactivity/"+beachloc+"/{{name}}") });
+	{{/each}}
 });
 </script>

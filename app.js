@@ -58,6 +58,7 @@ app.get('/weather/:name', pagelist.viewweather);
 app.get('/map/:name', pagelist.viewMap);
 app.get('/activity/:name', pagelist.viewActivity);
 app.get('/addactivity/:beach/:act', pagelist.addActivity);
+app.get('/suggestact/:name', pagelist.suggestActivity);
 app.get('/updatedcrowd/:name/:status', pagelist.updateCrowd);
 
 // Example route

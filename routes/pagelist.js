@@ -92,6 +92,13 @@ exports.addActivity = function(req, res){
   //beachstatus[code]['activity'].push({"name": "fly", "count": 10});
   res.render('addactivity');
 }
+exports.suggestActivity = function(req, res){
+  var name = req.params.name; 
+  var code = nametocode(name);
+  console.log(name);
+  res.render('suggestact', beachstatus[code]);
+}
+
 
 exports.updateCrowd = function(req, res){
   var name = req.params.name; 
