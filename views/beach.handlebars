@@ -1,5 +1,3 @@
-<!--link href="/css/beach.css" rel="stylesheet"-->
-
 <div class="beachcontent">
 <div class="headline">
 <div class="arrow"><a href="#"><img src="/images/arrowicon.png"></a></div><div class="pagename" id="topnavname">{{beachname}}</div>
@@ -22,13 +20,47 @@
 <div style="clear:both;"></div>
 </div> <!-- end beach content -->
 <script type="text/javascript">
+var lastIcon = '/images/weathericon.png';
+var currentPage = "#weather img";
 function loadWeather(){
+	$(currentPage).attr('src',lastIcon);
+	lastIcon = $('#weather img').attr('src');
+	currentPage = "#weather img";
+	$('#weather img').attr('src','/images/rheart.png');
 	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
-	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );}
-function loadSurf(){$(".sbcontent").load("/surf/{{stringname}}",errorResponse);}
-function loadActivity(){$(".sbcontent").load("/activity/{{stringname}}",errorResponse);}
-function loadCrowds(){$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);}
-function loadMap(){$(".sbcontent").load("/map/{{stringname}}", errorResponse);}
+	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
+}
+
+function loadSurf(){
+	$(currentPage).attr('src',lastIcon);
+	currentPage = "#surf img";
+	lastIcon = $('#surf img').attr('src');
+	$('#surf img').attr('src','/images/rheart.png');
+	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
+	
+}
+function loadActivity(){
+	$(currentPage).attr('src',lastIcon);
+	currentPage = "#activity img"
+	lastIcon = $('#activity img').attr('src');
+	$('#activity img').attr('src','/images/rheart.png');
+	$(".sbcontent").load("/activity/{{stringname}}",errorResponse);
+	}
+
+function loadCrowds(){
+	$(currentPage).attr('src',lastIcon);
+	currentPage = "#crowd img";
+	lastIcon = $('#crowd img').attr('src');
+	$('#crowd img').attr('src','/images/rheart.png');
+	$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);
+	}
+function loadMap(){
+	$(currentPage).attr('src',lastIcon);
+	currentPage = "#map img";
+	lastIcon = $('#map img').attr('src');
+	$('#map img').attr('src','/images/rheart.png');
+	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
+	}
 function parseweather(result){
 	console.log(result);
 }
@@ -42,7 +74,5 @@ $( document ).ready(function() {
 	$("#activity a").click(function(){loadActivity(); });
 	$("#map a").click(function(){loadMap();});
 	$("#crowd a").click(function(){loadCrowds() });
-	$("#login a").click( function(){ loadMainContent("LOGIN") });
-	$("#help a").click(function() { loadMainContent("HELP"); }); 
 });
 </script>
