@@ -7,13 +7,17 @@ div .comment .title .height{
 	text-align: center;
 	font-size: 40px;
 	opacity:.9;
+	/*margin-left:auto;
+ 	padding-right:50px;*/
+ 	letter-spacing: 1.5px;
 
 }
 
+
 #time{
 	font-size:40px;
-	padding-top: 10%;
-	padding-bottom: 15%;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }	
 #icon{
 	display:inline-block;
@@ -23,7 +27,7 @@ div .comment .title .height{
     z-index:-1;
 }
 img{
-	width:170px;
+	width:auto;
 	height:120px;
 }
 #temp{

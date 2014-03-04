@@ -1,6 +1,6 @@
 {
 	"LaJolla":{
-		"acticon": "/images/sun.png",
+		"activityicon": "/images/sun.png",
 		"bestact": "Best activity: Sun Tanning",
 		"youcan": "You can do...",
 		"youcancontent": "run, surf, scuba dive, beach volleyball, fire pits, kayaking",

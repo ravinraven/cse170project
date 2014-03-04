@@ -2,11 +2,11 @@
 <div id="crowdpage"> Crowd-O-Meter </div>
 <!-- <div id="crowdtime"> </div> -->
 <div id="crowd"> High: Packed like Sardines </div>
-</div>
+
 
 
 <div id="hottiealert"> Hottie Alert: <img src="/images/gheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"><img src="/images/rheart.png" class="img-responsive"> </div>
-</div>
+
 
 <div style="clear: both;"></div>
 
@@ -16,6 +16,8 @@
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
 <div style="clear: both;"></div>
 </div>
+</div>
+<!-- </div> -->
 
 
 <!-- This updates the beach crowd status when one user clicks a crowd icon. I don't think we need both the "packed like sardines" and this update. -->
@@ -37,7 +39,12 @@
 	font-size: 27px;
 	text-align: center;
 }
-.crowdalert{text-align: center;letter-spacing: 1.5px;}
+.crowdalert{
+	text-align: center;
+	letter-spacing: 1.5px;
+ 	margin-left:auto;
+ 	/*padding-right:50px;*/
+}
 #hottiealert img{
 	width:12%;
 	height: 12%;
@@ -47,8 +54,8 @@
 #crowdpage{
 	/*color: #2a6496;*/
 	font-size: 40px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 #crowd{
 	color: #ef4444;
