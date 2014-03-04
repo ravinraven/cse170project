@@ -67,8 +67,8 @@ function parseweather(result){
 $( document ).ready(function() {
 	loadWeather();
 	//$(".sidebar").click( function(){ expandSidebar(); } );
-	$(".arrow a").click(function() { loadMainContent("beachlist") });
-	$(".home a").click(function() { window.location.href="/"; });
+	$(".arrow a").click(function() {loadMainContent("beachlist") });
+	$(".home a").click(function(){loadMainContent("beachlist") });
 	$("#surf a").click(function(){ loadSurf()});
 	$("#weather a").click(function(){loadWeather(); });
 	$("#activity a").click(function(){loadActivity(); });
