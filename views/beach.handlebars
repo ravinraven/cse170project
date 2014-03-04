@@ -51,14 +51,14 @@ function loadCrowds(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#crowd img";
 	lastIcon = $('#crowd img').attr('src');
-	$('#crowd img').attr('src','/images/rheart.png');
+	$('#crowd img').attr('src','/images/crowdiconC.png');
 	$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);
 	}
 function loadMap(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#map img";
 	lastIcon = $('#map img').attr('src');
-	$('#map img').attr('src','/images/rheart.png');
+	$('#map img').attr('src','/images/mapiconB.png');
 	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
 	}
 function parseweather(result){
