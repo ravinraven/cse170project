@@ -2,19 +2,32 @@
 	<div id="pagetitle">Suggest</div>
 	<div class="actlist"> 
 	{{#each activity}}
-	<a id="{{name}}" href="#" ><div class="activity">
+	<a id="{{name}}" href="#" ><div id="activity">
 			<div id="name" >{{name}}</div>
 			<div id="count">{{count}} Counts</div>
 		</div></a>
 		{{/each}}
 	</div>
 </div>
+
+<!-- 
+<div id="suggest"><a href="#">Track Beach Activity</a></div>
+</div> -->
+
 <style type="text/css">
+/*
+div a:link {color:#2a6496;}*/
+
+/*#name a:link {color:#2a6496;}
+#count a:visited {color:#2a6496;}
+*/
+
 .activitypage{
  	font-size:25px;
  	text-align:center;
  	margin-left:auto;
  	padding-right:50px;
+ 	letter-spacing: 1.5px;
  }
  #pagetitle{
  	padding-top:5px;
@@ -25,7 +38,6 @@
  	width: 60%;
  	margin-left:auto;
 	margin-right:auto;
-
  }
 #bestact{
 	font-size:30px;
@@ -63,6 +75,7 @@ margin-right:auto;
 </style>
 <script>
 var beachloc = "{{name}}";
+
 $(document).ready(function(){
 	{{#each activity}}
 	$("a[id=\"{{name}}\"]").click(function(){$(".sbcontent").load("/addactivity/"+beachloc+"/{{name}}", errorResponse);
