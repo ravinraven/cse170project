@@ -30,6 +30,12 @@ img{
 	width:auto;
 	height:120px;
 }
+#temp_min{
+	display:inline-block;
+}
+#temp_max{
+	display:inline-block;
+}
 #temp{
 	position: relative;
 	font-size: 60px;
