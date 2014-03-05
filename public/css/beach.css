@@ -19,7 +19,7 @@
 	height: 45px;
 }
 #topnavname{
-	padding-left:20px;
+	padding-left: auto;
 	padding-right: 5px;
 	font-size:40px;
 }
