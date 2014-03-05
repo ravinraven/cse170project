@@ -31,7 +31,7 @@ exports.viewbeach = function(req, res) { 
   if(name == "LaJolla")
     beachname = "La Jolla Shores";
   else if(name == "Oceanside")
-    beachname = "Oceanside";
+    beachname = "Ocean Beach";
   else if(name == "PacificBeach")
     beachname = "Pacific Beach";
   else if(name == "Coronado")
