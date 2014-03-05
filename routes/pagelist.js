@@ -118,7 +118,6 @@ exports.updateCrowd = function(req, res){
   data['ucrowd']=true;
   console.log(data);
   res.render('crowds',data);
-  //res.render('updatedcrowd',{"beachname":name});
 }
 
 function nametocode (name ){
