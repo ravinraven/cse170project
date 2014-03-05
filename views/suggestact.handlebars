@@ -76,6 +76,7 @@ margin-right:auto;
 var beachloc = "{{name}}";
 
 $(document).ready(function(){
+	$(".arrow a").click(function() {$(".sbcontent").load("/activity/"+beachloc,errorResponse); });
 	{{#each activity}}
 	$("a[id=\"{{name}}\"]").click(function(){$(".sbcontent").load("/addactivity/"+beachloc+"/{{name}}", errorResponse);
 	});
