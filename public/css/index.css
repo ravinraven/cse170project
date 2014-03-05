@@ -75,6 +75,7 @@ body{
 #find{
 	clear:both;
 	width:100%;
+	letter-spacing: 2px;
 	/*background:green; /*sign in background color*/
 }
 #homeimg{width:100%;}
