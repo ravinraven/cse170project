@@ -9,7 +9,7 @@
 	<div class="iconname" id="weather"><a href='#'><img src="/images/weathericon.png" class="img-responsive"></a></div>
 	<div class="iconname" id="surf"><a href='#'><img src="/images/surficon.png" class="img-responsive"></a></div>
 	<div class="iconname" id="map"><a href='#'><img src="/images/mapicon.png" class="img-responsive"></a></div>
-	<div class="iconname" id="activity"><a href='#'><img src="/images/activityicon2.png" class="img-responsive"></a></div>
+	<div class="iconname" id="activity"><a href='#'><img src="/images/beachball.png" class="img-responsive"></a></div>
 	<div class="iconname" id="crowd"><a href='#'><img src="/images/crowdicon.png" class="img-responsive"></a></div>
 </div>
 <div style="clear:both;"></div>
@@ -26,7 +26,7 @@ function loadWeather(){
 	$(currentPage).attr('src',lastIcon);
 	lastIcon = $('#weather img').attr('src');
 	currentPage = "#weather img";
-	$('#weather img').attr('src','/images/rweather.png');
+	$('#weather img').attr('src','/images/yweather.png');
 	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
 	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
 }
@@ -35,7 +35,7 @@ function loadSurf(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#surf img";
 	lastIcon = $('#surf img').attr('src');
-	$('#surf img').attr('src','/images/rsurf.png');
+	$('#surf img').attr('src','/images/ysurf.png');
 	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
 	
 }
@@ -43,7 +43,7 @@ function loadActivity(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#activity img"
 	lastIcon = $('#activity img').attr('src');
-	$('#activity img').attr('src','/images/ractivity.png');
+	$('#activity img').attr('src','/images/rbeachball.png');
 	$(".sbcontent").load("/activity/{{stringname}}",errorResponse);
 	}
 
