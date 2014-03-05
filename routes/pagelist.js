@@ -86,16 +86,24 @@ exports.viewActivity = function(req, res) { 
 
 //testing json storage
 exports.addActivity = function(req, res){
-  var name = req.query.beach; 
+  var name = req.params.beach; 
+  var activity = req.params.act; 
   var code = nametocode(name);
+  console.log(name);
   //var activity = "Function call is fine";
-  //beachstatus[code]['activity'].push({"name": "fly", "count": 10});
+  var arr = beachstatus[code]['activity'];
+  for (var i = 0; i < arr.length; ++i) {
+        if (arr[i]["name"] === activity) {
+            arr[i]["count"]++;
+            break;
+        }
+    }
+  console.log(arr);
   res.render('addactivity');
 }
 exports.suggestActivity = function(req, res){
   var name = req.params.name; 
   var code = nametocode(name);
-  console.log(name);
   res.render('suggestact', beachstatus[code]);
 }
 

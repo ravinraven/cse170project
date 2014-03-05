@@ -2,10 +2,10 @@
 	<div id="pagetitle">Suggest</div>
 	<div class="actlist"> 
 	{{#each activity}}
-	<div id="activity"><a href="#">
-			<div id="name" class="{{name}}">{{name}}</div>
+	<a id="{{name}}" href="#" ><div class="activity">
+			<div id="name" >{{name}}</div>
 			<div id="count">{{count}} Counts</div>
-		</a></div>
+		</div></a>
 		{{/each}}
 	</div>
 </div>
@@ -65,7 +65,10 @@ margin-right:auto;
 var beachloc = "{{name}}";
 $(document).ready(function(){
 	{{#each activity}}
-	$(".{{name}} a").click(function() { loadMainContent("/addactivity/"+beachloc+"/{{name}}") });
+	$("a[id=\"{{name}}\"]").click(function(){
+		$.get("/addactivity/"+beachloc+"/{{name}}", function(){});
+		//loadMainContent("/addactivity/"+beachloc+"/{{name}}") });
+	});
 	{{/each}}
 });
 </script>
