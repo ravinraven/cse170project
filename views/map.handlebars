@@ -3,7 +3,7 @@
 <div id="beachAddress"></div>
 <!--div id="address">{{address}}</div>
 <div id="mapimg"><img src="{{mapimg}}"></div-->
-<div id="mapdata"> </div>
+<a href="#"><div id="mapdata"> </div></a>
 <!--div id="location">{{location}}</div>
 <div id="locationcontent">{{locationcontent}}</div-->
 </div>
@@ -21,22 +21,24 @@
 #locationcontent{font-size:20px;}
 </style>
 
-
 <script> 
 //<script
+var link;
  function getMap(){
  	var location;
  	var name = "{{beachname}}"
- 	if(name == "LaJolla")
+ 	if(name == "LaJolla"){
      	location = "/images/LJSMap.png"; //la jolla 
- 	else if(name == "Oceanside")
+    link = "https://maps.google.com/maps/ms?msid=200417316614940091469.0004a056d1e794d37efeb&msa=0&dg=feature";
+ 	}else if(name == "Oceanside"){
      	location = "/images/OBMap.png";
-   	else if(name == "PacificBeach")
+   	}else if(name == "PacificBeach"){
      	location = "/images/PBMap.png";
-   	else if(name == "Coronado")
+    }else if(name == "Coronado"){
      	location = "/images/CorMap.png";
-   	else if(name == "MissionBay")
+    }else if(name == "MissionBay"){
      	location = "/images/MsMap.png";
+    }
  	var tag = "<img src=\"" + location +"\" >";
  	$("div #mapdata").html(tag);
  }
@@ -61,6 +63,7 @@
  $( document ).ready(function() {
    getMap();
    getAddress();
+   $("a #mapdata").click(function(){ window.open(link, '_blank'); });
  });
 </script>
 
