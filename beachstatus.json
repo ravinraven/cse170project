@@ -7,7 +7,7 @@
 		"status": "none"
 		}
 	},
-	{"beachname": "Oceanside",
+	{"beachname": "Ocean Beach",
 		"name": "Oceanside",
 		"activity":[{"name": "running", "count": 1}, {"name": "swimming", "count": 0}, {"name": "surfing", "count":0},{"name": "fishing", "count": 0}, {"name": "volleyball", "count": 0},{"name": "bonfire", "count": 0} ],
 		"crowd":{
