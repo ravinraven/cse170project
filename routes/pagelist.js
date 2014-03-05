@@ -89,7 +89,6 @@ exports.addActivity = function(req, res){
   var name = req.params.beach; 
   var activity = req.params.act; 
   var code = nametocode(name);
-  console.log(name);
   //var activity = "Function call is fine";
   var arr = beachstatus[code]['activity'];
   for (var i = 0; i < arr.length; ++i) {
@@ -98,8 +97,8 @@ exports.addActivity = function(req, res){
             break;
         }
     }
-  console.log(arr);
-  res.render('addactivity');
+  var code = nametocode(name);
+  res.render('activity', beachstatus[code]);
 }
 exports.suggestActivity = function(req, res){
   var name = req.params.name; 
