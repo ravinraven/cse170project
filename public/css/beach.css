@@ -13,7 +13,11 @@
 	text-align: center;
 	position:relative;
 	z-index: 2;
-	color:#2a6496; 
+	color: #2a6496;
+	/*color:#F0DE62;*/
+	/*background-color: #2a6496;*/
+	height: 80px;
+
 }
 #topnavname{
 	padding-left:50px;
@@ -26,8 +30,12 @@
 	-moz-border-radius: 12px; /* FF1+ */
 	/webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
-	background: #F0DE62;/*default background color for buttons*/
+  	background:#F0DE62;
+	/*background: #2a6496;/*default background color for buttons*/
 	/*background-image: url('/images/purtywood.png'); */
+	border-color: #2a6496;
+	border-width: 5px;
+	border-style: solid;
 }
 /*///////////////////////////*/
 .arrow{
