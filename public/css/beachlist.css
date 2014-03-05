@@ -7,6 +7,7 @@ li{
 }
 .pagename{
 	font-size: 40px;
+	letter-spacing: 4px;
 }
 #back{
 	display:block;
@@ -29,4 +30,19 @@ li img{
 	display:block;
 	width:75%;
 	float:left;
+}
+#LaJolla {
+	letter-spacing: 1px;
+}
+#Oceanside {
+	letter-spacing: 1px;
+}
+#pb {
+	letter-spacing: 1px;
+}
+#Coronado {
+	letter-spacing: 1px;
+}
+#MissionBay {
+	letter-spacing: 1px;
 }
