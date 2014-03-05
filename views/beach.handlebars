@@ -26,7 +26,7 @@ function loadWeather(){
 	$(currentPage).attr('src',lastIcon);
 	lastIcon = $('#weather img').attr('src');
 	currentPage = "#weather img";
-	$('#weather img').attr('src','/images/rheart.png');
+	$('#weather img').attr('src','/images/rweather.png');
 	var weatherRequest = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569";
 	$( ".sbcontent" ).load( "/weather/{{stringname}}" , errorResponse );
 }
@@ -35,7 +35,7 @@ function loadSurf(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#surf img";
 	lastIcon = $('#surf img').attr('src');
-	$('#surf img').attr('src','/images/surficonC.png');
+	$('#surf img').attr('src','/images/rsurf.png');
 	$(".sbcontent").load("/surf/{{stringname}}",errorResponse);
 	
 }
@@ -43,7 +43,7 @@ function loadActivity(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#activity img"
 	lastIcon = $('#activity img').attr('src');
-	$('#activity img').attr('src','/images/rheart.png');
+	$('#activity img').attr('src','/images/ractivity.png');
 	$(".sbcontent").load("/activity/{{stringname}}",errorResponse);
 	}
 
@@ -51,14 +51,14 @@ function loadCrowds(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#crowd img";
 	lastIcon = $('#crowd img').attr('src');
-	$('#crowd img').attr('src','/images/crowdiconC.png');
+	$('#crowd img').attr('src','/images/rcrowd.png');
 	$(".sbcontent").load("/crowds/{{stringname}}",errorResponse);
 	}
 function loadMap(){
 	$(currentPage).attr('src',lastIcon);
 	currentPage = "#map img";
 	lastIcon = $('#map img').attr('src');
-	$('#map img').attr('src','/images/mapiconB.png');
+	$('#map img').attr('src','/images/rmap.png');
 	$(".sbcontent").load("/map/{{stringname}}", errorResponse);
 	}
 function parseweather(result){
