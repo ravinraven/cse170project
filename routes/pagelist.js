@@ -59,15 +59,6 @@ exports.viewweather = function(req, res) { 
   res.render('weather', jsondata);
   // controller code goes here 
 };
-exports.viewcrowd = function(req, res) { 
-  var name = req.params.name;  //name of location
-  //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
-  //var crowd = require('../public/json/crowd.json');
-  var code = nametocode(name);
-  var data = beachstatus[code];
-  res.render('crowds',data);
-  // controller code goes here 
-};
 exports.viewMap = function(req, res) { 
    var name = req.params.name; 
    // var location;
@@ -105,8 +96,17 @@ exports.suggestActivity = function(req, res){
   var code = nametocode(name);
   res.render('suggestact', beachstatus[code]);
 }
-
-
+exports.viewcrowd = function(req, res) { 
+  var name = req.params.name;  //name of location
+  //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 
+  //var crowd = require('../public/json/crowd.json');
+  var code = nametocode(name);
+  var data = beachstatus[code];
+  data['ucrowd']=false;
+  console.log(data);
+  res.render('crowds',data);
+  // controller code goes here 
+};
 exports.updateCrowd = function(req, res){
   var name = req.params.name; 
   var stat = req.params.status; 
@@ -114,7 +114,11 @@ exports.updateCrowd = function(req, res){
   var code = nametocode(name);
   beachstatus[code]['crowd']['lastupdate'] = newtime;
   beachstatus[code]['crowd']['status'] = stat;
-  res.render('updatedcrowd');
+  var data = beachstatus[code];
+  data['ucrowd']=true;
+  console.log(data);
+  res.render('crowds',data);
+  //res.render('updatedcrowd',{"beachname":name});
 }
 
 function nametocode (name ){

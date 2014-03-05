@@ -13,6 +13,7 @@
 <div style="clear: both;"></div>
 
 <div id="crowdicons"> Crowd Alert:
+<div id="confirmation"></div>
 <div class="buttonppl" id="hcrowd"><a href="#"> <img src="/images/3person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
@@ -85,19 +86,24 @@
 	width: 12%;
 	font-size: 27px;
 }
-.buttonppl{
-	font-size:27px;
-	}
+.buttonppl{font-size:27px;}
+#confirmation{font-size: 25px;color:red;}
 </style>
 <script type="text/javascript">
 //this portion of the script gets the current time
 $("div #crowdtime").html("<p>"+getRealtime()+"</p>");
-
+{{#if ucrowd}}
+$("#confirmation").html("Thanks for contributing");
+var reload = setInterval(function(){
+	$("#confirmation").html("");
+	clearInterval(reload);
+}, 1000);
+{{/if}}
 function loadUpdateCrowd(name){$(".sbcontent").load(name, errorResponse);}
-
 $(document).ready(function(){
 	$("#lcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/low");});
 	$("#mcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/medium");});
 	$("#hcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/high");});
+
 });
 </script>
