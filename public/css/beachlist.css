@@ -5,6 +5,9 @@ li{
 	margin-top: 3%;
 	list-style-type: none;
 }
+.pagename{
+	font-size: 40px;
+}
 #back{
 	display:block;
 	text-align: left;

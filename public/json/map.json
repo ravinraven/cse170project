@@ -1,0 +1,34 @@
+{
+
+"LaJolla":{
+		"address": "8200 Camino del Oro, La Jolla, 92037",
+		"mapimg": "/images/LJSMap.png",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch"
+		},
+"Oceanside":{
+		"address": "5059 Newport Ave, San Diego, 92107",
+		"mapimg": "/images/OBMap.png",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, pier"
+},
+"PacificBeach":{
+		"address": "4500 Ocean Ave, San Diego, 92109",
+		"mapimg": "/images/PBMap.png",
+		"location": "location:",
+		"locationcontent": "street parking, bathrooms, pier"
+},	
+"Coronado":{
+		"address": "1800 Avenida de las Arenas, Coronado, 92118",
+		"mapimg": "/images/CorMap.png",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, Hotel Coronado "
+},
+"MissionBay":{
+		"address": "3448 Crown Point Drive, San Diego, 92109",
+		"mapimg": "/images/MsMap.png",
+		"location": "location:",
+		"locationcontent": "parking lot, bathrooms, showers, boat launch"
+}
+
+}
