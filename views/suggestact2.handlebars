@@ -80,7 +80,9 @@ var beachloc = "{{name}}";
 $(document).ready(function(){
 	$(".arrow a").click(function() {$(".sbcontent").load("/activity/"+beachloc,errorResponse); });
 	{{#each activity}}
-	$("a[id=\"{{name}}\"]").click(function(){$(".sbcontent").load("/addactivity/"+beachloc+"/{{name}}", errorResponse);
+	$("a[id=\"{{name}}\"]").click(function(){
+		ga("send", "event", "Category", "Action");
+		$(".sbcontent").load("/addactivity2/"+beachloc+"/{{name}}", errorResponse);
 	});
 	{{/each}}
 });

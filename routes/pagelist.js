@@ -91,6 +91,21 @@ exports.addActivity = function(req, res){
   var code = nametocode(name);
   res.render('activity', beachstatus[code]);
 }
+exports.addActivity2 = function(req, res){
+  var name = req.params.beach; 
+  var activity = req.params.act; 
+  var code = nametocode(name);
+  //var activity = "Function call is fine";
+  var arr = beachstatus[code]['activity'];
+  for (var i = 0; i < arr.length; ++i) {
+        if (arr[i]["name"] === activity) {
+            arr[i]["count"]++;
+            break;
+        }
+    }
+  var code = nametocode(name);
+  res.render('suggestact2', beachstatus[code]);
+}
 exports.suggestActivity = function(req, res){
   var name = req.params.name; 
   var code = nametocode(name);
