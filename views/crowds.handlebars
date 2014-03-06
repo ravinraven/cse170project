@@ -1,13 +1,17 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
-<!-- <div id="crowdtime"> </div> -->
-<div id="crowd"> High: Packed like Sardines </div>
-<!-- Medium: You can build a beach towel fort -->
-<!-- Low: Is it the zombie apocalypse?   --> 
 
-<div id="hottiealert"> Hottie Alert: <a href="#"><img id="1" src="/images/gheart.png" class="img-responsive"></a><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div>
+{{#with crowd}}
+<div id="crowdstatus">{{status}}</div>
 
 
+
+<div id="lastupdate">last update: {{lastupdate}}</div>
+{{/with}}
+
+
+
+<div id="hottiealert"> Hottie Alert: <div id="iconfloat"><a href="#"><img id="1" src="/images/gheart.png" class="img-responsive"></a><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div></div>
 <div style="clear: both;"></div>
 
 <div id="crowdicons"> Crowd Alert:
@@ -23,10 +27,9 @@
 
 <!-- This updates the beach crowd status when one user clicks a crowd icon. I don't think we need both the "packed like sardines" and this update. -->
 
-{{#with crowd}}
-<div id="crowdstatus">{{status}}</div>
-<div id="lastupdate">last update: {{lastupdate}}</div>
-{{/with}}
+
+
+
 
 <style>
 #crowdicons{font-size:27px;}
@@ -35,7 +38,7 @@
 	text-align: center;
 }
 #lastupdate{
-	font-size: 27px;
+	font-size: 24px;
 	text-align: center;
 }
 .crowdalert{
@@ -44,11 +47,15 @@
  	margin-left:auto;
  	/*padding-right:50px;*/
 }
+#iconfloat{
+	margin-left:22%;
+}
+
 #hottiealert img{
 	width:12%;
 	height: 12%;
-	float: right;
-	margin-right: 10px;
+	float:left;
+	margin-left: 10px;
 }
 #crowdpage{
 	/*color: #2a6496;*/
@@ -81,15 +88,25 @@
 	float: right;
 	width: 12%;
 	font-size: 27px;
+	padding-right:0px;
 }
 .buttonppl{font-size:27px;}
-#confirmation{font-size: 25px;color:#333333;}
+#confirmation{
+	font-size: 25px;
+	color:#333333;
+}
 </style>
 <script type="text/javascript">
+
+function localize(t){
+  var d=new Date(t+" UTC");
+  return d;
+  //document.write(d.toString());
+}
 //this portion of the script gets the current time
 $("div #crowdtime").html("<p>"+getRealtime()+"</p>");
 {{#if ucrowd}}
-$("#confirmation").html("Thanks for contributing");
+$("#confirmation").html("Thanks for your input!");
 var reload = setInterval(function(){
 	$("#confirmation").html("");
 	clearInterval(reload);
@@ -104,6 +121,18 @@ $(document).ready(function(){
 	$("#2 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/2");});
 	$("#3 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/3");});
 	$("#4 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/4");});
+
+	$("div #lastupdate").html("<p>"+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
+
+if("{{crowd.status}}" == "high") {
+	$("div #crowdstatus").html("High: Packed like sardines");
+
+}else if("{{crowd.status}}" == "medium") {
+		$("div #crowdstatus").html("Medium: Sand to build a beach towel fort");
+	}
+		else if ("{{crowd.status}}" == "low") {
+				$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
+			}
 
 	$('#1 img').attr('src','"/images/gheart.png');
 	$('#2 img').attr('src','"/images/gheart.png');
