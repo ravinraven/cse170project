@@ -5,9 +5,7 @@
 <!-- Medium: You can build a beach towel fort -->
 <!-- Low: Is it the zombie apocalypse?   --> 
 
-
-
-<div id="hottiealert"> Hottie Alert: <img src="/images/gheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"> <img src="/images/rheart.png" class="img-responsive"><img src="/images/rheart.png" class="img-responsive"> </div>
+<div id="hottiealert"> Hottie Alert: <a href="#"><img id="1" src="/images/gheart.png" class="img-responsive"></a><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div>
 
 
 <div style="clear: both;"></div>
@@ -31,9 +29,7 @@
 {{/with}}
 
 <style>
-#crowdicons{
-	font-size:27px;
-}
+#crowdicons{font-size:27px;}
 #crowdstatus{
 	font-size: 30px;
 	text-align: center;
@@ -104,6 +100,13 @@ $(document).ready(function(){
 	$("#lcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/low");});
 	$("#mcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/medium");});
 	$("#hcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/high");});
+	$("#1 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/1");});
+	$("#2 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/2");});
+	$("#3 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/3");});
+	$("#4 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/4");});
 
+	switch({{crowd.hottie}}){
+		
+	}
 });
 </script>

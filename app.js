@@ -60,6 +60,7 @@ app.get('/activity/:name', pagelist.viewActivity);
 app.get('/addactivity/:beach/:act', pagelist.addActivity);
 app.get('/suggestact/:name', pagelist.suggestActivity);
 app.get('/updatedcrowd/:name/:status', pagelist.updateCrowd);
+app.get('/updatedhottie/:name/:status', pagelist.updateHottie);
 
 // Example route
 // app.get('/users', user.list);

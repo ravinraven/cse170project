@@ -119,7 +119,17 @@ exports.updateCrowd = function(req, res){
   console.log(data);
   res.render('crowds',data);
 }
-
+exports.updateHottie = function(req, res){
+  var name = req.params.name; 
+  var stat = req.params.status; 
+  var newtime = getRealtime(); //"hhmmss"
+  var code = nametocode(name);
+  beachstatus[code]['crowd']['hottie'] = stat;
+  var data = beachstatus[code];
+  data['ucrowd']=false;
+  console.log(data);
+  res.render('crowds',data);
+}
 function nametocode (name ){
   if(name == "LaJolla")
     return 0;
