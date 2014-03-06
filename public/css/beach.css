@@ -56,8 +56,7 @@
 	height:50px;
 	float:left;
 	font-size: 30px;
-	margin-left:0px;
-	clear:both;
+	margin-left:;
 }
 .sbcontent{
 	line-height: 230%;
@@ -72,13 +71,15 @@ div .sbcontent{
 	font-family:'Sintony'; 
 }
 .sidebar{
-	width:9%;
-	position:absolute;
+	width:100%;
 	float:left;
+	display:inline;
 	z-index: 2;
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */
+  	text-align:center;	
+  	margin-left:15%;
 }
 .beachcontent{}
 .home img{
