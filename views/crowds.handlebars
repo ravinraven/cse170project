@@ -2,12 +2,6 @@
 <div id="crowdpage"> Crowd-O-Meter </div>
 
 <div id="explain"> Beach Bum, click the icons to update Crowd-o-meter</div>
-{{#with crowd}}
-<div id="crowdstatus">{{status}}</div>
-<div id="lastupdate"> last update: {{lastupdate}} </div>
-{{/with}}
-
-
 
 <!-- last update went away, when i first log into the page, the time is wrong, moving the Thanks! to the bottom of the page?  -->
 
@@ -16,9 +10,9 @@
 <div><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a></div>
 <div><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div></div>
 
-
 <div style="clear: both;"></div>
 
+<div id="space"> </div>
 
 <div id="crowdicons"> Crowd Alert: <div id="crowdlayout">
 <div class="buttonppl" id="hcrowd"><a href="#"> <img src="/images/3person.png" class="img-responsive"></a></div>
@@ -26,8 +20,16 @@
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div></div>
 <div style="clear: both;"></div>
 </div>
+
 <div id="confirmation"></div>
 </div>
+
+{{#with crowd}}
+<div id="crowdstatus">{{status}}</div>
+<div id="lastupdate"> last update: {{lastupdate}} </div>
+{{/with}}
+
+
 <!-- </div> -->
 
 
@@ -46,15 +48,19 @@ div #crowdstatus{
 	color:#EF4444 !important;
 
 }
+#space{
+	padding-top:5%;
+}
 #hottieview{
 margin-left:20%;
 }
 #explain{
 	text-align: center;
 	font-size:15px;
+	padding-bottom:8px;
 }
 #lastupdate{
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 #crowdlayout{
