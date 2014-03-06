@@ -28,10 +28,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div>
 
 <style type="text/css">
-
 #suggest a:link {color:#2a6496;}
 #suggest a:visited {color:#2a6496;}
-
 .activitypage{
  	font-size:25px;
  	text-align:center;
@@ -84,7 +82,7 @@ margin-right:auto;
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+//  ga('create', 'UA-48659430-1', { 'cookieDomain': 'none' });
   ga('create', 'UA-48659430-1', 'beachbum.herokuapp.com');
   ga('send', 'pageview');
 
@@ -106,9 +104,9 @@ console.log(n);
 var chosenVariation = cxApi.chooseVariation();
 console.log("was chosen " + chosenVariation);
 	if(chosenVariation == 0 ){
-		$("#suggest a").click(function() { loadSA(); ga("send", "event", "Category", "Action");});
+		$("#suggest a").click(function() { loadSA(); ga("send", "event", "activity", "click");});
 	} else {
-		$("#suggest a").click(function() { loadSA2();ga("send", "event", "Category", "Action");});	
+		$("#suggest a").click(function() { loadSA2();ga("send", "event", "activity", "click");});	
 	}
 
 	//pageVariations[chosenVariation];

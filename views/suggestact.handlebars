@@ -90,7 +90,7 @@ $(document).ready(function(){
 	$(".arrow a").click(function() {$(".sbcontent").load("/activity/"+beachloc,errorResponse); });
 	{{#each activity}}
 	$("a[id=\"{{name}}\"]").click(function(){
-ga("send", "event", "Category", "Action");
+ga("send", "event", "activity", "click");
 		$(".sbcontent").load("/addactivity/"+beachloc+"/{{name}}", errorResponse);
 	});
 	{{/each}}
