@@ -96,6 +96,11 @@ exports.suggestActivity = function(req, res){
   var code = nametocode(name);
   res.render('suggestact', beachstatus[code]);
 }
+exports.suggestActivity2 = function(req, res){
+  var name = req.params.name; 
+  var code = nametocode(name);
+  res.render('suggestact2', beachstatus[code]);
+}
 exports.viewcrowd = function(req, res) { 
   var name = req.params.name;  //name of location
   //var location = "http://api.openweathermap.org/data/2.5/weather?lat=32.8608&lon=-117.2569"; //la jolla 

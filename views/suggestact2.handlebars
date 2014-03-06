@@ -1,0 +1,87 @@
+<div class="activitypage">
+	<div id="pagetitle">Suggest</div>
+	<div class="actlist"> 
+	{{#each activity}}
+	<a id="{{name}}" href="#" ><div id="activity">
+			<div id="name" >{{name}}</div>
+			<div id="count">{{count}} Counts</div>
+		</div></a>
+		{{/each}}
+	</div>
+</div>
+
+<!-- 
+<div id="suggest"><a href="#">Track Beach Activity</a></div>
+</div> -->
+
+<style type="text/css">
+a{color:#2a6496;}
+a:link{color:#2a6496;}
+a:hover{color:#428bca;}
+a:visited{color:#2a6496;}
+a:active{color:#2a6496;}
+
+.activitypage{
+ 	font-size:25px;
+ 	text-align:center;
+ 	margin-left:auto;
+ 	padding-right:50px;
+ 	letter-spacing: 1.5px;
+ }
+ #pagetitle{
+ 	padding-top:5px;
+ 	padding-bottom:15px;
+ 	font-size:40px;
+ 	letter-spacing: 1.5px
+ }
+ #acticon{
+ 	width: 60%;
+ 	margin-left:auto;
+	margin-right:auto;
+ }
+#bestact{
+	font-size:30px;
+	padding-bottom:5px;
+
+}
+#youcan{
+	font-size:25px;
+}
+#youcancontent{
+	font-size:20px;
+}
+.actlist{
+width:100%;
+}
+#name{
+	width:50%;
+	float:left;
+}
+#votes{
+	width:50%;
+	float:right;
+}
+#suggest{
+padding-top:5px;
+font-size: 27px;
+font-color:#333333;
+height: 40px; /* height for all three buttons on front page*/
+width:170px;
+background: none;
+margin-left:auto;
+margin-right:auto;
+
+
+}
+</style>
+<script>
+var beachloc = "{{name}}";
+
+$(document).ready(function(){
+	$(".arrow a").click(function() {$(".sbcontent").load("/activity/"+beachloc,errorResponse); });
+	{{#each activity}}
+	$("a[id=\"{{name}}\"]").click(function(){$(".sbcontent").load("/addactivity/"+beachloc+"/{{name}}", errorResponse);
+	});
+	{{/each}}
+});
+</script>

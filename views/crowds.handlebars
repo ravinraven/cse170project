@@ -105,8 +105,21 @@ $(document).ready(function(){
 	$("#3 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/3");});
 	$("#4 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/4");});
 
+	$('#1 img').attr('src','"/images/gheart.png');
+	$('#2 img').attr('src','"/images/gheart.png');
+	$('#3 img').attr('src','"/images/gheart.png');
+	$('#4 img').attr('src','"/images/gheart.png');
+	
 	switch({{crowd.hottie}}){
-		
+		case '4':
+			$('#4 img').attr('src','"/images/rheart.png');
+		case '3':
+			$('# img').attr('src','"/images/rheart.png');
+		case '2':
+			$('#2 img').attr('src','"/images/rheart.png');
+		case '1':
+			$('#1 img').attr('src','"/images/rheart.png');
+		break;
 	}
 });
 </script>

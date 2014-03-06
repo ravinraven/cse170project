@@ -59,6 +59,7 @@ app.get('/map/:name', pagelist.viewMap);
 app.get('/activity/:name', pagelist.viewActivity);
 app.get('/addactivity/:beach/:act', pagelist.addActivity);
 app.get('/suggestact/:name', pagelist.suggestActivity);
+app.get('/suggestact2/:name', pagelist.suggestActivity2);
 app.get('/updatedcrowd/:name/:status', pagelist.updateCrowd);
 app.get('/updatedhottie/:name/:status', pagelist.updateHottie);
 
