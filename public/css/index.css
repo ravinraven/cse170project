@@ -41,6 +41,7 @@ body{
 	background-color: RGBA(255,255,255,.3);
 }}
 .button{
+	margin-top: 5px;
 	margin:5px 0;
 	font-size:40px;
 	color:#000000; /* center font color*/
@@ -50,7 +51,6 @@ body{
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */	
   	height: 70px; /* height for all three buttons on front page*/
 	background: #F0DE62;/*default background color for buttons*/
-	padding-top: 7px;
 }
 #tagline{
 	font-size: 26px;
