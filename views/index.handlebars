@@ -37,7 +37,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     <div class="container">
     <!-- <div class="circle" id="title"> Beach Bum</div> -->
     <img class="img-responsive" id="homeimg" src="/images/logo.png" alt="homepage logo"><br>
-    <p id="tagline"> Dude, where you wanna bum?</p>
+    <p id="tagline"></p>
     <div class="button" id="find"><a href="#">Find a Beach</a></div>
     <!--
     <div id="buttonline">
@@ -49,7 +49,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/beachbum.js"></script>
-<script>
+< script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -60,10 +60,26 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </script>
 <script>
+var tagarr ={"text":[]};
+{{#each headline}}
+tagarr.text.push("{{text}}") ;
+{{/each}}
+console.log(tagarr);
+
+
+
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 //if(width > 620)
     //$('.container').css('width', "400px");
 $( document ).ready(function() {
+var loc = 0;
+  setInterval(function(){
+  $("#tagline").html(tagarr['text'][loc]);
+  loc++;
+  if(loc > (tagarr.length))
+    loc = 0;
+  console.log(loc);
+}, 2000);
 	$("#login a").click(function() { loadMainContent("login"); });
 	$("#find a").click(function() { loadMainContent("beachlist"); });
 	$("#sign a").click(function() { loadMainContent("/dummy"); });
