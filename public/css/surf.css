@@ -14,8 +14,8 @@
 .height{
 	text-align: center;
 	font-size: 50px;
-	/*color: #ef4444;*/
-	padding-top: 15px;
+	/*color: #ef4444 !important;
+	/*padding-top: 15px;
 	padding-bottom: 20px;
 	letter-spacing: 2px;
 	/*add font color*/
