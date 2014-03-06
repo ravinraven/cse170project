@@ -1,44 +1,55 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
 
+<div id="explain"> Click the icons to update the Crowd-o-meter</div>
 {{#with crowd}}
 <div id="crowdstatus">{{status}}</div>
 <div id="lastupdate"> last update: {{lastupdate}} </div>
 {{/with}}
+
+
 
 <!-- last update went away, when i first log into the page, the time is wrong, moving the Thanks! to the bottom of the page?  -->
 
 <div id="hottiealert"> Hottie Alert: <div id="iconfloat"><a href="#"><img id="1" src="/images/gheart.png" class="img-responsive"></a><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div></div>
 <div style="clear: both;"></div>
 
-<div id="crowdicons"> Crowd Alert:
-<div id="confirmation"></div>
+
+<div id="crowdicons"> Crowd Alert: <div id="crowdlayout">
 <div class="buttonppl" id="hcrowd"><a href="#"> <img src="/images/3person.png" class="img-responsive"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive"></a></div>
-<div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div>
+<div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive"></a></div></div>
 <div style="clear: both;"></div>
 </div>
+<div id="confirmation"></div>
 </div>
 <!-- </div> -->
 
 
 <!-- This updates the beach crowd status when one user clicks a crowd icon. I don't think we need both the "packed like sardines" and this update. -->
 
-
-
-
-
 <style>
 #crowdicons{font-size:27px;}
+
+#crowdstatus a:visited {
+color:#CC3300;
+}
 div #crowdstatus{
 	font-size: 25px;
 	text-align: center;
-	font-color:#FF0000 !important;
+	color:#CC3300 !important;
 
 }
-#lastupdate{
-	font-size: 24px;
+#explain{
 	text-align: center;
+	font-size:15px;
+}
+#lastupdate{
+	font-size: 25px;
+	text-align: center;
+}
+#crowdlayout{
+	margin-right:35%;
 }
 .crowdalert{
 	text-align: center;
@@ -91,7 +102,7 @@ div #crowdstatus{
 }
 .buttonppl{font-size:27px;}
 #confirmation{
-	font-size: 25px;
+	font-size: 20px;
 	color:#333333;
 }
 </style>
@@ -105,11 +116,11 @@ function localize(t){
 //this portion of the script gets the current time
 $("div #crowdtime").html("<p>"+getRealtime()+"</p>");
 {{#if ucrowd}}
-$("#confirmation").html("Thanks for your input!");
+$("#confirmation").html("Thanks for updating the Crowd-o-meter");
 var reload = setInterval(function(){
 	$("#confirmation").html("");
 	clearInterval(reload);
-}, 1000);
+}, 3000);
 {{/if}}
 function loadUpdateCrowd(name){$(".sbcontent").load(name, errorResponse);}
 $(document).ready(function(){
@@ -124,10 +135,10 @@ $(document).ready(function(){
 	$("div #lastupdate").html("<p> Last update: "+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
 
 if("{{crowd.status}}" == "high") {
-	$("div #crowdstatus").html("High: Packed like sardines");
+	$("div #crowdstatus").html("High: Packed like sardines!");
 
 }else if("{{crowd.status}}" == "medium") {
-		$("div #crowdstatus").html("Medium: Sand to build a beach towel fort");
+		$("div #crowdstatus").html("Medium: Room for a beach towel fort.");
 	}
 		else if ("{{crowd.status}}" == "low") {
 				$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
