@@ -12,7 +12,6 @@
 <div id="suggest"><a href="#">Track Beach Activity</a></div>
 </div>
 
-<script src="//www.google-analytics.com/cx/api.js?experiment=h7FR7d9SQ8yYqr_erh7kUg"></script>
 <style type="text/css">
 
 #suggest a:link {color:#2a6496;}
@@ -60,21 +59,25 @@ margin-left:auto;
 margin-right:auto;
 }
 </style>
+<script src="//www.google-analytics.com/cx/api.js?experiment=nA7cbYV-TLOFI7cfd-0G9Q"></script>
 <script>
 var n = "{{name}}";
 console.log(n);
 function loadSA(){$(".sbcontent").load("/suggestact/"+n,errorResponse);}
 function loadSA2(){$(".sbcontent").load("/suggestact2/"+n,errorResponse);}
 var chosenVariation = cxApi.chooseVariation();
-
+console.log("was chosen " + choseVariation);
 var pageVariations = [
-  function() {$("#suggest a").click(function() { loadSA(); });},
   function() {
+ga("send", "event", "Category", "Action");
+  	$("#suggest a").click(function() { loadSA(); });},
+  function() {
+  	ga("send", "event", "Category", "Action");
     $("#suggest a").click(function() { loadS2(); });
   }];
 
 $(document).ready(function(){
-	pageVariations[chosenVariation]
+	pageVariations[chosenVariation];
 	//$("#suggest a").click(function() { loadSA(); });
 	//loadMainContent("/suggestActivity/LaJolla")
 });
