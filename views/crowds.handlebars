@@ -3,13 +3,10 @@
 
 {{#with crowd}}
 <div id="crowdstatus">{{status}}</div>
-
-
-
-<div id="lastupdate">last update: {{lastupdate}}</div>
+<div id="lastupdate"> last update: {{lastupdate}} </div>
 {{/with}}
 
-
+<!-- last update went away, when i first log into the page, the time is wrong, moving the Thanks! to the bottom of the page?  -->
 
 <div id="hottiealert"> Hottie Alert: <div id="iconfloat"><a href="#"><img id="1" src="/images/gheart.png" class="img-responsive"></a><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a><a href="#"><img id="3" src="/images/rheart.png" class="img-responsive"></a><a href="#>"><img id="4" src="/images/rheart.png" class="img-responsive"></a></div></div>
 <div style="clear: both;"></div>
@@ -33,9 +30,11 @@
 
 <style>
 #crowdicons{font-size:27px;}
-#crowdstatus{
-	font-size: 30px;
+div #crowdstatus{
+	font-size: 25px;
 	text-align: center;
+	font-color:#FF0000 !important;
+
 }
 #lastupdate{
 	font-size: 24px;
@@ -122,7 +121,7 @@ $(document).ready(function(){
 	$("#3 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/3");});
 	$("#4 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/4");});
 
-	$("div #lastupdate").html("<p>"+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
+	$("div #lastupdate").html("<p> Last update: "+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
 
 if("{{crowd.status}}" == "high") {
 	$("div #crowdstatus").html("High: Packed like sardines");
