@@ -85,29 +85,27 @@ margin-right:auto;
 
 </script>
 
-
 <script>
 var n = "{{name}}";
-console.log(n);
 function loadSA(){$(".sbcontent").load("/suggestact/"+n,errorResponse);}
 function loadSA2(){$(".sbcontent").load("/suggestact2/"+n,errorResponse);}
-//var chosenVariation = cxApi.chooseVariation();
-var chosenVariation;
-var val = Math.random();
-if( val < 0.5)
-	chosenVariation  = 0;
-else 
-	chosenVariation  = 1;
 
-console.log("was chosen " + chosenVariation);
 var pageVariations = [
   function() {
   	$("#suggest a").click(function() { loadSA(); }); },
   function() {
     $("#suggest a").click(function() { loadSA2();});
   } ];
-
 $(document).ready(function(){
+console.log(n);
+var chosenVariation = cxApi.chooseVariation();
+console.log("was chosen " + chosenVariation);
+	if(chosenVariation == 0 ){
+		$("#suggest a").click(function() { loadSA(); ga("send", "event", "Category", "Action");});
+	} else {
+		$("#suggest a").click(function() { loadSA2();ga("send", "event", "Category", "Action");});	
+	}
+
 	pageVariations[chosenVariation];
 	//$("#suggest a").click(function() { loadSA(); });
 	//loadMainContent("/suggestActivity/LaJolla")
