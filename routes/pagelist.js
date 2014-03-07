@@ -13,7 +13,6 @@ exports.viewbeachlist = function(req, res) { 
 };
 
 exports.viewdummy = function(req, res) { 
-	console.log("ajax called dummy");
   var name = req.params.name; 
   res.render('dummy');
   // controller code goes here 
@@ -123,7 +122,6 @@ exports.viewcrowd = function(req, res) { 
   var code = nametocode(name);
   var data = beachstatus[code];
   data['ucrowd']=false;
-  console.log(data);
   res.render('crowds',data);
   // controller code goes here 
 };
@@ -136,7 +134,6 @@ exports.updateCrowd = function(req, res){
   beachstatus[code]['crowd']['status'] = stat;
   var data = beachstatus[code];
   data['ucrowd']=true;
-  console.log(data);
   res.render('crowds',data);
 }
 exports.updateHottie = function(req, res){
@@ -147,7 +144,6 @@ exports.updateHottie = function(req, res){
   beachstatus[code]['crowd']['hottie'] = stat;
   var data = beachstatus[code];
   data['ucrowd']=false;
-  console.log(data);
   res.render('crowds',data);
 }
 function nametocode (name ){

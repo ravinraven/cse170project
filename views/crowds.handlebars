@@ -7,9 +7,9 @@
 <!-- last update went away, when i first log into the page, the time is wrong, moving the Thanks! to the bottom of the page?  -->
 
 <div id="hottiealert"> Hottie Alert: 
-	<div id="hottieview"><div><a href="#"><img id="1" src="/images/rheart.png" class="img-responsive"></a></div>
-<div><a href="#"><img id="2" src="/images/rheart.png" class="img-responsive"></a></div>
-<div><a href="#"><img id="3" src="/images/gheart.png" class="img-responsive"></a></div>
+	<div id="hottieview"><div id="1"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
+<div id="2"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
+<div id="3"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
 </div>
 
 <div style="clear: both;"></div>
@@ -146,7 +146,6 @@ $(document).ready(function(){
 	$("#1 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/1");});
 	$("#2 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/2");});
 	$("#3 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/3");});
-	$("#4 a").click(function(){loadUpdateCrowd("/updatehottie/{{name}}/4");});
 
 	$("div #lastupdate").html("<p> Last update: "+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
 
@@ -160,20 +159,17 @@ if("{{crowd.status}}" == "high") {
 				$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
 			}
 
-	$('#1 img').attr('src','"/images/gheart.png');
-	$('#2 img').attr('src','"/images/gheart.png');
-	$('#3 img').attr('src','"/images/gheart.png');
-	$('#4 img').attr('src','"/images/gheart.png');
-	
-	switch({{crowd.hottie}}){
-		case '4':
-			$('#4 img').attr('src','"/images/rheart.png');
+	$('#1 img').attr('src','/images/gheart.png');
+	$('#2 img').attr('src','/images/gheart.png');
+	$('#3 img').attr('src','/images/gheart.png');
+	console.log({{crowd.hottie}});
+	switch('{{crowd.hottie}}'){
 		case '3':
-			$('# img').attr('src','"/images/rheart.png');
+			$('#3 img').attr('src','/images/rheart.png');
 		case '2':
-			$('#2 img').attr('src','"/images/rheart.png');
+			$('#2 img').attr('src','/images/rheart.png');
 		case '1':
-			$('#1 img').attr('src','"/images/rheart.png');
+			$('#1 img').attr('src','/images/rheart.png');
 		break;
 	}
 });
