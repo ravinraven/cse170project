@@ -143,7 +143,7 @@ exports.updateHottie = function(req, res){
   var code = nametocode(name);
   beachstatus[code]['crowd']['hottie'] = stat;
   var data = beachstatus[code];
-  data['ucrowd']=false;
+  data['ucrowd']=true;
   res.render('crowds',data);
 }
 function nametocode (name ){
