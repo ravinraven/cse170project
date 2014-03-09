@@ -1,28 +1,18 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
-
-
 <div id="explain"> Beach Bum, click the icons to update Crowd-o-meter</div>
 
-<!-- last update went away, when i first log into the page, the time is wrong, moving the Thanks! to the bottom of the page?  -->
+<div id="alerttag"> Hottie Alert: </div><div id="iconlayout">
+<div class="buttonppl" id="1"><a href="#"><img src="/images/gheart.png" class="img-responsive buttonppl"></a></div>
+<div class="buttonppl" id="2"><a href="#"><img src="/images/gheart.png" class="img-responsive buttonppl"></a></div>
+<div class="buttonppl" id="3"><a href="#"><img src="/images/gheart.png" class="img-responsive buttonppl"></a></div>
+<div style="clear: both;"></div></div>
 
-<div id="hottiealert"> Hottie Alert: 
-	<div id="hottieview"><div id="1"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
-<div id="2"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
-<div id="3"><a href="#"><img src="/images/gheart.png" class="img-responsive"></a></div>
-</div>
-
-<div style="clear: both;"></div>
-</div>
-
-<div id="crowdicons"> Crowd Alert: </div>
-
-<div id="crowdlayout">
+<div id="alerttag"> Crowd Alert: </div><div id="iconlayout">
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive buttonppl"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive buttonppl"></a></div>
 <div class="buttonppl" id="hcrowd"><a href="#"><img src="/images/3person.png" class="img-responsive buttonppl"></a></div>
-<div style="clear: both;"></div>
-</div>
+<div style="clear: both;"></div></div>
 
 <div id="confirmation"></div>
 
@@ -31,75 +21,31 @@
 <div id="lastupdate"> last update: {{lastupdate}} </div>
 {{/with}}
 
-
-<!-- </div> -->
-
-
-<!-- This updates the beach crowd status when one user clicks a crowd icon. I don't think we need both the "packed like sardines" and this update. -->
-
 <style>
-#crowdicons{font-size:27px;}
+#alerttag{font-size:27px;}
 #crowdstatus a:visited {color:#EF4444;}
 div #crowdstatus{
 	font-size: 25px;
 	text-align: center;
 	color:#EF4444 !important;
-
 }
-#hottieview{margin-left:20%;}
-
 #lastupdate{
 	font-size: 20px;
 	text-align: center;
 }
-div #crowdlayout{
-	margin:1% auto;
-	text-align: center;
-}
+#iconlayout{margin:1% auto;}
 .crowdalert{
 	text-align: center;
 	letter-spacing: 1.5px;
  	margin-left:auto;
- 	/*padding-right:50px;*/
-}
-#iconfloat{
-	margin-left:22%;
-}
-
-#hottiealert img{
-	width:16%;
-	height: 16%;
-	float:left;
-	margin-left: 20px;
 }
 #crowdpage{
-	/*color: #2a6496;*/
 	font-size: 40px;
 	padding-top: 15px;
 	padding-bottom: 5px;
 }
 #crowdtime{font-size: 35px;}
-#hottiealert{
-	font-size: 27px;
-	padding-bottom:20px;
-}
-#lcrowd img{
-	/*float: right;*/
-	margin-right: 10px;
-	display: inline-block;
-}
-#mcrowd img{
-	/*float: right;*/
-	margin-right:10px;
-	display: inline-block;
-}
-#hcrowd img{
-	/*float: right;*/
-	padding-right:0px;
-	display: inline-block;
-}
-.buttonppl{display:inline-block; height:50px;}
-.buttonppl{height:50px;width: 50px;}
+.buttonppl{display:inline-block; height:50px;width: 50px;margin:0 10px;}
 #confirmation{
 	font-size: 20px;
 	color:#333333;
