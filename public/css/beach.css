@@ -59,6 +59,7 @@ display:inline-block;
 font-size: 30px;
 margin-left:2%;
 margin-right:2%;
+z-index: 2;
 /*margin-left:0px;*/
 clear:both;
 }
@@ -73,6 +74,7 @@ clear:both;
 }
 div .sbcontent{font-family:'Sintony'; }
 .sidebar{
+	margin: 2% 0;
 width:100%;
 /*position:absolute;
 /*float:left;*/
