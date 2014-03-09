@@ -34,7 +34,22 @@ console.log("ajax to weather");
 console.log(result);
 }
 
+function getCrowdIcon( stat){
+	if( stat == 'low')
+		return "/images/1bcrowd.png";
+	else if( stat == 'medium')
+		return "/images/2bcrowd.png";
+	else if( stat == 'high')
+		return "/images/3bcrowd.png";
+}
 $( document ).ready(function() {
+
+	$('#LaJolla img').attr('src',getCrowdIcon('{{LaJolla}}') );
+	$('#Oceanside img').attr('src',getCrowdIcon('{{Ocean}}') );
+	$('#pb img').attr('src',getCrowdIcon('{{Pacific}}') );
+	$('#Coronado img').attr('src',getCrowdIcon('{{Coronado}}') );
+	$('#MissionBay img').attr('src',getCrowdIcon('{{Mission}}') );
+
 	$("#pb a").click( function(){ loadMainContent("beach/PacificBeach") });
 	 //loadWeather()});
 	//$("a").click( function(){ loadDummyContent("dummy") })

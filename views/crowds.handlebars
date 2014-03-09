@@ -8,6 +8,8 @@
 <div class="buttonppl" id="3"><a href="#"><img src="/images/gheart.png" class="img-responsive buttonppl"></a></div>
 <div style="clear: both;"></div></div>
 
+<div id="hottiestatus" class="statustag"></div>
+
 <div id="alerttag"> Crowd Alert: </div><div id="iconlayout">
 <div class="buttonppl" id="lcrowd"><a href="#"><img src="/images/1person.png" class="img-responsive buttonppl"></a></div>
 <div class="buttonppl" id="mcrowd"><a href="#"><img src="/images/2person.png" class="img-responsive buttonppl"></a></div>
@@ -17,39 +19,21 @@
 <div id="confirmation"></div>
 
 {{#with crowd}}
-<div id="crowdstatus">{{status}}</div>
+<div id="crowdstatus" class="statustag">{{status}}</div>
 <div id="lastupdate"> last update: {{lastupdate}} </div>
 {{/with}}
 
 <style>
 #alerttag{font-size:27px;}
 #crowdstatus a:visited {color:#EF4444;}
-div #crowdstatus{
-	font-size: 25px;
-	text-align: center;
-	color:#EF4444 !important;
-}
-#lastupdate{
-	font-size: 20px;
-	text-align: center;
-}
+div .statustag{font-size: 25px;text-align: center;color:#EF4444 !important;}
+#lastupdate{font-size: 20px;text-align: center;}
 #iconlayout{margin:1% auto;}
-.crowdalert{
-	text-align: center;
-	letter-spacing: 1.5px;
- 	margin-left:auto;
-}
-#crowdpage{
-	font-size: 40px;
-	padding-top: 15px;
-	padding-bottom: 5px;
-}
+.crowdalert{text-align: center;letter-spacing: 1.5px;margin-left:auto;}
+#crowdpage{font-size: 40px;padding-top: 15px;padding-bottom: 5px;}
 #crowdtime{font-size: 35px;}
 .buttonppl{display:inline-block; height:50px;width: 50px;margin:0 10px;}
-#confirmation{
-	font-size: 20px;
-	color:#333333;
-}
+#confirmation{font-size: 20px;color:#333333;}
 </style>
 <script type="text/javascript">
 
@@ -78,15 +62,21 @@ $(document).ready(function(){
 
 	$("div #lastupdate").html("<p> Last update: "+getLocalize(localize("{{crowd.lastupdate}}"))+"</p>");
 
-if("{{crowd.status}}" == "high") {
-	$("div #crowdstatus").html("High: Packed like sardines!");
+	//status for hottie
+	if("{{crowd.hottie}}" == "3")
+		$("div #hottiestatus").html("Burning hot!");
+	else if("{{crowd.hottie}}" == "2")
+		$("div #hottiestatus").html("Sun Tanning!");
+	else if ("{{crowd.hottie}}" == "1")
+		$("div #hottiestatus").html("Chillin'!");
 
-}else if("{{crowd.status}}" == "medium") {
+	//crowd status
+	if("{{crowd.status}}" == "high")
+		$("div #crowdstatus").html("High: Packed like sardines!");
+	else if("{{crowd.status}}" == "medium")
 		$("div #crowdstatus").html("Medium: Room for a beach towel fort.");
-	}
-		else if ("{{crowd.status}}" == "low") {
-				$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
-			}
+	else if ("{{crowd.status}}" == "low")
+		$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
 
 	$('#1 img').attr('src','/images/gheart.png');
 	$('#2 img').attr('src','/images/gheart.png');

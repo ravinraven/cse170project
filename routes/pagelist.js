@@ -8,7 +8,13 @@ exports.viewlog = function(req, res) { 
 
 exports.viewbeachlist = function(req, res) { 
   var name = req.params.name; 
-  res.render('beachlist');
+  var data = {'LaJolla':beachstatus[0]["crowd"]['status'],
+              'Ocean':beachstatus[1]["crowd"]['status'],
+              'Pacific':beachstatus[2]["crowd"]['status'],
+              'Coronado':beachstatus[3]["crowd"]['status'],
+              'Mission':beachstatus[4]["crowd"]['status']}
+
+  res.render('beachlist', data);
   // controller code goes here 
 };
 
