@@ -32,9 +32,13 @@ div .statustag{font-size: 25px;text-align: center;color:#EF4444 !important;}
 .crowdalert{text-align: center;letter-spacing: 1.5px;margin-left:auto;}
 #crowdpage{font-size: 40px;padding-top: 15px;padding-bottom: 5px;}
 #crowdtime{font-size: 35px;}
-.buttonppl{display:inline-block; height:50px;/*width: 50px;*/margin:0 10px;background-color:#F0DE62;-moz-border-radius: 12px; /* FF1+ */
+.buttonppl{display:inline-block; height:50px;/*width: 50px;*/margin:0 0px;
+	background-color:rgba(255,255,255, .4); /*background-color:#F0DE62;#f0de63*/
+	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
-  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */}
+  	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */
+box-shadow: 2px 2px #d3d3d3;
+  }
 div a{display:block;margin: 0 auto;}
 #confirmation{font-size: 20px;color:#333333;}
 </style>
@@ -81,9 +85,9 @@ $(document).ready(function(){
 	else if ("{{crowd.status}}" == "low")
 		$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
 
-	$('#1 img').attr('src','/images/gheart.png');
-	$('#2 img').attr('src','/images/gheart.png');
-	$('#3 img').attr('src','/images/gheart.png');
+	$('#1 img').attr('src','/images/heart.png');
+	$('#2 img').attr('src','/images/heart.png');
+	$('#3 img').attr('src','/images/heart.png');
 	console.log({{crowd.hottie}});
 	switch('{{crowd.hottie}}'){
 		case '3':
