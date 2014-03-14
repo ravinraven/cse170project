@@ -79,13 +79,13 @@ $(document).ready(function(){
 	//crowd status
 	if("{{crowd.status}}" == "high"){
 		$("div #crowdstatus").html("High: Packed like sardines!");
-		$('#lcrowd img').attr('src','/images/1bcrowd.png');
+		$('#hcrowd img').attr('src','/images/3bcrowd.png');
 	} else if("{{crowd.status}}" == "medium"){
 		$("div #crowdstatus").html("Medium: Room for a beach towel fort.");
 		$('#mcrowd img').attr('src','/images/2bcrowd.png');
 	} else if ("{{crowd.status}}" == "low"){
 		$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
-		$('#hcrowd img').attr('src','/images/3bcrowd.png');
+		$('#lcrowd img').attr('src','/images/1bcrowd.png');
 	}
 
 	$('#1 img').attr('src','/images/gheart.png');
