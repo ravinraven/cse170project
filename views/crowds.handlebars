@@ -1,6 +1,5 @@
 <div class="crowdalert">
 <div id="crowdpage"> Crowd-O-Meter </div>
-<div id="explain"> Beach Bum, click the icons to update Crowd-o-meter</div>
 
 <div id="alerttag"> Hottie Alert: </div><div id="iconlayout">
 <div class="buttonppl" id="1"><a href="#"><img src="/images/gheart.png" class="img-responsive buttonppl"></a></div>
@@ -73,17 +72,21 @@ $(document).ready(function(){
 	if("{{crowd.hottie}}" == "3")
 		$("div #hottiestatus").html("Burning hot!");
 	else if("{{crowd.hottie}}" == "2")
-		$("div #hottiestatus").html("Sun Tanning!");
+		$("div #hottiestatus").html("Luke Warm!");
 	else if ("{{crowd.hottie}}" == "1")
 		$("div #hottiestatus").html("Chillin'!");
 
 	//crowd status
-	if("{{crowd.status}}" == "high")
+	if("{{crowd.status}}" == "high"){
 		$("div #crowdstatus").html("High: Packed like sardines!");
-	else if("{{crowd.status}}" == "medium")
+		$('#lcrowd img').attr('src','/images/1bcrowd.png');
+	} else if("{{crowd.status}}" == "medium"){
 		$("div #crowdstatus").html("Medium: Room for a beach towel fort.");
-	else if ("{{crowd.status}}" == "low")
+		$('#mcrowd img').attr('src','/images/2bcrowd.png');
+	} else if ("{{crowd.status}}" == "low"){
 		$("div #crowdstatus").html("Low: is this a zombie apocalypse or where is everyone?");
+		$('#hcrowd img').attr('src','/images/3bcrowd.png');
+	}
 
 	$('#1 img').attr('src','/images/gheart.png');
 	$('#2 img').attr('src','/images/gheart.png');
