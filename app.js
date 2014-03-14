@@ -2,7 +2,6 @@
  * Module dependencies.
  */
 
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -10,7 +9,6 @@ var handlebars = require('express3-handlebars')
 //var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var project = require('./routes/project');
 var pagelist = require('./routes/pagelist'); //every page should go to pagelist
 // Example route
 // var user = require('./routes/user');
@@ -46,7 +44,6 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:name', project.viewProject);
 app.get('/login', pagelist.viewlog);
 app.get('/beachlist', pagelist.viewbeachlist);
 app.get('/dummy', pagelist.viewdummy);

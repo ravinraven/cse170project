@@ -21,27 +21,17 @@ img{
 	width:auto;
 	height:120px;
 }
-#temp_min{
-	display:inline-block;
-}
-#temp_max{
-	display:inline-block;
-}
+#temp_min{display:inline-block;}
+#temp_max{display:inline-block;}
 #temp{
 	position: relative;
 	font-size: 60px;
 	padding-top:15%;
-	
 	padding-bottom: 15%;
 }
 
-#sunrise{
-	font-size: 25px;
-}
-#sunset{
-	font-size: 25px;
-	}
-
+#sunrise{font-size: 25px;}
+#sunset{font-size: 25px;}
 #highlow{
 	padding-bottom: 5px;
 	font-size: 25px;	
