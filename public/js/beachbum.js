@@ -8,7 +8,6 @@ $("#weather").attr("src", src);
 }
 
 function getLocalize(date){
-	date = new Date(date+" UTC");
 	var hours = date.getHours();
 	var am = "AM";
 	var minutes = date.getMinutes();
