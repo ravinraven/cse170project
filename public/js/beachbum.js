@@ -15,6 +15,7 @@ function getLocalize(date){
 	if(hours<10){ hours = "0"+hours;}else if (hours>12){hours = hours%12; am="PM";}
     if(minutes<10){minutes = "0"+minutes;}
 	var formattedTime = hours + ':' + minutes + " " +am;
+	console.log(formattedTime);
 	return formattedTime;
 } 
 
