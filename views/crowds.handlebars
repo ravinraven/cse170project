@@ -36,8 +36,7 @@ div .statustag{font-size: 25px;text-align: center;color:#EF4444 !important;}
 	-moz-border-radius: 12px; /* FF1+ */
 	-webkit-border-radius: 12px; /* Saf3-4 */
   	border-radius: 12px; /* Opera 10.5, IE 9, Saf5, Chrome */
-box-shadow: 2px 2px #d3d3d3;
-  }
+box-shadow: 2px 2px #d3d3d3;}
 div a{display:block;margin: 0 auto;}
 #confirmation{font-size: 20px;color:#333333;}
 </style>
@@ -50,6 +49,7 @@ function localize(t){
 }
 //this portion of the script gets the current time
 $("div #crowdtime").html("<p>"+getRealtime()+"</p>");
+
 {{#if ucrowd}}
 $("#confirmation").html("Thanks for updating the Crowd-o-meter");
 var reload = setInterval(function(){
@@ -57,6 +57,7 @@ var reload = setInterval(function(){
 	clearInterval(reload);
 }, 3000);
 {{/if}}
+
 function loadUpdateCrowd(name){$(".sbcontent").load(name, errorResponse);}
 $(document).ready(function(){
 	$("#lcrowd a").click(function(){loadUpdateCrowd("/updatedcrowd/{{name}}/low");});
@@ -91,7 +92,6 @@ $(document).ready(function(){
 	$('#1 img').attr('src','/images/gheart.png');
 	$('#2 img').attr('src','/images/gheart.png');
 	$('#3 img').attr('src','/images/gheart.png');
-	console.log({{crowd.hottie}});
 	switch('{{crowd.hottie}}'){
 		case '3':
 			$('#3 img').attr('src','/images/rheart.png');

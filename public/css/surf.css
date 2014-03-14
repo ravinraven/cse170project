@@ -1,11 +1,7 @@
-.surfdata{
-		margin-left:auto;
-/* 	padding-right:50px;*/
-}
+.surfdata{margin-left:auto;}
 .comment{
 	text-align: center;
 	font-size: 40px;
-	/*color: #2A6496;*/
 	margin-bottom: 5px;
 	padding-top: 15px;
 }
@@ -13,11 +9,9 @@
 .height{
 	text-align: center;
 	font-size: 50px;
-	/*color: #ef4444 !important;*/
 	padding-top: 15px;
 	padding-bottom: 20px;
 	letter-spacing: 2px;
-	/*add font color*/
 }
 .high{
 	text-align: center;

@@ -3,17 +3,13 @@
 	<div class="actlist"> 
 	{{#each activity}}
 	<a id="{{name}}" href="#" ><div id="activity">
-			<div id="name" >{{name}}</div>
-			<div id="count">{{count}} Counts</div>
-		</div></a>
-		{{/each}}
-	</div>
-	<div id="return"><a href="#">Return to Activity</a></div>
+		<div id="name" >{{name}}</div>
+		<div id="count">{{count}} Counts</div>
+	</div></a>
+	{{/each}}
 </div>
-
-<!-- 
-<div id="suggest"><a href="#">Track Beach Activity</a></div>
-</div> -->
+<div id="return"><a href="#">Return to Activity</a></div>
+</div>
 
 <style type="text/css">
 a{color:#2a6496;}
@@ -26,26 +22,18 @@ a:active{color:#2a6496;}
  	font-size:25px;
  	text-align:center;
  	margin-left:auto;
- 	/*padding-right:50px;*/
  	letter-spacing: 1.5px;
  }
  #pagetitle{
  	padding-top:5px;
- 	/*padding-bottom:15px;*/
  	font-size:40px;
  	letter-spacing: 1.5px
  }
 #youcan{font-size:25px;}
 #youcancontent{font-size:20px;}
 .actlist{width:100%;}
-#name{
-	width:50%;
-	float:left;
-}
-#votes{
-	width:50%;
-	float:right;
-}
+#name{width:50%;float:left;}
+#votes{width:50%;float:right;}
 #suggest{
 padding-top:10px;
 font-size: 30px;
@@ -55,17 +43,6 @@ background: none;
 margin-left:auto;
 margin-right:auto;
 }
-/*
-#suggest{
-padding-top:5px;
-font-size: 27px;
-font-color:#333333;
-height: 40px; /* height for all three buttons on front page
-width:170px;
-background: none;
-margin-left:auto;
-margin-right:auto;
-}*/
 </style>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
