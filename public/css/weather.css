@@ -1,13 +1,7 @@
-div .comment .title .height{
-	font-size:40px;
-	border-radius:;
-}
 .weather{
 	text-align: center;
 	font-size: 40px;
 	opacity:.9;
-	/*margin-left:auto;
- 	padding-right:50px;*/
  	letter-spacing: 1.5px;
 }
 #time{
@@ -15,7 +9,7 @@ div .comment .title .height{
 	padding-top: 15px;
 	padding-bottom: 10px;
 }	
-#icon{
+#weatherIcon{
 	display:inline-block;
     position:absolute;
     left:20%;
